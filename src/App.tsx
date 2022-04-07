@@ -5,10 +5,10 @@ function App(): JSX.Element {
     return (
         <div className="App">
             <header className="App-header">
-                UD CISC275 with React Hooks and TypeScript
+                UD CISC275 with React Hooks and TypeScript.
                 <ul>
                     <li>Adam O</li>
-                    <li>Rehan C</li>
+                    <li>Rehan A</li>
                     <li>Dhruv P</li>
                 </ul>
             </header>
