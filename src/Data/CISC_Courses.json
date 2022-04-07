@@ -1,0 +1,188 @@
+[
+    {
+        "CourseName": "CISC108",
+        "ID": "1",
+        "Credits": "3",
+        "Status": "Not Taken"
+    },
+    {
+        "CourseName": "CISC181",
+        "ID": "2",
+        "Credits": "3",
+        "Status": "Not Taken"
+    },
+    {
+        "CourseName": "CISC210",
+        "ID": "3",
+        "Credits": "3",
+        "Status": "Not Taken"
+    },
+    {
+        "CourseName": "CISC220",
+        "ID": "4",
+        "Credits": "3",
+        "Status": "Not Taken"
+    },
+    {
+        "CourseName": "CISC260",
+        "ID": "5",
+        "Credits": "3",
+        "Status": "Not Taken"
+    },
+    {
+        "CourseName": "CISC275",
+        "ID": "6",
+        "Credits": "3",
+        "Status": "Not Taken"
+    },
+    {
+        "CourseName": "CISC303",
+        "ID": "666",
+        "Credits": "3",
+        "Status": "Not Taken"
+    },
+    {
+        "CourseName": "CISC320",
+        "ID": "7",
+        "Credits": "3",
+        "Status": "Not Taken"
+    },
+    {
+        "CourseName": "MATH210",
+        "ID": "8",
+        "Credits": "3",
+        "Status": "Not Taken"
+    },
+    {
+        "CourseName": "MATH241",
+        "ID": "9",
+        "Credits": "4",
+        "Status": "Not Taken"
+    },
+    {
+        "CourseName": "CISC498",
+        "ID": "10",
+        "Credits": "3",
+        "Status": "Not Taken"
+    },
+    {
+        "CourseName": "CISC499",
+        "ID": "11",
+        "Credits": "3",
+        "Status": "Not Taken"
+    },
+    {
+        "CourseName": "GEOL105",
+        "ID": "12",
+        "Credits": "3",
+        "Status": "Not Taken"
+    },
+    {
+        "CourseName": "GEOL115",
+        "ID": "13",
+        "Credits": "1",
+        "Status": "Not Taken"
+    },
+    {
+        "CourseName": "GEOL107",
+        "ID": "14",
+        "Credits": "4",
+        "Status": "Not Taken"
+    },
+    {
+        "CourseName": "CISC355",
+        "ID": "15",
+        "Credits": "3",
+        "Status": "Not Taken"
+    },
+    {
+        "CourseName": "CISC108",
+        "ID": "16",
+        "Credits": "3",
+        "Status": "Not Taken"
+    },
+    {
+        "CourseName": "ENGL312",
+        "ID": "17",
+        "Credits": "3",
+        "Status": "Not Taken"
+    },
+    {
+        "CourseName": "MATH205",
+        "ID": "18",
+        "Credits": "4",
+        "Status": "Not Taken"
+    },
+    {
+        "CourseName": "CISC361",
+        "ID": "19",
+        "Credits": "3",
+        "Status": "Not Taken"
+    },
+    {
+        "CourseName": "PSYC344",
+        "ID": "20",
+        "Credits": "3",
+        "Status": "Not Taken"
+    },
+    {
+        "CourseName": "CISC437",
+        "ID": "21",
+        "Credits": "3",
+        "Status": "Not Taken"
+    },
+    {
+        "CourseName": "MATH242",
+        "ID": "22",
+        "Credits": "4",
+        "Status": "Not Taken"
+    },
+    {
+        "CourseName": "CISC340",
+        "ID": "23",
+        "Credits": "3",
+        "Status": "Not Taken"
+    },
+    {
+        "CourseName": "ENGL110",
+        "ID": "24",
+        "Credits": "3",
+        "Status": "Not Taken"
+    },
+    {
+        "CourseName": "ENSC101",
+        "ID": "25",
+        "Credits": "2",
+        "Status": "Not Taken"
+    },
+    {
+        "CourseName": "EGGG101",
+        "ID": "26",
+        "Credits": "2",
+        "Status": "Not Taken"
+    },
+    {
+        "CourseName": "CISC",
+        "ID": "27",
+        "Credits": "3",
+        "Status": "Not Taken"
+    },
+    {
+        "CourseName": "CISC108",
+        "ID": "28",
+        "Credits": "3",
+        "Status": "Not Taken"
+    },
+    {
+        "CourseName": "CISC108",
+        "ID": "29",
+        "Credits": "3",
+        "Status": "Not Taken"
+    },
+    {
+        "CourseName": "CISC108",
+        "ID": "30",
+        "Credits": "3",
+        "Status": "Not Taken"
+    }
+]
