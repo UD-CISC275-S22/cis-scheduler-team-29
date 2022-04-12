@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Button, Row, Col } from "react-bootstrap";
+import { Button, Col } from "react-bootstrap";
 
 export function TableView(): JSX.Element {
     const [semester, setSemester] = useState<string>("Fall ");
     const [counter, setCounter] = useState<number>(1);
     const [courses, setCourse] = useState<string[]>([]);
-    const [credits, setCredits] = useState<number>(0);
+    //    const [credits, setCredits] = useState<number>(0);
 
     const semesterByDate: Record<string, string> = {
         "Fall ": "Winter ",
