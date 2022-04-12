@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import { TableView } from "./Components/TableView";
 
 function App(): JSX.Element {
     return (
@@ -16,6 +17,9 @@ function App(): JSX.Element {
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
             </p>
+            <hr></hr>
+            <TableView></TableView>
+            <hr></hr>
         </div>
     );
 }
