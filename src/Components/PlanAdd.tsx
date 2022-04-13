@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Button, Col, Form, Modal, Row } from "react-bootstrap";
 import { Plan } from "../Interfaces/Plan";
-import { PlanList } from "./PlanList";
 
 export function PlanAdd({
     show,

@@ -4,7 +4,6 @@ import "./App.css";
 import { PlanAdd } from "./Components/PlanAdd";
 import { PlanList } from "./Components/PlanList";
 import { Plan } from "./Interfaces/Plan";
-import { ControllableStates } from "./Components/AddCourseTest";
 
 const PLANS: Plan[] = [];
 
@@ -28,7 +27,6 @@ export function ShowHidePlans(): JSX.Element {
         <div>
             {visible && (
                 <div>
-                    <ControllableStates></ControllableStates>
                     <Button
                         variant="success"
                         className="m-4"

@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { Plan } from "../Interfaces/Plan";
+import { AddCourse } from "./AddCourseTest";
 //import { AddSemester} from "./AddSemester";
 
 export function PlanView({
@@ -15,6 +16,7 @@ export function PlanView({
             <Row>
                 <Col>
                     <h3>{plan.id}</h3>
+                    <AddCourse></AddCourse>
                     <Button
                         onClick={() => deletePlan(plan.id)}
                         variant="danger"
