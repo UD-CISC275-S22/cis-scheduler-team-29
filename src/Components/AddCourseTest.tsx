@@ -3,36 +3,14 @@ import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import { useState } from "react";
 import { Courses } from "../Interfaces/Courses";
-import testCourses from "../Data/CISC_Courses.json";
-/*
-This file is just a test to add courses from an autocomplete component
-*/
-const options = ["Option 1", "Option 2"];
-const COURSES = testCourses.map(
-    (courses): Courses => ({
-        ...courses
-    })
-);
-/*realCourseList.;
+import COURSES2 from "../Data/CISC_Courses.json";
 
-const REALCOURSES = realCourseList.map(
-    (courses): Courses => ({
-        ...courses
-    })
-);
-/*
+export function AddCourse(): JSX.Element {
+    const temp = COURSES2.map((name: Courses): string => name.CourseName);
 
-const TEST = testCourses.map(
-    (courses): Courses => ({
-        ...courses
-    })
-);*/
-//onChange={(event: any, newValue: string | null) => {setValue(newValue);}}
-
-export function ControllableStates() {
     const [courses, setCourses] = useState<string[]>([]);
-    const [value, setValue] = React.useState<string | null>(options[0]);
     const [inputValue, setInputValue] = React.useState("");
+    const [value, setValue] = React.useState<string | null>(temp[0]);
 
     function addCourse(name: string) {
         if (!courses.includes(name)) {
@@ -43,13 +21,12 @@ export function ControllableStates() {
             setCourses(newCourses);
         }
     }
-
     return (
         <div>
             <div>
                 <Autocomplete
                     value={value}
-                    onChange={(event: any, newValue: string | null) => {
+                    onChange={(event, newValue: string | null) => {
                         setValue(newValue);
                     }}
                     inputValue={inputValue}
@@ -57,7 +34,7 @@ export function ControllableStates() {
                         setInputValue(newInputValue);
                     }}
                     id="controllable-states-demo"
-                    options={options}
+                    options={temp}
                     sx={{ width: 200, textAlign: "center" }}
                     renderInput={(params) => (
                         <TextField {...params} label="Courses" />
