@@ -9,7 +9,7 @@
         at PlanList (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/Components/PlanList.tsx:7:5)
         at div
         at div
-        at ShowHidePlans (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/App.tsx:11:35)
+        at ShowHidePlans (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/Components/ShowHidePlans.tsx:10:35)
         at p
         at div
         at App
@@ -23,20 +23,21 @@
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
 
 PASS src/App.test.tsx
-  ✓ renders the course name somewhere (96 ms)
+  ✓ renders the course name somewhere (94 ms)
 
 --------------------|---------|----------|---------|---------|-------------------
 File                | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 --------------------|---------|----------|---------|---------|-------------------
 All files           |   31.37 |       50 |   17.24 |   34.04 |                   
- src                |   57.14 |      100 |      25 |   72.72 |                   
-  App.tsx           |   57.14 |      100 |      25 |   72.72 | 16-20,45          
- src/Components     |   21.62 |        0 |   14.28 |   22.22 |                   
+ src                |     100 |      100 |     100 |     100 |                   
+  App.tsx           |     100 |      100 |     100 |     100 |                   
+ src/Components     |      30 |       50 |   14.28 |    32.6 |                   
   AddCourseTest.tsx |       0 |        0 |       0 |       0 | 9-52              
   ListCourses.tsx   |       0 |      100 |       0 |       0 | 6-9               
   PlanAdd.tsx       |      40 |      100 |   33.33 |      40 | 17-21,40          
   PlanList.tsx      |      50 |      100 |      50 |      50 | 16                
   PlanView.tsx      |       0 |      100 |       0 |       0 | 14-21             
+  ShowHidePlans.tsx |   53.84 |      100 |   14.28 |      70 | 15-19,44          
   TableView.tsx     |      50 |      100 |      25 |      50 | 19-25,32          
  src/Interfaces     |       0 |        0 |       0 |       0 |                   
   Courses.ts        |       0 |        0 |       0 |       0 |                   
@@ -46,5 +47,5 @@ All files           |   31.37 |       50 |   17.24 |   34.04 |
 Test Suites: 1 passed, 1 total
 Tests:       1 passed, 1 total
 Snapshots:   0 total
-Time:        2.86 s
+Time:        2.894 s
 Ran all test suites.
