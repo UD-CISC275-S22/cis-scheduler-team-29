@@ -23,7 +23,7 @@
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
 
 PASS src/App.test.tsx
-  ✓ renders the course name somewhere (91 ms)
+  ✓ renders the course name somewhere (92 ms)
 
 --------------------|---------|----------|---------|---------|-------------------
 File                | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
@@ -32,7 +32,7 @@ All files           |   31.37 |       50 |   17.24 |   34.04 |
  src                |     100 |      100 |     100 |     100 |                   
   App.tsx           |     100 |      100 |     100 |     100 |                   
  src/Components     |      30 |       50 |   14.28 |    32.6 |                   
-  AddCourseTest.tsx |       0 |        0 |       0 |       0 | 9-52              
+  AddCourseTest.tsx |       0 |        0 |       0 |       0 | 9-53              
   ListCourses.tsx   |       0 |      100 |       0 |       0 | 6-9               
   PlanAdd.tsx       |      40 |      100 |   33.33 |      40 | 17-21,40          
   PlanList.tsx      |      50 |      100 |      50 |      50 | 16                
@@ -47,5 +47,5 @@ All files           |   31.37 |       50 |   17.24 |   34.04 |
 Test Suites: 1 passed, 1 total
 Tests:       1 passed, 1 total
 Snapshots:   0 total
-Time:        2.982 s
+Time:        3.03 s
 Ran all test suites.
