@@ -160,29 +160,5 @@
         "ID": "26",
         "Credits": "2",
         "Status": "Not Taken"
-    },
-    {
-        "CourseName": "CISC",
-        "ID": "27",
-        "Credits": "3",
-        "Status": "Not Taken"
-    },
-    {
-        "CourseName": "CISC108",
-        "ID": "28",
-        "Credits": "3",
-        "Status": "Not Taken"
-    },
-    {
-        "CourseName": "CISC108",
-        "ID": "29",
-        "Credits": "3",
-        "Status": "Not Taken"
-    },
-    {
-        "CourseName": "CISC108",
-        "ID": "30",
-        "Credits": "3",
-        "Status": "Not Taken"
     }
 ]
