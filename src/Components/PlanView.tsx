@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { Plan } from "../Interfaces/Plan";
-import { AddCourse } from "./AddCourseTest";
 import { SemesterModal } from "./SemesterModal";
 
 export function PlanView({
