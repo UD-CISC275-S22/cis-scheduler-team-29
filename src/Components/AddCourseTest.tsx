@@ -26,7 +26,10 @@ export function AddCourse(): JSX.Element {
             <div>
                 <Autocomplete
                     value={value}
-                    onChange={(event, newValue: string | null) => {
+                    onChange={(
+                        event: React.SyntheticEvent<Element, Event>,
+                        newValue: string | null
+                    ) => {
                         setValue(newValue);
                     }}
                     inputValue={inputValue}
