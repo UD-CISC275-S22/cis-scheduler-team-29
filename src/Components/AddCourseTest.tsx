@@ -11,11 +11,8 @@ export function AddCourse(): JSX.Element {
     const [courses, setCourses] = useState<string[]>([]);
     const [inputValue, setInputValue] = React.useState("");
     const [value, setValue] = React.useState<string | null>(temp[0]);
-<<<<<<< HEAD
     // const [credit, setCredit] = useState<string[]>([]);
-=======
 
->>>>>>> 273693f48bdccada4ec31aaac95a9983149a0170
     function addCourse(name: string) {
         if (!courses.includes(name)) {
             const newCourses = [...courses, inputValue];
