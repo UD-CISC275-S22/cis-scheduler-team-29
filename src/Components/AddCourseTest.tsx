@@ -4,7 +4,6 @@ import Autocomplete from "@mui/material/Autocomplete";
 import { useState } from "react";
 import { Courses } from "../Interfaces/Courses";
 import COURSES2 from "../Data/CISC_Courses.json";
-import test from "../Data/test.json";
 
 export function AddCourse(): JSX.Element {
     const temp = COURSES2.map((name: Courses): string => name.CourseName);

@@ -1,50 +1,6 @@
-import React, { useState } from "react";
-import { Button } from "react-bootstrap";
+import React from "react";
 import "./App.css";
-import { PlanAdd } from "./Components/PlanAdd";
-import { PlanList } from "./Components/PlanList";
-import { Plan } from "./Interfaces/Plan";
-
-const PLANS: Plan[] = [];
-
-export function ShowHidePlans(): JSX.Element {
-    const [plans, setPlan] = useState<Plan[]>(PLANS);
-    const [showAddModal, setShowAddModal] = useState(false);
-
-    function addPlan(newPlan: Plan) {
-        if (
-            !plans.some((plan) => plan.id === newPlan.id) &&
-            newPlan.id !== ""
-        ) {
-            setPlan([...plans, newPlan]);
-        }
-    }
-
-    function deletePlan(id: string) {
-        setPlan(plans.filter((plan: Plan): boolean => plan.id !== id));
-    }
-
-    const handleCloseAddModal = () => setShowAddModal(false);
-    const handleShowAddModal = () => setShowAddModal(true);
-
-    return (
-        <div>
-            <Button
-                variant="success"
-                className="m-4"
-                onClick={handleShowAddModal}
-            >
-                Add New Plan
-            </Button>
-            <PlanAdd
-                show={showAddModal}
-                handleClose={handleCloseAddModal}
-                addPlan={addPlan}
-            ></PlanAdd>
-            <PlanList plans={plans} deletePlan={deletePlan}></PlanList>
-        </div>
-    );
-}
+import { ShowHidePlans } from "./Components/ShowHidePlans";
 import { TableView } from "./Components/TableView";
 
 function App(): JSX.Element {
