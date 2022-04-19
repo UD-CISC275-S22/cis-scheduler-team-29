@@ -8,8 +8,7 @@
         at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-bootstrap/cjs/Stack.js:23:7
         at PlanList (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/Components/PlanList.tsx:7:5)
         at div
-        at div
-        at ShowHidePlans (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/Components/ShowHidePlans.tsx:10:35)
+        at ShowHidePlans (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/Components/ShowHidePlans.tsx:10:30)
         at p
         at div
         at App
@@ -23,21 +22,25 @@
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
 
 PASS src/App.test.tsx
-  ✓ renders the course name somewhere (93 ms)
+  ✓ renders the course name somewhere (98 ms)
 
 --------------------|---------|----------|---------|---------|-------------------
 File                | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 --------------------|---------|----------|---------|---------|-------------------
-All files           |   31.37 |       50 |   17.24 |   34.04 |                   
+All files           |   20.77 |        0 |   11.11 |   22.53 |                   
  src                |     100 |      100 |     100 |     100 |                   
   App.tsx           |     100 |      100 |     100 |     100 |                   
- src/Components     |      30 |       50 |   14.28 |    32.6 |                   
-  AddCourseTest.tsx |       0 |        0 |       0 |       0 | 9-53              
+ src/Components     |   19.73 |        0 |    9.09 |   21.42 |                   
+  AddCourseTest.tsx |       0 |        0 |       0 |       0 | 9-55              
   ListCourses.tsx   |       0 |      100 |       0 |       0 | 6-9               
   PlanAdd.tsx       |      40 |      100 |   33.33 |      40 | 17-21,40          
   PlanList.tsx      |      50 |      100 |      50 |      50 | 16                
-  PlanView.tsx      |       0 |      100 |       0 |       0 | 14-21             
-  ShowHidePlans.tsx |   53.84 |      100 |   14.28 |      70 | 15-19,44          
+  PlanView.tsx      |       0 |      100 |       0 |       0 | 13-20             
+  SemesterAdd.tsx   |       0 |      100 |       0 |       0 | 14-51             
+  SemesterList.tsx  |       0 |      100 |       0 |       0 | 13-20             
+  SemesterModal.tsx |    7.69 |        0 |       0 |    9.09 | 10-32             
+  SemesterView.tsx  |       0 |      100 |       0 |       0 | 13-20             
+  ShowHidePlans.tsx |   46.15 |        0 |   14.28 |      60 | 14-23             
   TableView.tsx     |      50 |      100 |      25 |      50 | 19-25,32          
  src/Interfaces     |       0 |        0 |       0 |       0 |                   
   Courses.ts        |       0 |        0 |       0 |       0 |                   
@@ -47,5 +50,5 @@ All files           |   31.37 |       50 |   17.24 |   34.04 |
 Test Suites: 1 passed, 1 total
 Tests:       1 passed, 1 total
 Snapshots:   0 total
-Time:        3.065 s
+Time:        3.087 s
 Ran all test suites.
