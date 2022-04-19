@@ -8,12 +8,16 @@ import { Plan } from "./Interfaces/Plan";
 const PLANS: Plan[] = [];
 
 export function ShowHidePlans(): JSX.Element {
-    const [visible, setVisible] = useState<boolean>(true);
     const [plans, setPlan] = useState<Plan[]>(PLANS);
     const [showAddModal, setShowAddModal] = useState(false);
 
     function addPlan(newPlan: Plan) {
-        setPlan([...plans, newPlan]);
+        if (
+            !plans.some((plan) => plan.id === newPlan.id) &&
+            newPlan.id !== ""
+        ) {
+            setPlan([...plans, newPlan]);
+        }
     }
 
     function deletePlan(id: string) {
@@ -25,26 +29,19 @@ export function ShowHidePlans(): JSX.Element {
 
     return (
         <div>
-            {visible && (
-                <div>
-                    <Button
-                        variant="success"
-                        className="m-4"
-                        onClick={handleShowAddModal}
-                    >
-                        Add New Plan
-                    </Button>
-                    <PlanAdd
-                        show={showAddModal}
-                        handleClose={handleCloseAddModal}
-                        addPlan={addPlan}
-                    ></PlanAdd>
-                    <PlanList plans={plans} deletePlan={deletePlan}></PlanList>
-                </div>
-            )}
-            <Button onClick={() => setVisible(!visible)}>
-                Show/Hide Degree Plans
+            <Button
+                variant="success"
+                className="m-4"
+                onClick={handleShowAddModal}
+            >
+                Add New Plan
             </Button>
+            <PlanAdd
+                show={showAddModal}
+                handleClose={handleCloseAddModal}
+                addPlan={addPlan}
+            ></PlanAdd>
+            <PlanList plans={plans} deletePlan={deletePlan}></PlanList>
         </div>
     );
 }
