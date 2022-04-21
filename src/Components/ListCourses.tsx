@@ -6,7 +6,10 @@ export function ListCourses({ course }: { course: Courses[] }): JSX.Element {
     return (
         <Stack gap={3}>
             {course.map((courses: Courses) => (
-                <div key={courses.ID}>{courses.CourseName}</div>
+                <div key={courses.ID}>
+                    {courses.Code}
+                    {courses.Credits}
+                </div>
             ))}
         </Stack>
     );
