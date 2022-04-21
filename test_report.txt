@@ -32,14 +32,14 @@ All files           |      20 |        0 |   10.86 |   21.91 |
   App.tsx           |     100 |      100 |     100 |     100 |                   
  src/Components     |   18.98 |        0 |    8.88 |   20.83 |                   
   AddCourseTest.tsx |       0 |        0 |       0 |       0 | 10-55             
-  ListCourses.tsx   |       0 |      100 |       0 |       0 | 6-9               
+  ListCourses.tsx   |       0 |      100 |       0 |       0 | 7-15              
   PlanAdd.tsx       |      40 |      100 |   33.33 |      40 | 17-21,40          
   PlanList.tsx      |      50 |      100 |      50 |      50 | 16                
   PlanView.tsx      |       0 |      100 |       0 |       0 | 13-20             
   SemesterAdd.tsx   |       0 |      100 |       0 |       0 | 14-51             
   SemesterList.tsx  |       0 |      100 |       0 |       0 | 13-20             
   SemesterModal.tsx |    7.69 |        0 |       0 |    9.09 | 10-32             
-  SemesterView.tsx  |       0 |      100 |       0 |       0 | 13-20             
+  SemesterView.tsx  |       0 |      100 |       0 |       0 | 14-20             
   ShowHidePlans.tsx |   46.15 |        0 |   14.28 |      60 | 14-23             
   TableView.tsx     |      50 |      100 |      25 |      50 | 19-25,32          
  src/Interfaces     |       0 |        0 |       0 |       0 |                   
@@ -50,5 +50,5 @@ All files           |      20 |        0 |   10.86 |   21.91 |
 Test Suites: 1 passed, 1 total
 Tests:       1 passed, 1 total
 Snapshots:   0 total
-Time:        3.559 s
+Time:        4.316 s
 Ran all test suites.
