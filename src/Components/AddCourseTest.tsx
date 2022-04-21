@@ -7,11 +7,10 @@ import COURSES2 from "../Data/CISC_Courses.json";
 
 export function AddCourse(): JSX.Element {
     const temp = COURSES2.map((name: Courses): string => name.CourseName);
-
+    //const temp = COURSES2.map((name: Courses): Courses => name);
     const [courses, setCourses] = useState<string[]>([]);
     const [inputValue, setInputValue] = React.useState("");
     const [value, setValue] = React.useState<string | null>(temp[0]);
-    const [credit, setCredit] = useState<string[]>([]);
     function addCourse(name: string) {
         if (!courses.includes(name)) {
             const newCourses = [...courses, inputValue];
@@ -21,21 +20,15 @@ export function AddCourse(): JSX.Element {
             setCourses(newCourses);
         }
     }
-    function addCredit(n: string) {
-        if (!courses.includes(n)) {
-            const newCredit = [...credit, inputValue];
-            setCredit(newCredit);
-        } else {
-            const newCredit = [...credit];
-            setCredit(newCredit);
-        }
-    }
     return (
         <div>
             <div>
                 <Autocomplete
                     value={value}
-                    onChange={(event: any, newValue: string | null) => {
+                    onChange={(
+                        event: React.SyntheticEvent<Element, Event>,
+                        newValue: string | null
+                    ) => {
                         setValue(newValue);
                     }}
                     inputValue={inputValue}

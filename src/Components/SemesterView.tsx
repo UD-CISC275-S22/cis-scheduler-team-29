@@ -1,27 +1,27 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import { Plan } from "../Interfaces/Plan";
-import { SemesterModal } from "./SemesterModal";
+import { Semester } from "../Interfaces/Semester";
+import { AddCourse } from "./AddCourseTest";
 
-export function PlanView({
-    plan,
-    deletePlan
+export function SemesterView({
+    semester,
+    deleteSemester
 }: {
-    plan: Plan;
-    deletePlan: (id: string) => void;
+    semester: Semester;
+    deleteSemester: (id: string) => void;
 }): JSX.Element {
     return (
         <Container>
             <Row>
                 <Col>
-                    <h3>{plan.id}</h3>
-                    <SemesterModal></SemesterModal>
+                    <h3>{semester.id}</h3>
+                    <AddCourse></AddCourse>
                     <Button
-                        onClick={() => deletePlan(plan.id)}
+                        onClick={() => deleteSemester(semester.id)}
                         variant="danger"
                         className="me-8"
                     >
-                        Delete Plan
+                        Delete Semester
                     </Button>
                 </Col>
             </Row>
