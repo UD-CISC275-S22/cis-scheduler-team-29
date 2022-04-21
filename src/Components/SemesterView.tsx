@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Col, Button } from "react-bootstrap";
 import { Semester } from "../Interfaces/Semester";
 import { AddCourse } from "./AddCourseTest";
 import { Stack } from "react-bootstrap";
