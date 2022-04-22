@@ -15,11 +15,12 @@ export function SemesterList({
         <div>
             <button onClick={() => setHidden(!hidden)}>HIDE SEMESTERS</button>
             <div hidden={hidden}>
-                <Stack gap={3}>
+                <Stack className="SemesterList" direction="horizontal" gap={3}>
                     {semesters.map((semester: Semester) => (
                         <div
                             key={semester.id}
-                            className="bg-light border m-2 p-2"
+                            // className="bg-light border m-2 p-2"
+                            className="hey"
                         >
                             <SemesterView
                                 semester={semester}
