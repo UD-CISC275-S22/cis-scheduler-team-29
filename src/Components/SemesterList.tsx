@@ -11,9 +11,12 @@ export function SemesterList({
     deleteSemester: (id: string) => void;
 }): JSX.Element {
     const [hidden, setHidden] = useState(false);
+
     return (
         <div>
-            <button onClick={() => setHidden(!hidden)}>HIDE SEMESTERS</button>
+            <button onClick={() => setHidden(!hidden)}>
+                {hidden ? <div>SHOW SEMESTERS</div> : <div>HIDE SEMESTERS</div>}
+            </button>
             <div hidden={hidden}>
                 <Stack className="SemesterList" direction="horizontal" gap={3}>
                     {semesters.map((semester: Semester) => (
