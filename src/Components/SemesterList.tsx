@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Stack } from "react-bootstrap";
+import { Button, Stack } from "react-bootstrap";
 import { Semester } from "../Interfaces/Semester";
 import { SemesterView } from "./SemesterView";
 
@@ -14,9 +14,9 @@ export function SemesterList({
 
     return (
         <div>
-            <button onClick={() => setHidden(!hidden)}>
+            <Button onClick={() => setHidden(!hidden)}>
                 {hidden ? <div>SHOW SEMESTERS</div> : <div>HIDE SEMESTERS</div>}
-            </button>
+            </Button>
             <div hidden={hidden}>
                 <Stack className="SemesterList" direction="horizontal" gap={3}>
                     {semesters.map((semester: Semester) => (
