@@ -38,10 +38,10 @@ export function SemesterAdd({
                     </Form.Label>
                     <Col>
                         <Form.Select value={season} onChange={updateSeason}>
-                            <option value="summer">Summer</option>
-                            <option value="fall">Fall</option>
-                            <option value="winter">Winter</option>
-                            <option value="spring">Spring</option>
+                            <option value="Summer">Summer</option>
+                            <option value="Fall">Fall</option>
+                            <option value="Winter">Winter</option>
+                            <option value="Spring">Spring</option>
                         </Form.Select>
                         <Form.Control
                             type="number"

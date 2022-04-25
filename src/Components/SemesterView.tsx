@@ -1,7 +1,8 @@
-import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import React, { useState } from "react";
+import { Col, Button } from "react-bootstrap";
 import { Semester } from "../Interfaces/Semester";
 import { AddCourse } from "./AddCourseTest";
+import { Stack } from "react-bootstrap";
 
 export function SemesterView({
     semester,
@@ -10,12 +11,17 @@ export function SemesterView({
     semester: Semester;
     deleteSemester: (id: string) => void;
 }): JSX.Element {
+    const [visible, setVisible] = useState<boolean>(true);
+
+    function flipVisibility(): void {
+        setVisible(!visible);
+    }
     return (
-        <Container>
-            <Row>
-                <Col>
-                    <h3>{semester.id}</h3>
-                    <AddCourse></AddCourse>
+        <Stack direction="horizontal">
+            <Col>
+                <h3>{semester.id}</h3>
+                <AddCourse></AddCourse>
+                {visible && (
                     <Button
                         onClick={() => deleteSemester(semester.id)}
                         variant="danger"
@@ -23,8 +29,9 @@ export function SemesterView({
                     >
                         Delete Semester
                     </Button>
-                </Col>
-            </Row>
-        </Container>
+                )}
+                <Button onClick={flipVisibility}>Edit</Button>
+            </Col>
+        </Stack>
     );
 }
