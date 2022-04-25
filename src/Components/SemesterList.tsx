@@ -1,3 +1,4 @@
+import { Grid } from "@mui/material";
 import React, { useState } from "react";
 import { Button, Stack } from "react-bootstrap";
 import { Semester } from "../Interfaces/Semester";
@@ -18,7 +19,7 @@ export function SemesterList({
                 {hidden ? <div>SHOW SEMESTERS</div> : <div>HIDE SEMESTERS</div>}
             </Button>
             <div hidden={hidden}>
-                <Stack className="SemesterList" direction="horizontal" gap={3}>
+                <Grid className="SemesterList" direction="row" gap={3}>
                     {semesters.map((semester: Semester) => (
                         <div
                             key={semester.id}
@@ -31,7 +32,7 @@ export function SemesterList({
                             ></SemesterView>
                         </div>
                     ))}
-                </Stack>
+                </Grid>
             </div>
         </div>
     );
