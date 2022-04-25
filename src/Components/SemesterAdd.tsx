@@ -19,9 +19,13 @@ export function SemesterAdd({
     }
 
     function saveChanges() {
-        addSemester({
-            id: season + " " + year
-        });
+        if (year !== "") {
+            addSemester({
+                id: season + " " + year,
+                season: season,
+                year: year
+            });
+        }
         handleClose();
     }
 
