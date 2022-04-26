@@ -14,10 +14,13 @@ function App(): JSX.Element {
                     <li>Dhruv P</li>
                 </ul>
             </header>
-            <p>
-                Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload.
-            </p>
+            <header className="App-intro">
+                <h1>Computer Science(BS) Degree Planner</h1>
+                <div className="App-intro-text">
+                    Welcome to the team 29 course scheduler for computer science
+                    students at UD
+                </div>
+            </header>
             <p>
                 <ShowHidePlans></ShowHidePlans>
             </p>
