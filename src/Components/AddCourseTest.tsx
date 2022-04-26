@@ -13,7 +13,6 @@ export function AddCourse(): JSX.Element {
     const [courses, setCourses] = useState<string[]>([]);
     const [inputValue, setInputValue] = React.useState("");
     const [value, setValue] = React.useState<string | null>(temp[0]);
-
     function addCourse(name: string) {
         if (!courses.includes(name) && name !== "") {
             const newCourses = [...courses, inputValue];
