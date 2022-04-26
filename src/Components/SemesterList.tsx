@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import React, { useState } from "react";
-import { Button, Stack } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { Semester } from "../Interfaces/Semester";
 import { SemesterView } from "./SemesterView";
 
@@ -33,17 +33,17 @@ export function SemesterList({
                             return a.year.localeCompare(b.year);
                         })
                         .map((semester: Semester) => (
-                          <div
-                              key={semester.id}
-                              // className="bg-light border m-2 p-2"
-                              className="hey"
-                          >
-                              <SemesterView
-                                  semester={semester}
-                                  deleteSemester={deleteSemester}
-                              ></SemesterView>
-                          </div>
-                      ))}
+                            <div
+                                key={semester.id}
+                                // className="bg-light border m-2 p-2"
+                                className="hey"
+                            >
+                                <SemesterView
+                                    semester={semester}
+                                    deleteSemester={deleteSemester}
+                                ></SemesterView>
+                            </div>
+                        ))}
                 </Grid>
             </div>
         </div>
