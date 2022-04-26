@@ -28,9 +28,9 @@ export function CourseEditor({
         });
         changeEditing();
     }
-    function cancel() {
-        changeEditing();
-    }
+    // function cancel() {
+    //     changeEditing();
+    // }
     return (
         <Modal show={show} onHide={handleClose} animation={false}>
             <Modal.Header>
