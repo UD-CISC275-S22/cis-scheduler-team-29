@@ -51,23 +51,10 @@ export function CourseEditor({
                         />
                     </Col>
                 </Form.Group>
+                {/* COURSE NAME */}
                 <Form.Group controlId="formCourseCredit" as={Row}>
                     <Form.Label column sm={2}>
                         Code:
-                    </Form.Label>
-                    <Col>
-                        <Form.Control
-                            value={CourseCredit}
-                            onChange={(
-                                event: React.ChangeEvent<HTMLInputElement>
-                            ) => setCourseCode(event.target.value)}
-                        />
-                    </Col>
-                </Form.Group>
-                {/* COURSE CREDIT */}
-                <Form.Group controlId="formCourseCredit" as={Row}>
-                    <Form.Label column sm={2}>
-                        Credit:
                     </Form.Label>
                     <Col>
                         <Form.Control
@@ -75,6 +62,19 @@ export function CourseEditor({
                             onChange={(
                                 event: React.ChangeEvent<HTMLInputElement>
                             ) => setCourseCredit(event.target.value)}
+                        />
+                    </Col>
+                </Form.Group>
+                <Form.Group controlId="formCourseCredit" as={Row}>
+                    <Form.Label column sm={2}>
+                        Credit:
+                    </Form.Label>
+                    <Col>
+                        <Form.Control
+                            value={CourseCredit}
+                            onChange={(
+                                event: React.ChangeEvent<HTMLInputElement>
+                            ) => setCourseCode(event.target.value)}
                         />
                     </Col>
                 </Form.Group>
