@@ -2,6 +2,7 @@ import { Courses } from "../Interfaces/Courses";
 import React from "react";
 import { Stack } from "react-bootstrap";
 import { Row, Table, Col } from "react-bootstrap";
+// import { CourseEditor } from "./EditCourse";
 
 export function ListCourses({ course }: { course: Courses[] }): JSX.Element {
     return (
