@@ -17,10 +17,10 @@ export function SemesterView({
         setVisible(!visible);
     }
     return (
-        <Stack direction="horizontal">
+        <Stack direction="horizontal" gap={0}>
             <Col>
                 <h3>{semester.id}</h3>
-                <AddCourse></AddCourse>
+                {visible && <AddCourse></AddCourse>}
                 {visible && (
                     <Button
                         onClick={() => deleteSemester(semester.id)}
