@@ -32,7 +32,7 @@ export function EditCourseModal({ course }: { course: Courses }): JSX.Element {
                 handleClose={handleCloseAddModal}
                 changeEditing={changeEditing}
                 deleteCourse={deleteCourse}
-                Course={course}
+                C={course}
                 editCourse={editCourse}
             ></CourseEditor>
         </div>

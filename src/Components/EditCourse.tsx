@@ -4,7 +4,7 @@ import { Courses } from "../Interfaces/Courses";
 
 export function CourseEditor({
     changeEditing,
-    Course,
+    C,
     show,
     handleClose,
     editCourse,
@@ -15,15 +15,15 @@ export function CourseEditor({
     show: boolean;
     handleClose: () => void;
     editCourse: (id: string, newCourse: Courses) => void;
-    Course: Courses;
+    C: Courses;
     deleteCourse: (id: string) => void;
 }): JSX.Element {
-    const [Coursecode, setCourseCode] = useState<string>(Course.Code);
-    const [CourseCredit, setCourseCredit] = useState<string>(Course.Credits);
-    const [CourseStatus, setCourseStatus] = useState<string>(Course.Status);
+    const [Coursecode, setCourseCode] = useState<string>(C.Code);
+    const [CourseCredit, setCourseCredit] = useState<string>(C.Credits);
+    const [CourseStatus, setCourseStatus] = useState<string>(C.Status);
     function save() {
-        editCourse(Course.ID, {
-            ID: Course.ID,
+        editCourse(C.ID, {
+            ID: C.ID,
             Code: Coursecode,
             Credits: CourseCredit,
             Status: CourseStatus
