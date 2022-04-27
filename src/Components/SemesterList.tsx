@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import React, { useState } from "react";
-import { Button, Container } from "react-bootstrap";
+// import { Button, Container } from "react-bootstrap";
 import { Semester } from "../Interfaces/Semester";
 import { SemesterView } from "./SemesterView";
 
@@ -11,7 +11,7 @@ export function SemesterList({
     semesters: Semester[];
     deleteSemester: (id: string) => void;
 }): JSX.Element {
-    const [hidden, setHidden] = useState(false);
+    const [hidden] = useState(false);
 
     function sortBySeason(semester: Semester[]) {
         const seasonName: string[] = ["Summer", "Fall", "Winter", "Spring"];
