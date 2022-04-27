@@ -23,11 +23,15 @@ export function SemesterList({
 
     return (
         <div>
-            <Button onClick={() => setHidden(!hidden)}>
-                {hidden ? <div>SHOW SEMESTERS</div> : <div>HIDE SEMESTERS</div>}
-            </Button>
             <div hidden={hidden}>
-                <Grid className="SemesterList" direction="row" gap={3}>
+                <Grid
+                    className="SemesterList"
+                    direction="row"
+                    gap={2}
+                    container
+                    spacing={3}
+                    columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+                >
                     {sortBySeason(semesters)
                         .sort(function (a, b) {
                             return a.year.localeCompare(b.year);
