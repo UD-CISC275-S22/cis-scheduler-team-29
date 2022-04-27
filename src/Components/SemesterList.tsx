@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import React, { useState } from "react";
-import { Button, Container } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { Semester } from "../Interfaces/Semester";
 import { SemesterView } from "./SemesterView";
 
