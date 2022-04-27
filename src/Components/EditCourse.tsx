@@ -5,15 +5,17 @@ import { Courses } from "../Interfaces/Courses";
 export function CourseEditor({
     changeEditing,
     C,
-    editCourse,
     show,
-    handleClose
+    handleClose,
+    editCourse,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    deleteCourse
 }: {
     changeEditing: () => void;
     show: boolean;
     handleClose: () => void;
-    C: Courses;
     editCourse: (id: string, newCourse: Courses) => void;
+    C: Courses;
     deleteCourse: (id: string) => void;
 }): JSX.Element {
     const [Coursecode, setCourseCode] = useState<string>(C.Code);
@@ -21,13 +23,15 @@ export function CourseEditor({
     const [CourseStatus, setCourseStatus] = useState<string>(C.Status);
     function save() {
         editCourse(C.ID, {
-            ...C,
+            ID: C.ID,
             Code: Coursecode,
             Credits: CourseCredit,
             Status: CourseStatus
         });
+        handleClose();
         changeEditing();
     }
+
     // function cancel() {
     //     changeEditing();
     // }
@@ -87,7 +91,7 @@ export function CourseEditor({
                         <Form.Control
                             as="textarea"
                             rows={3}
-                            value={Coursecode}
+                            value={CourseStatus}
                             onChange={(
                                 event: React.ChangeEvent<HTMLInputElement>
                             ) => setCourseStatus(event.target.value)}
