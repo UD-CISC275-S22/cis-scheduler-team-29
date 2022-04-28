@@ -14,7 +14,7 @@ export function CourseEditor({
     changeEditing: () => void;
     show: boolean;
     handleClose: () => void;
-    editCourse: (id: string, newCourse: Courses) => void;
+    editCourse: (course: Courses, newCourse: Courses) => void;
     Course: Courses;
     deleteCourse: (id: string) => void;
 }): JSX.Element {
@@ -22,7 +22,7 @@ export function CourseEditor({
     const [CourseCredit, setCourseCredit] = useState<string>(Course.Credits);
     const [CourseStatus, setCourseStatus] = useState<string>(Course.Status);
     function save() {
-        editCourse(Course.ID, {
+        editCourse(Course, {
             ID: Course.ID,
             Code: Coursecode,
             Credits: CourseCredit,
@@ -58,14 +58,14 @@ export function CourseEditor({
                 {/* COURSE NAME */}
                 <Form.Group controlId="formCourseCredit" as={Row}>
                     <Form.Label column sm={2}>
-                        Code:
+                        Name:
                     </Form.Label>
                     <Col>
                         <Form.Control
                             value={Coursecode}
                             onChange={(
                                 event: React.ChangeEvent<HTMLInputElement>
-                            ) => setCourseCredit(event.target.value)}
+                            ) => setCourseCode(event.target.value)}
                         />
                     </Col>
                 </Form.Group>
@@ -78,7 +78,7 @@ export function CourseEditor({
                             value={CourseCredit}
                             onChange={(
                                 event: React.ChangeEvent<HTMLInputElement>
-                            ) => setCourseCode(event.target.value)}
+                            ) => setCourseCredit(event.target.value)}
                         />
                     </Col>
                 </Form.Group>
