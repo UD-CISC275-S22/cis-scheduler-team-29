@@ -3,5 +3,5 @@ import { Semester } from "./Semester";
 export interface Plan {
     id: string;
     title: string;
-    plan: Semester[];
+    semesters: Semester[];
 }

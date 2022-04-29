@@ -24,7 +24,7 @@ export function SemesterAdd({
                 id: season + " " + year,
                 season: season,
                 year: year,
-                Courses: []
+                course: []
             });
         }
         handleClose();

@@ -17,7 +17,7 @@ export function PlanAdd({
         addPlan({
             id: id,
             title: "",
-            plan: []
+            semesters: []
         });
         handleClose();
     }

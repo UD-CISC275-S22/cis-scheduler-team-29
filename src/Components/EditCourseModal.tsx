@@ -3,7 +3,13 @@ import { Button } from "react-bootstrap";
 import { Courses } from "../Interfaces/Courses";
 import { CourseEditor } from "./EditCourse";
 
-export function EditCourseModal({ course }: { course: Courses }): JSX.Element {
+export function EditCourseModal({
+    course,
+    editCourse
+}: {
+    course: Courses;
+    editCourse: (course: Courses, newCourse: Courses) => void;
+}): JSX.Element {
     const [showAddModal, setShowAddModal] = useState(false);
 
     // eslint-disable-next-line @typescript-eslint/no-empty-function
@@ -14,11 +20,6 @@ export function EditCourseModal({ course }: { course: Courses }): JSX.Element {
         id;
     }
 
-    function editCourse(id: string, newCourse: Courses) {
-        course.Code = newCourse.Code;
-        course.Credits = newCourse.Credits;
-        course.Status = newCourse.Status;
-    }
     const handleCloseAddModal = () => setShowAddModal(false);
     const handleShowAddModal = () => setShowAddModal(true);
 
@@ -32,7 +33,7 @@ export function EditCourseModal({ course }: { course: Courses }): JSX.Element {
                 handleClose={handleCloseAddModal}
                 changeEditing={changeEditing}
                 deleteCourse={deleteCourse}
-                C={course}
+                Course={course}
                 editCourse={editCourse}
             ></CourseEditor>
         </div>
