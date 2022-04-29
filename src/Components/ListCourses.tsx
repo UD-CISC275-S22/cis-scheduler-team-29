@@ -5,7 +5,13 @@ import { Row, Table, Col } from "react-bootstrap";
 import { EditCourseModal } from "./EditCourseModal";
 // import { CourseEditor } from "./EditCourse";
 
-export function ListCourses({ course }: { course: Courses[] }): JSX.Element {
+export function ListCourses({
+    course,
+    editCourse
+}: {
+    course: Courses[];
+    editCourse: (course: Courses, newCourse: Courses) => void;
+}): JSX.Element {
     return (
         <Stack gap={3}>
             <Table>
@@ -19,7 +25,10 @@ export function ListCourses({ course }: { course: Courses[] }): JSX.Element {
                         <Col className="Code_Col">{courses.Code}</Col>
                         <Col className="Credit_Col">{courses.Credits}</Col>
                         <Col>
-                            <EditCourseModal course={courses}></EditCourseModal>
+                            <EditCourseModal
+                                course={courses}
+                                editCourse={editCourse}
+                            ></EditCourseModal>
                         </Col>
                     </Row>
                 ))}

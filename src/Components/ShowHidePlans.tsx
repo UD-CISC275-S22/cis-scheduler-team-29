@@ -29,11 +29,11 @@ export function ShowHidePlans(): JSX.Element {
     return (
         <div>
             <Button
-                variant="success"
-                className="m-4"
+                className="btn effect01"
+                target="_blank"
                 onClick={handleShowAddModal}
             >
-                Add New Plan
+                <span>📂New Plan</span>
             </Button>
             <PlanAdd
                 show={showAddModal}
