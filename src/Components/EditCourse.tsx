@@ -5,29 +5,33 @@ import { Courses } from "../Interfaces/Courses";
 export function CourseEditor({
     changeEditing,
     Course,
-    editCourse,
     show,
-    handleClose
+    handleClose,
+    editCourse,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    deleteCourse
 }: {
     changeEditing: () => void;
     show: boolean;
     handleClose: () => void;
+    editCourse: (course: Courses, newCourse: Courses) => void;
     Course: Courses;
-    editCourse: (id: string, newCourse: Courses) => void;
     deleteCourse: (id: string) => void;
 }): JSX.Element {
     const [Coursecode, setCourseCode] = useState<string>(Course.Code);
     const [CourseCredit, setCourseCredit] = useState<string>(Course.Credits);
     const [CourseStatus, setCourseStatus] = useState<string>(Course.Status);
     function save() {
-        editCourse(Course.ID, {
-            ...Course,
+        editCourse(Course, {
+            ID: Course.ID,
             Code: Coursecode,
             Credits: CourseCredit,
             Status: CourseStatus
         });
+        handleClose();
         changeEditing();
     }
+
     // function cancel() {
     //     changeEditing();
     // }
@@ -38,7 +42,7 @@ export function CourseEditor({
             </Modal.Header>
             {/* COURSE CODE */}
             <Modal.Body>
-                <Form.Group controlId="formCourseCode" as={Row}>
+                <Form.Group controlId="formCourseCode" as={Row} spacing={2}>
                     <Form.Label column sm={2}>
                         Code:
                     </Form.Label>
@@ -54,14 +58,14 @@ export function CourseEditor({
                 {/* COURSE NAME */}
                 <Form.Group controlId="formCourseCredit" as={Row}>
                     <Form.Label column sm={2}>
-                        Code:
+                        Name:
                     </Form.Label>
                     <Col>
                         <Form.Control
                             value={Coursecode}
                             onChange={(
                                 event: React.ChangeEvent<HTMLInputElement>
-                            ) => setCourseCredit(event.target.value)}
+                            ) => setCourseCode(event.target.value)}
                         />
                     </Col>
                 </Form.Group>
@@ -74,7 +78,7 @@ export function CourseEditor({
                             value={CourseCredit}
                             onChange={(
                                 event: React.ChangeEvent<HTMLInputElement>
-                            ) => setCourseCode(event.target.value)}
+                            ) => setCourseCredit(event.target.value)}
                         />
                     </Col>
                 </Form.Group>
@@ -87,7 +91,7 @@ export function CourseEditor({
                         <Form.Control
                             as="textarea"
                             rows={3}
-                            value={Coursecode}
+                            value={CourseStatus}
                             onChange={(
                                 event: React.ChangeEvent<HTMLInputElement>
                             ) => setCourseStatus(event.target.value)}
