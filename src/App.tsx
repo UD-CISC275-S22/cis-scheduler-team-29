@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
+import { Button } from "react-bootstrap";
 import "./App.css";
 import { ShowHidePlans } from "./Components/ShowHidePlans";
 import { TableView } from "./Components/TableView";
+//import { Courses } from "./Interfaces/Courses";
+import { Plan } from "./Interfaces/Plan";
+//import { Semester } from "./Interfaces/Semester";
 
 function App(): JSX.Element {
+    const [plans, setPlan] = useState<Plan[]>([]);
+    const [visible, setVisible] = useState<boolean>(true);
+
+    function flipVisibility(): void {
+        setVisible(!visible);
+    }
     return (
         <div className="App">
             <header className="App-header">
@@ -22,11 +32,17 @@ function App(): JSX.Element {
                 </div>
             </header>
             <p>
-                <ShowHidePlans></ShowHidePlans>
+                {visible && (
+                    <ShowHidePlans
+                        realPlans={plans}
+                        setPlan={setPlan}
+                    ></ShowHidePlans>
+                )}
             </p>
             <hr></hr>
             <TableView></TableView>
             <hr></hr>
+            <Button onClick={flipVisibility}>Edit</Button>
         </div>
     );
 }

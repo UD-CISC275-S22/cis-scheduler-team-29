@@ -1,14 +1,19 @@
 import { Grid } from "@mui/material";
 import React from "react";
+import { Plan } from "../Interfaces/Plan";
 import { Semester } from "../Interfaces/Semester";
 import { SemesterView } from "./SemesterView";
 
 export function SemesterList({
     semesters,
-    deleteSemester
+    deleteSemester,
+    setPlan,
+    plans
 }: {
     semesters: Semester[];
     deleteSemester: (id: string) => void;
+    setPlan: (plans: Plan[]) => void;
+    plans: Plan[];
 }): JSX.Element {
     function sortBySeason(semester: Semester[]) {
         const seasonName: string[] = ["Summer", "Fall", "Winter", "Spring"];
@@ -34,6 +39,9 @@ export function SemesterList({
                             <SemesterView
                                 semester={semester}
                                 deleteSemester={deleteSemester}
+                                courses={semester.course}
+                                plans={plans}
+                                setPlan={setPlan}
                             ></SemesterView>
                         </div>
                     ))}

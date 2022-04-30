@@ -1,29 +1,37 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
+import { Plan } from "../Interfaces/Plan";
 import { Semester } from "../Interfaces/Semester";
 import { SemesterAdd } from "./SemesterAdd";
 import { SemesterList } from "./SemesterList";
 
-const SEMESTERS: Semester[] = [];
-
-export function SemesterModal(): JSX.Element {
-    const [semesters, setSemesters] = useState<Semester[]>(SEMESTERS);
+export function SemesterModal({
+    plan,
+    plans,
+    realSemesters,
+    setPlan
+}: {
+    plan: Plan;
+    plans: Plan[];
+    realSemesters: Semester[];
+    setPlan: (plans: Plan[]) => void;
+}): JSX.Element {
     const [showAddModal, setShowAddModal] = useState(false);
 
     function addSemester(newSemester: Semester) {
         if (
-            !semesters.some((semester) => semester.id === newSemester.id) &&
+            !realSemesters.some((semester) => semester.id === newSemester.id) &&
             newSemester.id !== ""
         ) {
-            setSemesters([...semesters, newSemester]);
+            plan.semesters = [...plan.semesters, newSemester];
+            setPlan([...plans]);
         }
     }
     function deleteSemester(id: string) {
-        setSemesters(
-            semesters.filter(
-                (semester: Semester): boolean => semester.id !== id
-            )
+        plan.semesters = realSemesters.filter(
+            (semester: Semester): boolean => semester.id !== id
         );
+        setPlan([...plans]);
     }
 
     const handleCloseAddModal = () => setShowAddModal(false);
@@ -44,8 +52,10 @@ export function SemesterModal(): JSX.Element {
                 addSemester={addSemester}
             ></SemesterAdd>
             <SemesterList
-                semesters={semesters}
+                semesters={realSemesters}
                 deleteSemester={deleteSemester}
+                setPlan={setPlan}
+                plans={plans}
             ></SemesterList>
         </div>
     );

@@ -1,15 +1,26 @@
 import * as React from "react";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
-import { useState } from "react";
 import { Courses } from "../Interfaces/Courses";
 import COURSES2 from "../Data/CISC_Courses.json";
 import { ListCourses } from "./ListCourses";
+import { Semester } from "../Interfaces/Semester";
+import { Plan } from "../Interfaces/Plan";
 
 const COURSE_LIST: Courses[] = COURSES2.map((crse) => crse);
 
-export function AddCourse(): JSX.Element {
-    const [courses, setCourses] = useState<Courses[]>([]);
+export function AddCourse({
+    courses,
+    semester,
+    plans,
+    setPlan
+}: {
+    courses: Courses[];
+    setPlan: (plans: Plan[]) => void;
+    semester: Semester;
+    plans: Plan[];
+}): JSX.Element {
+    //const [courses, setCourses] = useState<Courses[]>(coursess);
 
     // const [courses, setCourses] = useState<string[]>([]);
     const [inputValue, setInputValue] = React.useState("");
@@ -18,24 +29,23 @@ export function AddCourse(): JSX.Element {
     );
 
     function editCourse(course: Courses, newCourse: Courses): void {
-        setCourses(
-            courses.map((c) => {
-                if (c.Code !== course.Code) return c;
-                return newCourse;
-            })
-        );
+        semester.course = courses.map((c) => {
+            if (c.Code !== course.Code) return c;
+            return newCourse;
+        });
+        setPlan([...plans]);
     }
     function addCourse(code: string) {
         if (!courses.find((c) => c.Code === code) && code !== "") {
             //const temp = COURSE_LIST.filter((obj) => obj.Code === name);
-            setCourses([
+            semester.course = [
                 ...courses,
-                //temp[0]
                 ...COURSE_LIST.filter((obj) => obj.Code === code)
-            ]);
+            ];
+            setPlan([...plans]);
         } else {
-            const newCourses = [...courses];
-            setCourses(newCourses);
+            semester.course = [...courses];
+            setPlan([...plans]);
         }
     }
     //function filterByName(obj: Courses) {
