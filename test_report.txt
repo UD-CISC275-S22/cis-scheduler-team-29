@@ -5,7 +5,7 @@
   console.error
     Warning: validateDOMNesting(...): <body> cannot appear as a child of <div>.
         at body
-        at App
+        at App (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/App.tsx:7:30)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
@@ -16,7 +16,7 @@
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (106 ms)
+  ✕ renders the course name somewhere (128 ms)
 
   ● renders the course name somewhere
 
@@ -104,22 +104,22 @@ FAIL src/App.test.tsx
 ----------------------|---------|----------|---------|---------|-------------------
 File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ----------------------|---------|----------|---------|---------|-------------------
-All files             |   12.26 |        0 |    7.93 |    12.5 |                   
+All files             |   10.37 |        0 |    7.93 |   10.41 |                   
  src                  |     100 |      100 |     100 |     100 |                   
   App.tsx             |     100 |      100 |     100 |     100 |                   
- src/Components       |   11.42 |        0 |    6.45 |   11.57 |                   
-  AddCourseTest.tsx   |    9.52 |        0 |    8.33 |    5.55 | 12-73             
-  EditCourse.tsx      |       0 |      100 |       0 |       0 | 21-97             
+ src/Components       |    8.65 |        0 |    6.45 |    8.51 |                   
+  AddCourseTest.tsx   |    9.09 |        0 |    8.33 |    5.26 | 23-74             
+  EditCourse.tsx      |       0 |      100 |       0 |       0 | 21-94             
   EditCourseModal.tsx |       0 |      100 |       0 |       0 | 13-26             
-  ListCourses.tsx     |       0 |      100 |       0 |       0 | 15-24             
+  ListCourses.tsx     |       0 |      100 |       0 |       0 | 14-23             
   PlanAdd.tsx         |      40 |      100 |   33.33 |      40 | 17-22,41          
-  PlanList.tsx        |      50 |      100 |      50 |      50 | 16                
-  PlanView.tsx        |       0 |      100 |       0 |       0 | 13-20             
+  PlanList.tsx        |      50 |      100 |      50 |      50 | 18                
+  PlanView.tsx        |       0 |      100 |       0 |       0 | 20-32             
   SemesterAdd.tsx     |       0 |        0 |       0 |       0 | 14-56             
-  SemesterList.tsx    |       0 |      100 |       0 |       0 | 14-37             
-  SemesterModal.tsx   |    7.69 |        0 |       0 |    9.09 | 10-32             
-  SemesterView.tsx    |       0 |        0 |       0 |       0 | 14-26             
-  ShowHidePlans.tsx   |   46.15 |        0 |   14.28 |      60 | 14-23             
+  SemesterList.tsx    |       0 |      100 |       0 |       0 | 19-41             
+  SemesterModal.tsx   |       0 |        0 |       0 |       0 | 19-40             
+  SemesterView.tsx    |       0 |        0 |       0 |       0 | 22-41             
+  ShowHidePlans.tsx   |   36.36 |        0 |   14.28 |      50 | 17-26             
   TableView.tsx       |       0 |      100 |       0 |       0 | 5-32              
  src/Interfaces       |       0 |        0 |       0 |       0 |                   
   Courses.ts          |       0 |        0 |       0 |       0 |                   
@@ -129,5 +129,5 @@ All files             |   12.26 |        0 |    7.93 |    12.5 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        4.125 s
+Time:        4.659 s
 Ran all test suites.
