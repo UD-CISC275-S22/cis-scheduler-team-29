@@ -3,7 +3,6 @@ import React from "react";
 import { Stack } from "react-bootstrap";
 import { Row, Table, Col } from "react-bootstrap";
 import { EditCourseModal } from "./EditCourseModal";
-// import { CourseEditor } from "./EditCourse";
 
 export function ListCourses({
     course,
