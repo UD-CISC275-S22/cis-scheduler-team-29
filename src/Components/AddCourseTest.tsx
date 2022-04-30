@@ -20,9 +20,6 @@ export function AddCourse({
     semester: Semester;
     plans: Plan[];
 }): JSX.Element {
-    //const [courses, setCourses] = useState<Courses[]>(coursess);
-
-    // const [courses, setCourses] = useState<string[]>([]);
     const [inputValue, setInputValue] = React.useState("");
     const [value, setValue] = React.useState<string | null>(
         COURSE_LIST[0].Code
@@ -37,7 +34,6 @@ export function AddCourse({
     }
     function addCourse(code: string) {
         if (!courses.find((c) => c.Code === code) && code !== "") {
-            //const temp = COURSE_LIST.filter((obj) => obj.Code === name);
             semester.course = [
                 ...courses,
                 ...COURSE_LIST.filter((obj) => obj.Code === code)
@@ -48,12 +44,7 @@ export function AddCourse({
             setPlan([...plans]);
         }
     }
-    //function filterByName(obj: Courses) {
-    // if (courses.includes(obj.Code)) {
-    //     return true;
-    // }
-    //    if (obj.Code === name)
-    //}
+
     return (
         <div>
             <div>
@@ -89,10 +80,3 @@ export function AddCourse({
         </div>
     );
 }
-/*
-<ul>
-                {courses.map((person: string) => (
-                    <li key={person}>{person}</li>
-                ))}
-            </ul>
-*/
