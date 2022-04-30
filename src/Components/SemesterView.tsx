@@ -20,7 +20,6 @@ export function SemesterView({
         <Stack direction="horizontal" gap={0}>
             <Col>
                 <h3>{semester.id}</h3>
-                {visible && <AddCourse></AddCourse>}
                 {visible && (
                     <Button
                         onClick={() => deleteSemester(semester.id)}
