@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material";
+import Grid from "@mui/material/Grid";
 import React from "react";
 import { Plan } from "../Interfaces/Plan";
 import { Semester } from "../Interfaces/Semester";
@@ -25,7 +25,10 @@ export function SemesterList({
 
     return (
         <div>
-            <Grid className="SemesterList" direction="row" gap={3}>
+            <Grid className="SemesterList" direction="row" gap={2}
+                    container
+                    spacing={3}
+                    columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                 {sortBySeason(semesters)
                     .sort(function (a, b) {
                         return a.year.localeCompare(b.year);

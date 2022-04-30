@@ -42,7 +42,7 @@ export function CourseEditor({
             </Modal.Header>
             {/* COURSE CODE */}
             <Modal.Body>
-                <Form.Group controlId="formCourseCode" as={Row}>
+                <Form.Group controlId="formCourseCode" as={Row} spacing={2}>
                     <Form.Label column sm={2}>
                         Code:
                     </Form.Label>
