@@ -5,20 +5,17 @@ import { CourseEditor } from "./EditCourse";
 
 export function EditCourseModal({
     course,
-    editCourse
+    editCourse,
+    deleteCourse
 }: {
     course: Courses;
     editCourse: (course: Courses, newCourse: Courses) => void;
+    deleteCourse: (name: string) => void;
 }): JSX.Element {
     const [showAddModal, setShowAddModal] = useState(false);
 
     // eslint-disable-next-line @typescript-eslint/no-empty-function
     function changeEditing() {}
-
-    // eslint-disable-next-line @typescript-eslint/no-empty-function
-    function deleteCourse(id: string) {
-        id;
-    }
 
     const handleCloseAddModal = () => setShowAddModal(false);
     const handleShowAddModal = () => setShowAddModal(true);
@@ -27,6 +24,9 @@ export function EditCourseModal({
         <div>
             <Button variant="success" onClick={handleShowAddModal}>
                 Edit
+            </Button>
+            <Button onClick={() => deleteCourse(course.Code)} variant="danger">
+                X
             </Button>
             <CourseEditor
                 show={showAddModal}

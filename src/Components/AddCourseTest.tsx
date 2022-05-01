@@ -45,6 +45,11 @@ export function AddCourse({
         }
     }
 
+    function deleteCourse(code: string) {
+        semester.course = [...courses.filter((obj) => obj.Code !== code)];
+        setPlan([...plans]);
+    }
+
     return (
         <div>
             <div>
@@ -76,7 +81,11 @@ export function AddCourse({
                     Add Course
                 </button>
             </div>
-            <ListCourses course={courses} editCourse={editCourse}></ListCourses>
+            <ListCourses
+                course={courses}
+                editCourse={editCourse}
+                deleteCourse={deleteCourse}
+            ></ListCourses>
         </div>
     );
 }
