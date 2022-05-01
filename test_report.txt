@@ -16,7 +16,7 @@
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (128 ms)
+  ✕ renders the course name somewhere (77 ms)
 
   ● renders the course name somewhere
 
@@ -104,14 +104,14 @@ FAIL src/App.test.tsx
 ----------------------|---------|----------|---------|---------|-------------------
 File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ----------------------|---------|----------|---------|---------|-------------------
-All files             |   10.37 |        0 |    7.93 |   10.41 |                   
+All files             |   10.09 |        0 |    7.69 |    10.2 |                   
  src                  |     100 |      100 |     100 |     100 |                   
   App.tsx             |     100 |      100 |     100 |     100 |                   
- src/Components       |    8.65 |        0 |    6.45 |    8.51 |                   
-  AddCourseTest.tsx   |    9.09 |        0 |    8.33 |    5.26 | 23-74             
+ src/Components       |    8.41 |        0 |    6.25 |    8.33 |                   
+  AddCourseTest.tsx   |       8 |        0 |    7.14 |    4.76 | 23-79             
   EditCourse.tsx      |       0 |      100 |       0 |       0 | 21-94             
-  EditCourseModal.tsx |       0 |      100 |       0 |       0 | 13-26             
-  ListCourses.tsx     |       0 |      100 |       0 |       0 | 14-23             
+  EditCourseModal.tsx |       0 |      100 |       0 |       0 | 15-28             
+  ListCourses.tsx     |       0 |      100 |       0 |       0 | 16-25             
   PlanAdd.tsx         |      40 |      100 |   33.33 |      40 | 17-22,41          
   PlanList.tsx        |      50 |      100 |      50 |      50 | 18                
   PlanView.tsx        |       0 |      100 |       0 |       0 | 20-32             
@@ -129,5 +129,5 @@ All files             |   10.37 |        0 |    7.93 |   10.41 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        4.659 s
+Time:        3.178 s
 Ran all test suites.
