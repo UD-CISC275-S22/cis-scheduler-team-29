@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import { ShowHidePlans } from "./Components/ShowHidePlans";
+import { Plan } from "./Interfaces/Plan";
 
 function App(): JSX.Element {
+    const [plans, setPlan] = useState<Plan[]>([]);
     return (
         <body className="App">
             <div className="header">
@@ -20,15 +22,15 @@ function App(): JSX.Element {
                         <h1>Scheduler!</h1>
                     </div>
                 </header>
-                {/* <header className="App-intro">
-                <h1>Computer Science(BS) Degree Planner</h1>
-                <div className="App-intro-text">
-                    Welcome to the team 29 course scheduler for computer science
-                    students at UD
-                </div>
-            </header> */}
+                {/*<header className="App-intro">
+                    <h1>Computer Science(BS) Degree Planner</h1>
+                    <div className="App-intro-text">
+                        Welcome to the team 29 course scheduler for computer
+                        science students at UD
+                    </div>
+                </header>*/}
             </div>
-            <ShowHidePlans></ShowHidePlans>
+            <ShowHidePlans realPlans={plans} setPlan={setPlan}></ShowHidePlans>
         </body>
     );
 }

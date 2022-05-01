@@ -81,7 +81,11 @@ export function AddCourse({
                     Add Course
                 </button>
             </div>
-            <ListCourses course={courses} editCourse={editCourse}></ListCourses>
+            <ListCourses
+                course={courses}
+                editCourse={editCourse}
+                deleteCourse={deleteCourse}
+            ></ListCourses>
         </div>
     );
 }
