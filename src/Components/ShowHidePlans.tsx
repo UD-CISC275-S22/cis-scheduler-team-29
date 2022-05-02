@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { Plan } from "../Interfaces/Plan";
 import { PlanAdd } from "./PlanAdd";
-import { PlanList } from "./PlanList";
 
 export function ShowHidePlans({
     realPlans,
@@ -43,11 +42,11 @@ export function ShowHidePlans({
                 handleClose={handleCloseAddModal}
                 addPlan={addPlan}
             ></PlanAdd>
-            <PlanList
+            {/* <PlanList
                 plans={realPlans}
                 deletePlan={deletePlan}
                 setPlan={setPlan}
-            ></PlanList>
+            ></PlanList> */}
         </div>
     );
 }
