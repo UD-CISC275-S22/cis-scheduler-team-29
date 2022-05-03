@@ -38,25 +38,29 @@ export function SemesterModal({
     const handleShowAddModal = () => setShowAddModal(true);
 
     return (
-        <div>
-            <Button
-                variant="success"
-                className="m-4"
-                onClick={handleShowAddModal}
-            >
-                Add New Semester
-            </Button>
-            <SemesterAdd
-                show={showAddModal}
-                handleClose={handleCloseAddModal}
-                addSemester={addSemester}
-            ></SemesterAdd>
-            <SemesterList
-                semesters={realSemesters}
-                deleteSemester={deleteSemester}
-                setPlan={setPlan}
-                plans={plans}
-            ></SemesterList>
-        </div>
+        <>
+            <h4>
+                <Button
+                    variant="success"
+                    className="m-4"
+                    onClick={handleShowAddModal}
+                >
+                    Add New Semester
+                </Button>
+            </h4>
+            <div>
+                <SemesterAdd
+                    show={showAddModal}
+                    handleClose={handleCloseAddModal}
+                    addSemester={addSemester}
+                ></SemesterAdd>
+                <SemesterList
+                    semesters={realSemesters}
+                    deleteSemester={deleteSemester}
+                    setPlan={setPlan}
+                    plans={plans}
+                ></SemesterList>
+            </div>
+        </>
     );
 }
