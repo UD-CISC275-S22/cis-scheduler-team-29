@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Button, Modal } from "react-bootstrap";
+import { Container, Button, Modal } from "react-bootstrap";
 import { Plan } from "../Interfaces/Plan";
 import { Semester } from "../Interfaces/Semester";
 import { SemesterModal } from "./SemesterModal";
@@ -11,7 +11,8 @@ export function PlanView({
     semesters,
     setPlan,
     show,
-    handleClose
+    handleClose,
+    saveDataKey
 }: {
     plan: Plan;
     plans: Plan[];
@@ -20,27 +21,31 @@ export function PlanView({
     setPlan: (plans: Plan[]) => void;
     show: boolean;
     handleClose: () => void;
+    saveDataKey: string;
 }): JSX.Element {
     function saveChanges() {
+        localStorage.setItem(saveDataKey, JSON.stringify(plans));
         handleClose();
     }
     return (
-        <Modal show={show} onHide={handleClose} animation={true} size="xl">
+        <Modal
+            show={show}
+            centered
+            onHide={handleClose}
+            animation={true}
+            size="xl"
+        >
             <Modal.Header closeButton>
                 <Modal.Title>{plan.id}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <Container>
-                    <Row>
-                        <Col>
-                            <SemesterModal
-                                realSemesters={semesters}
-                                plan={plan}
-                                plans={plans}
-                                setPlan={setPlan}
-                            ></SemesterModal>
-                        </Col>
-                    </Row>
+                    <SemesterModal
+                        realSemesters={semesters}
+                        plan={plan}
+                        plans={plans}
+                        setPlan={setPlan}
+                    ></SemesterModal>
                 </Container>
             </Modal.Body>
             <Modal.Footer>

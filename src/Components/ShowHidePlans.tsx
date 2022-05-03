@@ -5,10 +5,12 @@ import { PlanAdd } from "./PlanAdd";
 
 export function ShowHidePlans({
     realPlans,
-    setPlan
+    setPlan,
+    saveDataKey
 }: {
     realPlans: Plan[];
     setPlan: (plans: Plan[]) => void;
+    saveDataKey: string;
 }): JSX.Element {
     const [showAddModal, setShowAddModal] = useState(false);
 
@@ -18,11 +20,11 @@ export function ShowHidePlans({
             newPlan.id !== ""
         ) {
             setPlan([...realPlans, newPlan]);
+            localStorage.setItem(
+                saveDataKey,
+                JSON.stringify([...realPlans, newPlan])
+            );
         }
-    }
-
-    function deletePlan(id: string) {
-        setPlan(realPlans.filter((plan: Plan): boolean => plan.id !== id));
     }
 
     const handleCloseAddModal = () => setShowAddModal(false);

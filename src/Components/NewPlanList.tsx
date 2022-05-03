@@ -5,10 +5,12 @@ import { PlanView } from "./PlanView";
 
 export function NewPlanList({
     plans,
-    setPlan
+    setPlan,
+    saveDataKey
 }: {
     plans: Plan[];
     setPlan: (plans: Plan[]) => void;
+    saveDataKey: string;
 }): JSX.Element {
     const [showAddModal, setShowAddModal] = useState(false);
     const [planToShow, setPlanToShow] = useState<Plan>();
@@ -21,6 +23,13 @@ export function NewPlanList({
 
     function deletePlan(id: string) {
         setPlan(plans.filter((plan: Plan): boolean => plan.id !== id));
+        localStorage.setItem(
+            saveDataKey,
+            JSON.stringify(
+                plans.filter((plan: Plan): boolean => plan.id !== id)
+            )
+        );
+        setShowAddModal(false);
     }
 
     // function rightPlan(id: string) {
@@ -52,6 +61,7 @@ export function NewPlanList({
                 setPlan={setPlan}
                 show={showAddModal}
                 handleClose={handleCloseAddModal}
+                saveDataKey={saveDataKey}
             ></PlanView>
         </Stack>
     );
