@@ -53,7 +53,7 @@
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (123 ms)
+  ✕ renders the course name somewhere (92 ms)
 
   ● renders the course name somewhere
 
@@ -152,7 +152,7 @@ FAIL src/App.test.tsx
 ----------------------|---------|----------|---------|---------|-------------------
 File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ----------------------|---------|----------|---------|---------|-------------------
-All files             |   11.02 |     7.14 |    5.79 |    11.3 |                   
+All files             |   11.02 |     6.66 |    5.79 |    11.3 |                   
  src                  |   85.71 |       50 |     100 |   85.71 |                   
   App.tsx             |   85.71 |       50 |     100 |   85.71 | 13                
  src/Components       |    6.66 |        0 |    4.41 |    6.48 |                   
@@ -160,7 +160,7 @@ All files             |   11.02 |     7.14 |    5.79 |    11.3 |
   EditCourse.tsx      |       0 |      100 |       0 |       0 | 16-88             
   EditCourseModal.tsx |       0 |      100 |       0 |       0 | 15-25             
   ListCourses.tsx     |       0 |      100 |       0 |       0 | 16-25             
-  NewPlanList.tsx     |       0 |        0 |       0 |       0 | 15-46             
+  NewPlanList.tsx     |       0 |        0 |       0 |       0 | 15-47             
   PlanAdd.tsx         |      40 |      100 |   33.33 |      40 | 17-22,42          
   PlanView.tsx        |       0 |      100 |       0 |       0 | 27-53             
   SemesterAdd.tsx     |       0 |        0 |       0 |       0 | 14-56             
@@ -177,5 +177,5 @@ All files             |   11.02 |     7.14 |    5.79 |    11.3 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        5.197 s
+Time:        3.879 s
 Ran all test suites.
