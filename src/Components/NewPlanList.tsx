@@ -38,9 +38,9 @@ export function NewPlanList({
 
     return (
         <Stack gap={3}>
-            {plans.length !== 0 &&
-                plans.map((plan: Plan) => (
-                    <div key={plan.id} className="planlist">
+            {plans.map((plan: Plan) => (
+                <div key={plan.id} className="planlist">
+                    {plans.length !== 0 && (
                         <Button
                             className="btn effect01"
                             target="_blank"
@@ -48,8 +48,9 @@ export function NewPlanList({
                         >
                             <span>{plan.id}</span>
                         </Button>
-                    </div>
-                ))}
+                    )}
+                </div>
+            ))}
             <PlanView
                 plan={
                     planToShow !== undefined
