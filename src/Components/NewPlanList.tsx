@@ -38,7 +38,7 @@ export function NewPlanList({
 
     return (
         <Stack gap={3}>
-            {plans !== [] &&
+            {plans.length !== 0 &&
                 plans.map((plan: Plan) => (
                     <div key={plan.id} className="planlist">
                         <Button
