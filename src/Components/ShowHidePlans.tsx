@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import { Courses } from "../Interfaces/Courses";
 import { Plan } from "../Interfaces/Plan";
 import { PlanAdd } from "./PlanAdd";
 
@@ -9,7 +8,6 @@ export function ShowHidePlans({
     setPlan,
     saveDataKey
 }: {
-    course: Courses[];
     realPlans: Plan[];
     setPlan: (plans: Plan[]) => void;
     saveDataKey: string;
