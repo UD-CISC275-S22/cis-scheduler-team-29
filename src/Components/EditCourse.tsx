@@ -3,20 +3,15 @@ import React, { useState } from "react";
 import { Courses } from "../Interfaces/Courses";
 
 export function CourseEditor({
-    changeEditing,
     Course,
     show,
     handleClose,
-    editCourse,
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    deleteCourse
+    editCourse
 }: {
-    changeEditing: () => void;
     show: boolean;
     handleClose: () => void;
     editCourse: (course: Courses, newCourse: Courses) => void;
     Course: Courses;
-    deleteCourse: (id: string) => void;
 }): JSX.Element {
     const [Coursecode, setCourseCode] = useState<string>(Course.Code);
     const [CourseCredit, setCourseCredit] = useState<string>(Course.Credits);
@@ -29,7 +24,6 @@ export function CourseEditor({
             Status: CourseStatus
         });
         handleClose();
-        changeEditing();
     }
 
     return (

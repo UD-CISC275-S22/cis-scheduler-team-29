@@ -3,16 +3,16 @@ import { Button } from "react-bootstrap";
 import { Courses } from "../Interfaces/Courses";
 import { Plan } from "../Interfaces/Plan";
 import { PlanAdd } from "./PlanAdd";
-import { PlanList } from "./PlanList";
 
 export function ShowHidePlans({
-    course,
     realPlans,
-    setPlan
+    setPlan,
+    saveDataKey
 }: {
     course: Courses[];
     realPlans: Plan[];
     setPlan: (plans: Plan[]) => void;
+    saveDataKey: string;
 }): JSX.Element {
     const [showAddModal, setShowAddModal] = useState(false);
 
@@ -22,11 +22,11 @@ export function ShowHidePlans({
             newPlan.id !== ""
         ) {
             setPlan([...realPlans, newPlan]);
+            localStorage.setItem(
+                saveDataKey,
+                JSON.stringify([...realPlans, newPlan])
+            );
         }
-    }
-
-    function deletePlan(id: string) {
-        setPlan(realPlans.filter((plan: Plan): boolean => plan.id !== id));
     }
 
     const handleCloseAddModal = () => setShowAddModal(false);
@@ -46,12 +46,11 @@ export function ShowHidePlans({
                 handleClose={handleCloseAddModal}
                 addPlan={addPlan}
             ></PlanAdd>
-            <PlanList
-                course={course}
+            {/* <PlanList
                 plans={realPlans}
                 deletePlan={deletePlan}
                 setPlan={setPlan}
-            ></PlanList>
+            ></PlanList> */}
         </div>
     );
 }
