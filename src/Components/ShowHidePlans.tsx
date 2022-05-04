@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
+import { Courses } from "../Interfaces/Courses";
 import { Plan } from "../Interfaces/Plan";
 import { PlanAdd } from "./PlanAdd";
 import { PlanList } from "./PlanList";
 
 export function ShowHidePlans({
+    course,
     realPlans,
     setPlan
 }: {
+    course: Courses[];
     realPlans: Plan[];
     setPlan: (plans: Plan[]) => void;
 }): JSX.Element {
@@ -44,6 +47,7 @@ export function ShowHidePlans({
                 addPlan={addPlan}
             ></PlanAdd>
             <PlanList
+                course={course}
                 plans={realPlans}
                 deletePlan={deletePlan}
                 setPlan={setPlan}

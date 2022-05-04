@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import "./App.css";
 import { ShowHidePlans } from "./Components/ShowHidePlans";
+import { Courses } from "./Interfaces/Courses";
 import { Plan } from "./Interfaces/Plan";
 
 function App(): JSX.Element {
     const [plans, setPlan] = useState<Plan[]>([]);
+    const [course, setCourse] = useState<Courses[]>([]);
     return (
         <body className="App">
             <div className="header">
@@ -30,7 +32,11 @@ function App(): JSX.Element {
                     </div>
                 </header>*/}
             </div>
-            <ShowHidePlans realPlans={plans} setPlan={setPlan}></ShowHidePlans>
+            <ShowHidePlans
+                realPlans={plans}
+                setPlan={setPlan}
+                course={course}
+            ></ShowHidePlans>
         </body>
     );
 }
