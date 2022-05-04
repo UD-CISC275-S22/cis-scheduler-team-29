@@ -35,19 +35,19 @@ function App(): JSX.Element {
                                 <h1>Scheduler!</h1>
                             </div>
                         </p>
-                        <p className="alignright">
-                            {plans.length !== 0 && (
-                                <p>
-                                    View/Edit your saved Degree Plans
-                                    <div>
-                                        <NewPlanList
-                                            plans={plans}
-                                            setPlan={setPlan}
-                                            saveDataKey={saveDataKey}
-                                        ></NewPlanList>
-                                    </div>
-                                </p>
-                            )}
+                        <p className="vieweditdegreeplan">
+                            <p>
+                                View/Edit your saved Degree Plans
+                                <div>------------------------</div>
+                                {plans.length === 0 && <div>No Plans</div>}
+                                <div>
+                                    <NewPlanList
+                                        plans={plans}
+                                        setPlan={setPlan}
+                                        saveDataKey={saveDataKey}
+                                    ></NewPlanList>
+                                </div>
+                            </p>
                         </p>
                     </div>
                 </header>

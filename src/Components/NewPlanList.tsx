@@ -37,18 +37,16 @@ export function NewPlanList({
     // }
 
     return (
-        <Stack gap={3}>
+        <Stack gap={2} className="planlist">
             {plans.map((plan: Plan) => (
-                <div key={plan.id} className="planlist">
-                    {plans.length !== 0 && (
-                        <Button
-                            className="btn effect01"
-                            target="_blank"
-                            onClick={() => handleShowAddModal(plan)}
-                        >
-                            <span>{plan.id}</span>
-                        </Button>
-                    )}
+                <div key={plan.id}>
+                    <Button
+                        className="btn effect02"
+                        target="_blank"
+                        onClick={() => handleShowAddModal(plan)}
+                    >
+                        <span>{plan.id}</span>
+                    </Button>
                 </div>
             ))}
             <PlanView
