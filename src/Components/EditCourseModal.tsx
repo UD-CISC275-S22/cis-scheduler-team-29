@@ -14,9 +14,6 @@ export function EditCourseModal({
 }): JSX.Element {
     const [showAddModal, setShowAddModal] = useState(false);
 
-    // eslint-disable-next-line @typescript-eslint/no-empty-function
-    function changeEditing() {}
-
     const handleCloseAddModal = () => setShowAddModal(false);
     const handleShowAddModal = () => setShowAddModal(true);
 
@@ -31,8 +28,6 @@ export function EditCourseModal({
             <CourseEditor
                 show={showAddModal}
                 handleClose={handleCloseAddModal}
-                changeEditing={changeEditing}
-                deleteCourse={deleteCourse}
                 Course={course}
                 editCourse={editCourse}
             ></CourseEditor>

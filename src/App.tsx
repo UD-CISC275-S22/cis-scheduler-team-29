@@ -1,10 +1,20 @@
 import React, { useState } from "react";
 import "./App.css";
+import { NewPlanList } from "./Components/NewPlanList";
 import { ShowHidePlans } from "./Components/ShowHidePlans";
 import { Plan } from "./Interfaces/Plan";
 
+const saveDataKey = "MY-PAGE-DATA";
+let loadedData: Plan[] = [];
+// Check if the user's data already exists
+const previousData = localStorage.getItem(saveDataKey);
+// If the data doesn't exist, `getItem` returns null
+if (previousData !== null) {
+    loadedData = JSON.parse(previousData);
+}
+
 function App(): JSX.Element {
-    const [plans, setPlan] = useState<Plan[]>([]);
+    const [plans, setPlan] = useState<Plan[]>(loadedData);
     return (
         <body className="App">
             <div className="header">
@@ -15,22 +25,38 @@ function App(): JSX.Element {
                     <div className="headertopleft">
                         <p>University of Delaware</p>
                     </div>
-                    <div className="Welcomemiddle">
-                        <h1>Welcome</h1>
-                        <h1>to the</h1>
-                        <h1>UD Course</h1>
-                        <h1>Scheduler!</h1>
+                    <div id="textbox">
+                        <p className="alignleft"></p>
+                        <p className="aligncenter">
+                            <div className="Welcomemiddle">
+                                <h1>Welcome</h1>
+                                <h1>to the</h1>
+                                <h1>UD Course</h1>
+                                <h1>Scheduler!</h1>
+                            </div>
+                        </p>
+                        <p className="alignright">
+                            {plans.length !== 0 && (
+                                <p>
+                                    View/Edit your saved Degree Plans
+                                    <div>
+                                        <NewPlanList
+                                            plans={plans}
+                                            setPlan={setPlan}
+                                            saveDataKey={saveDataKey}
+                                        ></NewPlanList>
+                                    </div>
+                                </p>
+                            )}
+                        </p>
                     </div>
                 </header>
-                {/*<header className="App-intro">
-                    <h1>Computer Science(BS) Degree Planner</h1>
-                    <div className="App-intro-text">
-                        Welcome to the team 29 course scheduler for computer
-                        science students at UD
-                    </div>
-                </header>*/}
             </div>
-            <ShowHidePlans realPlans={plans} setPlan={setPlan}></ShowHidePlans>
+            <ShowHidePlans
+                realPlans={plans}
+                setPlan={setPlan}
+                saveDataKey={saveDataKey}
+            ></ShowHidePlans>
         </body>
     );
 }

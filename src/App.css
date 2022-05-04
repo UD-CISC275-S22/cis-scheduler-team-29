@@ -136,3 +136,22 @@
 .h1 {
     font-size: xx-large;
 }
+
+#textbox {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.alignleft {
+    width: 33.33333%;
+    text-align: left;
+}
+.aligncenter {
+    width: 33.33333%;
+    text-align: center;
+}
+.alignright {
+    width: 33.33333%;
+    text-align: right;
+}
