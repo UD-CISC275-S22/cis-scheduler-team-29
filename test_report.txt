@@ -11,7 +11,7 @@
         at header
         at div
         at body
-        at App (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/App.tsx:18:30)
+        at App (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/App.tsx:17:30)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
@@ -29,7 +29,25 @@
         at header
         at div
         at body
-        at App (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/App.tsx:18:30)
+        at App (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/App.tsx:17:30)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at validateDOMNesting (node_modules/react-dom/cjs/react-dom.development.js:10083:7)
+      at createInstance (node_modules/react-dom/cjs/react-dom.development.js:10181:5)
+      at completeWork (node_modules/react-dom/cjs/react-dom.development.js:19464:28)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
+
+  console.error
+    Warning: validateDOMNesting(...): <p> cannot appear as a descendant of <p>.
+        at p
+        at p
+        at div
+        at header
+        at div
+        at body
+        at App (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/App.tsx:17:30)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
@@ -42,7 +60,7 @@
   console.error
     Warning: validateDOMNesting(...): <body> cannot appear as a child of <div>.
         at body
-        at App (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/App.tsx:18:30)
+        at App (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/App.tsx:17:30)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
@@ -53,7 +71,7 @@
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (95 ms)
+  ✕ renders the course name somewhere (92 ms)
 
   ● renders the course name somewhere
 
@@ -110,8 +128,23 @@ FAIL src/App.test.tsx
                   [36m</div>[39m
                 [36m</p>[39m
                 [36m<p[39m
-                  [33mclass[39m=[32m"alignright"[39m
-                [36m/>[39m
+                  [33mclass[39m=[32m"vieweditdegreeplan"[39m
+                [36m>[39m
+                  [36m<p>[39m
+                    [0mView/Edit your saved Degree Plans[0m
+                    [36m<div>[39m
+                      [0m------------------------[0m
+                    [36m</div>[39m
+                    [36m<div>[39m
+                      [0mNo Plans[0m
+                    [36m</div>[39m
+                    [36m<div>[39m
+                      [36m<div[39m
+                        [33mclass[39m=[32m"planlist vstack gap-2"[39m
+                      [36m/>[39m
+                    [36m</div>[39m
+                  [36m</p>[39m
+                [36m</p>[39m
               [36m</div>[39m
             [36m</header>[39m
           [36m</div>[39m
@@ -152,23 +185,23 @@ FAIL src/App.test.tsx
 ----------------------|---------|----------|---------|---------|-------------------
 File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ----------------------|---------|----------|---------|---------|-------------------
-All files             |   11.19 |     7.69 |    5.47 |   11.66 |                   
- src                  |    87.5 |       50 |     100 |    87.5 |                   
-  App.tsx             |    87.5 |       50 |     100 |    87.5 | 14                
- src/Components       |    6.34 |        0 |    4.16 |    6.25 |                   
+All files             |   15.62 |    20.83 |    8.45 |   16.37 |                   
+ src                  |   85.71 |       75 |     100 |   85.71 |                   
+  App.tsx             |   85.71 |       75 |     100 |   85.71 | 13                
+ src/Components       |   11.57 |       10 |    7.14 |   11.92 |                   
   AddCourseTest.tsx   |       8 |        0 |    7.14 |    4.76 | 24-82             
   EditCourse.tsx      |       0 |      100 |       0 |       0 | 16-88             
   EditCourseModal.tsx |       0 |      100 |       0 |       0 | 15-25             
   ListCourses.tsx     |       0 |      100 |       0 |       0 | 16-25             
-  NewPlanList.tsx     |       0 |        0 |       0 |       0 | 18-50             
+  NewPlanList.tsx     |   33.33 |       50 |    12.5 |   38.46 | 20-32,42-46       
   PlanAdd.tsx         |      40 |      100 |   33.33 |      40 | 17-22,42          
-  PlanView.tsx        |       0 |      100 |       0 |       0 | 30-67             
+  PlanView.tsx        |      25 |      100 |   33.33 |      25 | 27-28,47          
   PlanViewModal.tsx   |       0 |      100 |       0 |       0 | 18-35             
   SemesterAdd.tsx     |       0 |        0 |       0 |       0 | 14-56             
   SemesterList.tsx    |       0 |      100 |       0 |       0 | 19-41             
   SemesterModal.tsx   |       0 |        0 |       0 |       0 | 19-40             
   SemesterView.tsx    |       0 |      100 |       0 |       0 | 22-34             
-  ShowHidePlans.tsx   |      40 |        0 |      20 |      50 | 20-25             
+  ShowHidePlans.tsx   |      40 |        0 |      20 |      50 | 18-23             
   TableView.tsx       |       0 |      100 |       0 |       0 | 5-32              
  src/Interfaces       |       0 |        0 |       0 |       0 |                   
   Courses.ts          |       0 |        0 |       0 |       0 |                   
@@ -178,5 +211,5 @@ All files             |   11.19 |     7.69 |    5.47 |   11.66 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.846 s
+Time:        4.041 s
 Ran all test suites.
