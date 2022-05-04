@@ -43,6 +43,7 @@ function App(): JSX.Element {
                                     View/Edit your saved Degree Plans
                                     <div>
                                         <NewPlanList
+                                            course={course}
                                             plans={plans}
                                             setPlan={setPlan}
                                             saveDataKey={saveDataKey}
