@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import { NewPlanList } from "./Components/NewPlanList";
 import { ShowHidePlans } from "./Components/ShowHidePlans";
+import { Courses } from "./Interfaces/Courses";
 import { Plan } from "./Interfaces/Plan";
 
 const saveDataKey = "MY-PAGE-DATA";
@@ -15,6 +16,7 @@ if (previousData !== null) {
 
 function App(): JSX.Element {
     const [plans, setPlan] = useState<Plan[]>(loadedData);
+    const [course] = useState<Courses[]>([]);
     return (
         <body className="App">
             <div className="header">
@@ -41,6 +43,7 @@ function App(): JSX.Element {
                                     View/Edit your saved Degree Plans
                                     <div>
                                         <NewPlanList
+                                            course={course}
                                             plans={plans}
                                             setPlan={setPlan}
                                             saveDataKey={saveDataKey}
@@ -55,6 +58,7 @@ function App(): JSX.Element {
             <ShowHidePlans
                 realPlans={plans}
                 setPlan={setPlan}
+                course={course}
                 saveDataKey={saveDataKey}
             ></ShowHidePlans>
         </body>
