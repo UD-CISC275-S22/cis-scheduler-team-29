@@ -6,6 +6,7 @@ import COURSES2 from "../Data/CISC_Courses.json";
 import { ListCourses } from "./ListCourses";
 import { Semester } from "../Interfaces/Semester";
 import { Plan } from "../Interfaces/Plan";
+import { Button, Grid } from "@mui/material";
 
 const COURSE_LIST: Courses[] = COURSES2.map((crse) => crse);
 
@@ -53,33 +54,43 @@ export function AddCourse({
     return (
         <div>
             <div>
-                <Autocomplete
-                    value={value}
-                    onChange={(
-                        event: React.SyntheticEvent<Element, Event>,
-                        newValue: string | null
-                    ) => {
-                        setValue(newValue);
-                    }}
-                    inputValue={inputValue}
-                    onInputChange={(event, newInputValue) => {
-                        setInputValue(newInputValue);
-                    }}
-                    id="controllable-states-demo"
-                    options={COURSE_LIST.map(
-                        (test: Courses): string => test.Code
-                    )}
-                    sx={{ width: 200, textAlign: "center" }}
-                    renderInput={(params) => (
-                        <TextField {...params} label="Courses" />
-                    )}
-                />
-                <button
-                    style={{ textAlign: "left" }}
+                <Grid>
+                    <Autocomplete
+                        value={value}
+                        onChange={(
+                            event: React.SyntheticEvent<Element, Event>,
+                            newValue: string | null
+                        ) => {
+                            setValue(newValue);
+                        }}
+                        inputValue={inputValue}
+                        onInputChange={(event, newInputValue) => {
+                            setInputValue(newInputValue);
+                        }}
+                        id="controllable-states-demo"
+                        options={COURSE_LIST.map(
+                            (test: Courses): string => test.Code
+                        )}
+                        sx={{ width: 200, textAlign: "center" }}
+                        renderInput={(params) => (
+                            <TextField {...params} label="Courses" />
+                        )}
+                    />
+                    <div>
+                        <Button
+                            style={{ textAlign: "center" }}
+                            onClick={() => addCourse(inputValue)}
+                        >
+                            Add Course
+                        </Button>
+                    </div>
+                    {/* <button
+                    style={{ textAlign: "center" }}
                     onClick={() => addCourse(inputValue)}
                 >
                     Add Course
-                </button>
+                </button> */}
+                </Grid>
             </div>
             <ListCourses
                 course={courses}

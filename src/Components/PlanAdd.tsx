@@ -36,6 +36,7 @@ export function PlanAdd({
                     <Col>
                         <Form.Control
                             value={id}
+                            autoFocus
                             onChange={(
                                 event: React.ChangeEvent<HTMLInputElement>
                             ) => setId(event.target.value)}
