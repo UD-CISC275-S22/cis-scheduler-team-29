@@ -2,12 +2,10 @@ import { Courses } from "../Interfaces/Courses";
 import { Semester } from "../Interfaces/Semester";
 import React from "react";
 import { Button, Modal, Stack } from "react-bootstrap";
-import { Row, Table, Col } from "react-bootstrap";
-import { ListCourses } from "./ListCourses";
+import { Row, Col } from "react-bootstrap";
 
 export function PlanViewModal({
     semesters,
-    course,
     show,
     handleClose
 }: {
