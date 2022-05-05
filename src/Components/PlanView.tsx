@@ -57,7 +57,7 @@ export function PlanView({
                     <PlanViewModal
                         show={showPlanViewModal}
                         handleClose={handleClosePlanViewModal}
-                        semester={plan.semesters}
+                        semesters={plan.semesters}
                         course={course}
                     ></PlanViewModal>
                 </Container>
@@ -70,9 +70,7 @@ export function PlanView({
                 >
                     Delete Plan
                 </Button>
-                <Button onClick={handleShowPlanViewModal} disabled>
-                    View
-                </Button>
+                <Button onClick={handleShowPlanViewModal}>View</Button>
                 <Button variant="secondary" onClick={handleClose}>
                     Close
                 </Button>
