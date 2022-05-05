@@ -11,7 +11,7 @@
         at header
         at div
         at body
-        at App (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/App.tsx:17:30)
+        at App (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/App.tsx:18:30)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
@@ -29,7 +29,7 @@
         at header
         at div
         at body
-        at App (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/App.tsx:17:30)
+        at App (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/App.tsx:18:30)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
@@ -47,7 +47,7 @@
         at header
         at div
         at body
-        at App (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/App.tsx:17:30)
+        at App (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/App.tsx:18:30)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
@@ -60,7 +60,7 @@
   console.error
     Warning: validateDOMNesting(...): <body> cannot appear as a child of <div>.
         at body
-        at App (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/App.tsx:17:30)
+        at App (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/App.tsx:18:30)
 
       at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
       at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
@@ -71,7 +71,7 @@
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
 
 FAIL src/App.test.tsx
-  ✕ renders the course name somewhere (92 ms)
+  ✕ renders the course name somewhere (107 ms)
 
   ● renders the course name somewhere
 
@@ -185,18 +185,18 @@ FAIL src/App.test.tsx
 ----------------------|---------|----------|---------|---------|-------------------
 File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ----------------------|---------|----------|---------|---------|-------------------
-All files             |   15.62 |    20.83 |    8.45 |   16.37 |                   
- src                  |   85.71 |       75 |     100 |   85.71 |                   
-  App.tsx             |   85.71 |       75 |     100 |   85.71 | 13                
- src/Components       |   11.57 |       10 |    7.14 |   11.92 |                   
+All files             |   17.91 |    20.83 |    8.21 |   19.16 |                   
+ src                  |    87.5 |       75 |     100 |    87.5 |                   
+  App.tsx             |    87.5 |       75 |     100 |    87.5 | 14                
+ src/Components       |   13.49 |       10 |    6.94 |   14.28 |                   
   AddCourseTest.tsx   |       8 |        0 |    7.14 |    4.76 | 24-82             
   EditCourse.tsx      |       0 |      100 |       0 |       0 | 16-88             
   EditCourseModal.tsx |       0 |      100 |       0 |       0 | 15-25             
   ListCourses.tsx     |       0 |      100 |       0 |       0 | 16-25             
-  NewPlanList.tsx     |   33.33 |       50 |    12.5 |   38.46 | 20-32,42-46       
+  NewPlanList.tsx     |   33.33 |       50 |    12.5 |   38.46 | 23-35,45-49       
   PlanAdd.tsx         |      40 |      100 |   33.33 |      40 | 17-22,42          
-  PlanView.tsx        |      25 |      100 |   33.33 |      25 | 27-28,47          
-  PlanViewModal.tsx   |       0 |      100 |       0 |       0 | 18-35             
+  PlanView.tsx        |   44.44 |      100 |      20 |   57.14 | 35-36,67          
+  PlanViewModal.tsx   |       0 |      100 |       0 |       0 | 17-35             
   SemesterAdd.tsx     |       0 |        0 |       0 |       0 | 14-56             
   SemesterList.tsx    |       0 |      100 |       0 |       0 | 19-41             
   SemesterModal.tsx   |       0 |        0 |       0 |       0 | 19-40             
@@ -211,5 +211,5 @@ All files             |   15.62 |    20.83 |    8.45 |   16.37 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        4.041 s
+Time:        3.832 s
 Ran all test suites.
