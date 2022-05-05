@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import { NewPlanList } from "./Components/NewPlanList";
 import { ShowHidePlans } from "./Components/ShowHidePlans";
+import { Courses } from "./Interfaces/Courses";
 import { Plan } from "./Interfaces/Plan";
 
 const saveDataKey = "MY-PAGE-DATA";
@@ -15,6 +16,7 @@ if (previousData !== null) {
 
 function App(): JSX.Element {
     const [plans, setPlan] = useState<Plan[]>(loadedData);
+    const [course] = useState<Courses[]>([]);
     return (
         <body className="App">
             <div className="header">
@@ -42,6 +44,7 @@ function App(): JSX.Element {
                                 {plans.length === 0 && <div>No Plans</div>}
                                 <div>
                                     <NewPlanList
+                                        course={course}
                                         plans={plans}
                                         setPlan={setPlan}
                                         saveDataKey={saveDataKey}
