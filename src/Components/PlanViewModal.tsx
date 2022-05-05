@@ -2,15 +2,14 @@ import { Courses } from "../Interfaces/Courses";
 import { Semester } from "../Interfaces/Semester";
 import React from "react";
 import { Button, Modal, Stack } from "react-bootstrap";
-import { Row, Table, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 
 export function PlanViewModal({
-    semester,
-    course,
+    semesters,
     show,
     handleClose
 }: {
-    semester: Semester[];
+    semesters: Semester[];
     course: Courses[];
     show: boolean;
     handleClose: () => void;
@@ -23,23 +22,30 @@ export function PlanViewModal({
             <Modal.Body>
                 {/* Title */}
                 <Stack gap={3}>
-                    {semester.map((semesters: Semester) => (
-                        <Table key={semesters.id}>{semesters}</Table>
-                    ))}
-                    <Table>
-                        <Row>
-                            <Col>Course Code</Col>
-                            <Col>Credits</Col>
-                        </Row>
-                        {course.map((courses: Courses) => (
-                            <Row className="Row_ListCourses" key={courses.ID}>
-                                <Col className="Code_Col">{courses.Code}</Col>
-                                <Col className="Credit_Col">
-                                    {courses.Credits}
-                                </Col>
+                    {semesters.map((semester: Semester) => (
+                        <div key={semester.id}>
+                            <span
+                                style={{ fontWeight: "bold" }}
+                            >{`${semester.season} ${semester.year}`}</span>
+                            <Row>
+                                <Col>Course Code</Col>
+                                <Col>Credits</Col>
                             </Row>
-                        ))}
-                    </Table>
+                            {semester.course.map((courses: Courses) => (
+                                <Row
+                                    className="Row_ListCourses"
+                                    key={courses.ID}
+                                >
+                                    <Col className="Code_Col">
+                                        {courses.Code}
+                                    </Col>
+                                    <Col className="Credit_Col">
+                                        {courses.Credits}
+                                    </Col>
+                                </Row>
+                            ))}
+                        </div>
+                    ))}
                 </Stack>
             </Modal.Body>
             <Modal.Footer>

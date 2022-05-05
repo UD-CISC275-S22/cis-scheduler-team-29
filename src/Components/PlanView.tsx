@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Button, Modal } from "react-bootstrap";
+import { Courses } from "../Interfaces/Courses";
 import { Plan } from "../Interfaces/Plan";
 import { Semester } from "../Interfaces/Semester";
+import { PlanViewModal } from "./PlanViewModal";
 import { SemesterModal } from "./SemesterModal";
 
 export function PlanView({
+    course,
     plan,
     plans,
     deletePlan,
@@ -14,6 +17,7 @@ export function PlanView({
     handleClose,
     saveDataKey
 }: {
+    course: Courses[];
     plan: Plan;
     plans: Plan[];
     deletePlan: (id: string) => void;
@@ -23,12 +27,22 @@ export function PlanView({
     handleClose: () => void;
     saveDataKey: string;
 }): JSX.Element {
+    const [showPlanViewModal, setPlanViewModal] = useState(false);
+
+    const handleClosePlanViewModal = () => setPlanViewModal(false);
+    const handleShowPlanViewModal = () => setPlanViewModal(true);
     function saveChanges() {
         localStorage.setItem(saveDataKey, JSON.stringify(plans));
         handleClose();
     }
     return (
-        <Modal show={show} onHide={handleClose} animation={true} size="xl">
+        <Modal
+            show={show}
+            centered
+            onHide={handleClose}
+            animation={true}
+            size="xl"
+        >
             <Modal.Header closeButton>
                 <Modal.Title>{plan.id}</Modal.Title>
             </Modal.Header>
@@ -40,6 +54,12 @@ export function PlanView({
                         plans={plans}
                         setPlan={setPlan}
                     ></SemesterModal>
+                    <PlanViewModal
+                        show={showPlanViewModal}
+                        handleClose={handleClosePlanViewModal}
+                        semesters={plan.semesters}
+                        course={course}
+                    ></PlanViewModal>
                 </Container>
             </Modal.Body>
             <Modal.Footer>
@@ -50,6 +70,7 @@ export function PlanView({
                 >
                     Delete Plan
                 </Button>
+                <Button onClick={handleShowPlanViewModal}>View</Button>
                 <Button variant="secondary" onClick={handleClose}>
                     Close
                 </Button>
