@@ -14,12 +14,14 @@ export function AddCourse({
     courses,
     semester,
     plans,
-    setPlan
+    setPlan,
+    saveDataKey
 }: {
     courses: Courses[];
     setPlan: (plans: Plan[]) => void;
     semester: Semester;
     plans: Plan[];
+    saveDataKey: string;
 }): JSX.Element {
     const [inputValue, setInputValue] = React.useState("");
     const [value, setValue] = React.useState<string | null>(
@@ -32,6 +34,7 @@ export function AddCourse({
             return newCourse;
         });
         setPlan([...plans]);
+        localStorage.setItem(saveDataKey, JSON.stringify([...plans]));
     }
     function addCourse(code: string) {
         if (!courses.find((c) => c.Code === code) && code !== "") {
@@ -40,6 +43,7 @@ export function AddCourse({
                 ...COURSE_LIST.filter((obj) => obj.Code === code)
             ];
             setPlan([...plans]);
+            localStorage.setItem(saveDataKey, JSON.stringify([...plans]));
         } else {
             semester.course = [...courses];
             setPlan([...plans]);
@@ -49,6 +53,7 @@ export function AddCourse({
     function deleteCourse(code: string) {
         semester.course = [...courses.filter((obj) => obj.Code !== code)];
         setPlan([...plans]);
+        localStorage.setItem(saveDataKey, JSON.stringify([...plans]));
     }
 
     return (

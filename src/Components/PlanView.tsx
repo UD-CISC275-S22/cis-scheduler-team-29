@@ -53,6 +53,7 @@ export function PlanView({
                         plan={plan}
                         plans={plans}
                         setPlan={setPlan}
+                        saveDataKey={saveDataKey}
                     ></SemesterModal>
                     <PlanViewModal
                         show={showPlanViewModal}
@@ -64,6 +65,7 @@ export function PlanView({
             </Modal.Body>
             <Modal.Footer>
                 <Button
+                    data-testid="deletePlanButton"
                     onClick={() => deletePlan(plan.id)}
                     variant="danger"
                     className="me-8"

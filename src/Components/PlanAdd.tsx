@@ -35,6 +35,7 @@ export function PlanAdd({
                     </Form.Label>
                     <Col>
                         <Form.Control
+                            data-testid="addPlanInputName"
                             value={id}
                             autoFocus
                             onChange={(
@@ -48,7 +49,11 @@ export function PlanAdd({
                 <Button variant="secondary" onClick={handleClose}>
                     Close
                 </Button>
-                <Button variant="primary" onClick={saveChanges}>
+                <Button
+                    data-testid="savePlanButton"
+                    variant="primary"
+                    onClick={saveChanges}
+                >
                     Save Changes
                 </Button>
             </Modal.Footer>
