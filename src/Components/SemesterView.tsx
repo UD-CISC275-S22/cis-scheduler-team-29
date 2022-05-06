@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Col, Button } from "react-bootstrap";
 import { Semester } from "../Interfaces/Semester";
 import { AddCourse } from "./AddCourseTest";
@@ -21,34 +21,25 @@ export function SemesterView({
     plans: Plan[];
     saveDataKey: string;
 }): JSX.Element {
-    const [visible, setVisible] = useState<boolean>(true);
-
-    function flipVisibility(): void {
-        setVisible(!visible);
-    }
     return (
         <Stack direction="horizontal" gap={0}>
             <Col>
                 <h3>{semester.id}</h3>
-                {visible && (
-                    <AddCourse
-                        courses={courses}
-                        semester={semester}
-                        plans={plans}
-                        setPlan={setPlan}
-                        saveDataKey={saveDataKey}
-                    ></AddCourse>
-                )}
-                {visible && (
-                    <Button
-                        onClick={() => deleteSemester(semester.id)}
-                        variant="danger"
-                        className="me-8"
-                    >
-                        Delete Semester
-                    </Button>
-                )}
-                <Button onClick={flipVisibility}>Edit</Button>
+                <AddCourse
+                    courses={courses}
+                    semester={semester}
+                    plans={plans}
+                    setPlan={setPlan}
+                    saveDataKey={saveDataKey}
+                ></AddCourse>
+
+                <Button
+                    onClick={() => deleteSemester(semester.id)}
+                    variant="danger"
+                    className="me-8"
+                >
+                    Delete Semester
+                </Button>
             </Col>
         </Stack>
     );

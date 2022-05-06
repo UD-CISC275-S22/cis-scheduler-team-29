@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import { NewPlanList } from "./Components/NewPlanList";
 import { ShowHidePlans } from "./Components/ShowHidePlans";
+import { Courses } from "./Interfaces/Courses";
 import { Plan } from "./Interfaces/Plan";
 
 const saveDataKey = "MY-PAGE-DATA";
@@ -15,6 +16,7 @@ if (previousData !== null) {
 
 function App(): JSX.Element {
     const [plans, setPlan] = useState<Plan[]>(loadedData);
+    const [course] = useState<Courses[]>([]);
     return (
         <body className="App">
             <div className="header">
@@ -35,19 +37,20 @@ function App(): JSX.Element {
                                 <h1>Scheduler!</h1>
                             </div>
                         </p>
-                        <p className="alignright">
-                            {plans.length !== 0 && (
-                                <p>
-                                    View/Edit your saved Degree Plans
-                                    <div>
-                                        <NewPlanList
-                                            plans={plans}
-                                            setPlan={setPlan}
-                                            saveDataKey={saveDataKey}
-                                        ></NewPlanList>
-                                    </div>
-                                </p>
-                            )}
+                        <p className="vieweditdegreeplan">
+                            <p>
+                                View/Edit your saved Degree Plans
+                                <div>------------------------</div>
+                                {plans.length === 0 && <div>No Plans</div>}
+                                <div>
+                                    <NewPlanList
+                                        course={course}
+                                        plans={plans}
+                                        setPlan={setPlan}
+                                        saveDataKey={saveDataKey}
+                                    ></NewPlanList>
+                                </div>
+                            </p>
                         </p>
                     </div>
                 </header>
