@@ -42,6 +42,7 @@ export function NewPlanList({
                 <div key={plan.id} className="planlist">
                     {plans.length !== 0 && (
                         <Button
+                            data-testid={plan.id}
                             className="btn effect01"
                             target="_blank"
                             onClick={() => handleShowAddModal(plan)}

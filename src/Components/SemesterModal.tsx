@@ -9,12 +9,14 @@ export function SemesterModal({
     plan,
     plans,
     realSemesters,
-    setPlan
+    setPlan,
+    saveDataKey
 }: {
     plan: Plan;
     plans: Plan[];
     realSemesters: Semester[];
     setPlan: (plans: Plan[]) => void;
+    saveDataKey: string;
 }): JSX.Element {
     const [showAddModal, setShowAddModal] = useState(false);
 
@@ -25,6 +27,7 @@ export function SemesterModal({
         ) {
             plan.semesters = [...plan.semesters, newSemester];
             setPlan([...plans]);
+            localStorage.setItem(saveDataKey, JSON.stringify([...plans]));
         }
     }
     function deleteSemester(id: string) {
@@ -32,6 +35,7 @@ export function SemesterModal({
             (semester: Semester): boolean => semester.id !== id
         );
         setPlan([...plans]);
+        localStorage.setItem(saveDataKey, JSON.stringify([...plans]));
     }
 
     const handleCloseAddModal = () => setShowAddModal(false);
@@ -59,6 +63,7 @@ export function SemesterModal({
                     deleteSemester={deleteSemester}
                     setPlan={setPlan}
                     plans={plans}
+                    saveDataKey={saveDataKey}
                 ></SemesterList>
             </div>
         </>

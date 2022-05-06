@@ -33,6 +33,7 @@ export function ShowHidePlans({
     return (
         <div>
             <Button
+                data-testid="newPlanButton"
                 className="btn effect01"
                 target="_blank"
                 onClick={handleShowAddModal}

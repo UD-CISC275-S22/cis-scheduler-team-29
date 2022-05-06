@@ -11,13 +11,15 @@ export function SemesterView({
     deleteSemester,
     courses,
     plans,
-    setPlan
+    setPlan,
+    saveDataKey
 }: {
     semester: Semester;
     deleteSemester: (id: string) => void;
     courses: Courses[];
     setPlan: (plans: Plan[]) => void;
     plans: Plan[];
+    saveDataKey: string;
 }): JSX.Element {
     const [visible, setVisible] = useState<boolean>(true);
 
@@ -34,6 +36,7 @@ export function SemesterView({
                         semester={semester}
                         plans={plans}
                         setPlan={setPlan}
+                        saveDataKey={saveDataKey}
                     ></AddCourse>
                 )}
                 {visible && (
