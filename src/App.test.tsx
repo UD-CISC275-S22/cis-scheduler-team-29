@@ -57,3 +57,49 @@ describe("Testing plan", () => {
         expect(newCreatedPlan === null);
     });
 });
+describe("Courses", () => {
+    beforeEach(() => {
+        render(<App />);
+    });
+    test("can add course", () => {
+        const newPlanButton = screen.getByTestId("newPlanButton");
+        newPlanButton.click();
+        const createNewPlanButton = screen.getByTestId("savePlanButton");
+        const input = screen.getByTestId("addPlanInputName");
+        userEvent.type(input, "test plan");
+        createNewPlanButton.click();
+        const newCreatedPlan = screen.getByTestId("test plan");
+        newCreatedPlan.click();
+        const addsemesterbutton = screen.getByTestId("addsemesterbutton");
+        addsemesterbutton.click();
+        const save = screen.getByTestId("Savechangessemester");
+        save.click();
+        const clickaddcourse = screen.getByTestId("addcoursetest");
+        clickaddcourse.click();
+        const color = screen.getByTestId("columncolortest");
+        expect(color).toHaveStyle({ backgroundColor: "d8d7d7" });
+    });
+    test("can search course", () => {
+        const newPlanButton = screen.getByTestId("newPlanButton");
+        newPlanButton.click();
+        const createNewPlanButton = screen.getByTestId("savePlanButton");
+        const input = screen.getByTestId("addPlanInputName");
+        userEvent.type(input, "test plan");
+        createNewPlanButton.click();
+        const newCreatedPlan = screen.getByTestId("test plan");
+        newCreatedPlan.click();
+        const addsemesterbutton = screen.getByTestId("addsemesterbutton");
+        addsemesterbutton.click();
+        const save = screen.getByTestId("Savechangessemester");
+        save.click();
+        const clickaddcourse = screen.getByTestId("addcoursetest");
+        clickaddcourse.click();
+        const clickautocomplete = screen.getByTestId("autocompletebutton");
+        clickautocomplete.click();
+    });
+});
+
+// addsemesterbutton
+// addcoursetest
+// Savechangessemester
+// autocompletebutton

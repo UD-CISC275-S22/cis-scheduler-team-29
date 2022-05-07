@@ -61,6 +61,7 @@ export function AddCourse({
             <div>
                 <Grid>
                     <Autocomplete
+                        data-testid="autocompletebutton"
                         value={value}
                         onChange={(
                             event: React.SyntheticEvent<Element, Event>,
@@ -85,6 +86,7 @@ export function AddCourse({
                         <Button
                             style={{ textAlign: "center" }}
                             onClick={() => addCourse(inputValue)}
+                            data-testid="addcoursetest"
                         >
                             Add Course
                         </Button>
