@@ -102,34 +102,96 @@
         at runCLI (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/@jest/core/build/cli/index.js:173:3)
         at Object.run (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/jest-cli/build/cli/index.js:155:37)
 
+  console.error
+    Warning: validateDOMNesting(...): <div> cannot appear as a child of <table>.
+        at div
+        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-bootstrap/cjs/Row.js:22:3
+        at table
+        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-bootstrap/cjs/Table.js:21:3
+        at div
+        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-bootstrap/cjs/Stack.js:23:7
+        at ListCourses (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/Components/ListCourses.tsx:8:5)
+        at div
+        at AddCourse (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/Components/AddCourses.tsx:14:5)
+        at div
+        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-bootstrap/cjs/Col.js:72:8
+        at div
+        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-bootstrap/cjs/Stack.js:23:7
+        at SemesterView (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/Components/SemesterView.tsx:10:5)
+        at div
+        at div
+        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/@emotion/react/dist/emotion-element-e89f38a3.cjs.dev.js:64:23
+        at Grid (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/@mui/material/node/Grid/Grid.js:315:49)
+        at div
+        at SemesterList (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/Components/SemesterList.tsx:8:5)
+        at div
+        at SemesterModal (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/Components/SemesterModal.tsx:9:5)
+        at div
+        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-bootstrap/cjs/Container.js:24:3
+        at div
+        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-bootstrap/cjs/createWithBsPrefix.js:31:5
+        at div
+        at div
+        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-bootstrap/cjs/ModalDialog.js:21:3
+        at div
+        at Transition (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-transition-group/cjs/Transition.js:133:30)
+        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-bootstrap/cjs/TransitionWrapper.js:24:3
+        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-bootstrap/cjs/Fade.js:38:3
+        at DialogTransition
+        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/@restart/ui/cjs/Modal.js:75:5
+        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-bootstrap/cjs/Modal.js:85:3
+        at PlanView (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/Components/PlanView.tsx:10:5)
+        at div
+        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-bootstrap/cjs/Stack.js:23:7
+        at NewPlanList (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/Components/NewPlanList.tsx:8:5)
+        at div
+        at p
+        at p
+        at div
+        at header
+        at div
+        at body
+        at App (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/App.tsx:18:30)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at validateDOMNesting (node_modules/react-dom/cjs/react-dom.development.js:10081:7)
+      at createInstance (node_modules/react-dom/cjs/react-dom.development.js:10181:5)
+      at completeWork (node_modules/react-dom/cjs/react-dom.development.js:19464:28)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
+
 PASS src/App.test.tsx
-  ✓ renders the course name somewhere (120 ms)
+  ✓ renders the course name somewhere (104 ms)
   Testing plan
-    ✓ Add new plan button shows up (19 ms)
-    ✓ clicking new plan shows modal (88 ms)
-    ✓ can add a plan (130 ms)
-    ✓ can not add an empty plan (74 ms)
-    ✓ can delete a plan (156 ms)
+    ✓ Add new plan button shows up (15 ms)
+    ✓ clicking new plan shows modal (67 ms)
+    ✓ can add a plan (98 ms)
+    ✓ can not add an empty plan (58 ms)
+    ✓ can delete a plan (116 ms)
+  Courses
+    ✓ can add course (325 ms)
+    ✓ can search course (180 ms)
 
 ----------------------|---------|----------|---------|---------|-------------------
 File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ----------------------|---------|----------|---------|---------|-------------------
-All files             |   38.84 |    45.83 |    31.5 |      40 |                   
+All files             |   64.02 |       75 |   57.53 |    66.4 |                   
  src                  |    87.5 |       75 |     100 |    87.5 |                   
   App.tsx             |    87.5 |       75 |     100 |    87.5 | 14                
- src/Components       |   35.87 |       40 |   30.55 |   36.75 |                   
-  AddCourseTest.tsx   |    7.14 |        0 |    7.14 |    4.16 | 26-87             
-  EditCourse.tsx      |       0 |      100 |       0 |       0 | 16-88             
-  EditCourseModal.tsx |       0 |      100 |       0 |       0 | 15-25             
-  ListCourses.tsx     |       0 |      100 |       0 |       0 | 16-25             
+ src/Components       |   62.59 |       75 |   56.94 |   64.95 |                   
+  AddCourses.tsx      |      50 |       50 |   57.14 |   54.16 | 32-37,48-56,70    
+  EditCourse.tsx      |      40 |      100 |   16.66 |      40 | 20-26,45-88       
+  EditCourseModal.tsx |   57.14 |      100 |      25 |      80 | 25                
+  ListCourses.tsx     |     100 |      100 |     100 |     100 |                   
   NewPlanList.tsx     |   93.33 |      100 |    87.5 |     100 |                   
   PlanAdd.tsx         |     100 |      100 |     100 |     100 |                   
   PlanView.tsx        |   55.55 |      100 |      40 |   71.42 | 35-36             
-  PlanViewModal.tsx   |   33.33 |      100 |   33.33 |   33.33 | 26-35             
-  SemesterAdd.tsx     |    37.5 |        0 |      25 |    37.5 | 18-30,56          
-  SemesterList.tsx    |   57.14 |      100 |      40 |   57.14 | 23,40-43          
-  SemesterModal.tsx   |   26.66 |        0 |   14.28 |   30.76 | 24-38             
-  SemesterView.tsx    |       0 |      100 |       0 |       0 | 24-37             
+  PlanViewModal.tsx   |     100 |      100 |     100 |     100 |                   
+  SemesterAdd.tsx     |      75 |       50 |      50 |      75 | 18,56             
+  SemesterList.tsx    |   71.42 |      100 |      60 |   71.42 | 23,40             
+  SemesterModal.tsx   |   66.66 |       75 |   57.14 |   61.53 | 25,34-38          
+  SemesterView.tsx    |      50 |      100 |      50 |      50 | 37                
   ShowHidePlans.tsx   |      90 |      100 |      80 |    87.5 | 19                
   TableView.tsx       |       0 |      100 |       0 |       0 | 5-32              
  src/Interfaces       |       0 |        0 |       0 |       0 |                   
@@ -138,7 +200,7 @@ All files             |   38.84 |    45.83 |    31.5 |      40 |
   Semester.ts         |       0 |        0 |       0 |       0 |                   
 ----------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 passed, 1 total
-Tests:       6 passed, 6 total
+Tests:       8 passed, 8 total
 Snapshots:   0 total
-Time:        5.485 s
+Time:        4.953 s
 Ran all test suites.
