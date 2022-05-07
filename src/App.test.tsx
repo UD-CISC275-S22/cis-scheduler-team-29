@@ -96,7 +96,6 @@ describe("Courses", () => {
         clickaddcourse.click();
         const clickautocomplete = screen.getByTestId("autocompletebutton");
         clickautocomplete.click();
-        const input2 = screen.getbyTest;
     });
 });
 
