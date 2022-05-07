@@ -8,15 +8,17 @@ export function SemesterList({
     semesters,
     deleteSemester,
     setPlan,
-    plans
+    plans,
+    saveDataKey
 }: {
     semesters: Semester[];
     deleteSemester: (id: string) => void;
     setPlan: (plans: Plan[]) => void;
     plans: Plan[];
+    saveDataKey: string;
 }): JSX.Element {
     function sortBySeason(semester: Semester[]) {
-        const seasonName: string[] = ["Summer", "Fall", "Winter", "Spring"];
+        const seasonName: string[] = ["Winter", "Spring", "Summer", "Fall"];
         semester.sort(function (a, b) {
             return seasonName.indexOf(a.season) - seasonName.indexOf(b.season);
         });
@@ -49,6 +51,7 @@ export function SemesterList({
                                 courses={semester.course}
                                 plans={plans}
                                 setPlan={setPlan}
+                                saveDataKey={saveDataKey}
                             ></SemesterView>
                         </div>
                     ))}

@@ -22,7 +22,11 @@ export function ListCourses({
                     <Col>Edit</Col>
                 </Row>
                 {course.map((courses: Courses) => (
-                    <Row className="Row_ListCourses" key={courses.ID}>
+                    <Row
+                        data-testid="columncolortest"
+                        className="Row_ListCourses"
+                        key={courses.ID}
+                    >
                         <Col className="Code_Col">{courses.Code}</Col>
                         <Col className="Credit_Col">{courses.Credits}</Col>
                         <Col>

@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import { Button, Stack } from "react-bootstrap";
+import { Courses } from "../Interfaces/Courses";
 import { Plan } from "../Interfaces/Plan";
 import { PlanView } from "./PlanView";
 
 export function NewPlanList({
+    course,
     plans,
     setPlan,
     saveDataKey
 }: {
+    course: Courses[];
     plans: Plan[];
     setPlan: (plans: Plan[]) => void;
     saveDataKey: string;
@@ -41,6 +44,7 @@ export function NewPlanList({
             {plans.map((plan: Plan) => (
                 <div key={plan.id}>
                     <Button
+                        data-testid={plan.id}
                         className="btn effect02"
                         target="_blank"
                         onClick={() => handleShowAddModal(plan)}
@@ -50,6 +54,7 @@ export function NewPlanList({
                 </div>
             ))}
             <PlanView
+                course={course}
                 plan={
                     planToShow !== undefined
                         ? planToShow
