@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Button } from "react-bootstrap";
 import { Semester } from "../Interfaces/Semester";
-import { AddCourse } from "./AddCourseTest";
+import { AddCourse } from "./AddCourses";
 import { Stack } from "react-bootstrap";
 import { Courses } from "../Interfaces/Courses";
 import { Plan } from "../Interfaces/Plan";

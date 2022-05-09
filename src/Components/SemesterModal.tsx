@@ -48,6 +48,7 @@ export function SemesterModal({
                     variant="success"
                     className="m-4"
                     onClick={handleShowAddModal}
+                    data-testid="addsemesterbutton"
                 >
                     Add New Semester
                 </Button>

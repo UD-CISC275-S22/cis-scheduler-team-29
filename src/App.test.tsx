@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import App from "./App";
 import userEvent from "@testing-library/user-event";
 
@@ -57,3 +57,105 @@ describe("Testing plan", () => {
         expect(newCreatedPlan === null);
     });
 });
+describe("Courses", () => {
+    beforeEach(() => {
+        render(<App />);
+    });
+    test("can add course", () => {
+        const newPlanButton = screen.getByTestId("newPlanButton");
+        newPlanButton.click();
+        const createNewPlanButton = screen.getByTestId("savePlanButton");
+        const input = screen.getByTestId("addPlanInputName");
+        userEvent.type(input, "test plan");
+        createNewPlanButton.click();
+        const newCreatedPlan = screen.getByTestId("test plan");
+        newCreatedPlan.click();
+        const addsemesterbutton = screen.getByTestId("addsemesterbutton");
+        addsemesterbutton.click();
+        const save = screen.getByTestId("Savechangessemester");
+        save.click();
+        const clickaddcourse = screen.getByTestId("addcoursetest");
+        clickaddcourse.click();
+        const color = screen.getByTestId("columncolortest");
+        expect(color).toHaveStyle({ backgroundColor: "d8d7d7" });
+    });
+    test("can search course", () => {
+        const newPlanButton = screen.getByTestId("newPlanButton");
+        newPlanButton.click();
+        const createNewPlanButton = screen.getByTestId("savePlanButton");
+        const input = screen.getByTestId("addPlanInputName");
+        userEvent.type(input, "test plan");
+        createNewPlanButton.click();
+        const newCreatedPlan = screen.getByTestId("test plan");
+        newCreatedPlan.click();
+        const addsemesterbutton = screen.getByTestId("addsemesterbutton");
+        addsemesterbutton.click();
+        const save = screen.getByTestId("Savechangessemester");
+        save.click();
+        const addcourse = screen.getByTestId("addcoursetest");
+        const clickautocomplete = screen.getByTestId("autocompletebutton");
+        clickautocomplete.click();
+        const input2 = screen.getByTestId("autocompletebutton");
+        userEvent.type(input2, "MATH242");
+        addcourse.click();
+        const checkchange = screen.getByText(/MATH242/i);
+        expect(checkchange).toBeInTheDocument;
+        //    note to FIX THIS (NOT WORKING, don't know whats up)
+        //    check how i added and searched course MATH242.
+    });
+    test("can delete a SINGLE selected course", () => {
+        const newPlanButton = screen.getByTestId("newPlanButton");
+        newPlanButton.click();
+        const createNewPlanButton = screen.getByTestId("savePlanButton");
+        const input = screen.getByTestId("addPlanInputName");
+        userEvent.type(input, "test plan");
+        createNewPlanButton.click();
+        const newCreatedPlan = screen.getByTestId("test plan");
+        newCreatedPlan.click();
+        const addsemesterbutton = screen.getByTestId("addsemesterbutton");
+        addsemesterbutton.click();
+        const save = screen.getByTestId("Savechangessemester");
+        save.click();
+        const addcourse = screen.getByTestId("addcoursetest");
+        addcourse.click();
+        const clickxbutton = screen.getByTestId("deletebuttonforsinglecourse");
+        clickxbutton.click();
+        expect(addcourse == null);
+    });
+    test("can edit a course", () => {
+        const newPlanButton = screen.getByTestId("newPlanButton");
+        newPlanButton.click();
+        const createNewPlanButton = screen.getByTestId("savePlanButton");
+        const input = screen.getByTestId("addPlanInputName");
+        userEvent.type(input, "test plan");
+        createNewPlanButton.click();
+        const newCreatedPlan = screen.getByTestId("test plan");
+        newCreatedPlan.click();
+        const addsemesterbutton = screen.getByTestId("addsemesterbutton");
+        addsemesterbutton.click();
+        const save = screen.getByTestId("Savechangessemester");
+        save.click();
+        const addcourse = screen.getByTestId("addcoursetest");
+        addcourse.click();
+        const edit = screen.getByTestId("editbuttonforsinglecourse");
+        edit.click();
+        const input2 = screen.getByTestId("coursecodeedit");
+        userEvent.type(input2, "testcode_n1");
+        const savechangescourse = screen.getByTestId(
+            "savechangesforeditsinglecourse"
+        );
+        savechangescourse.click();
+        edit.click();
+        const checkchange = screen.getByText(/testcode_n1/i);
+        expect(checkchange).toBeInTheDocument;
+    });
+});
+// editbuttonforsinglecourse
+//    //  coursecodeedit
+//    // coursenameedit
+//    // savechangesforeditsinglecourse
+// deletebuttonforsinglecourse;
+// addsemesterbutton
+// addcoursetest
+// Savechangessemester
+// autocompletebutton
