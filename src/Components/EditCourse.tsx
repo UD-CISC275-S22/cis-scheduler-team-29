@@ -34,7 +34,7 @@ export function CourseEditor({
             {/* COURSE CODE */}
             <Modal.Body>
                 <Form.Group controlId="formCourseCode" as={Row} spacing={2}>
-                    <Form.Label column sm={2}>
+                    <Form.Label data-testid="coursecodeedit" column sm={2}>
                         Code:
                     </Form.Label>
                     <Col>
@@ -47,7 +47,11 @@ export function CourseEditor({
                     </Col>
                 </Form.Group>
                 {/* COURSE NAME */}
-                <Form.Group controlId="formCourseCredit" as={Row}>
+                <Form.Group
+                    data-testid="coursenameedit"
+                    controlId="formCourseCredit"
+                    as={Row}
+                >
                     <Form.Label column sm={2}>
                         Name:
                     </Form.Label>
@@ -94,7 +98,12 @@ export function CourseEditor({
                 <Button variant="secondary" onClick={handleClose}>
                     Close
                 </Button>
-                <Button variant="success" className="me-4" onClick={save}>
+                <Button
+                    data-testid="savechangesforeditsinglecourse"
+                    variant="success"
+                    className="me-4"
+                    onClick={save}
+                >
                     Save Changes
                 </Button>
             </Modal.Footer>
