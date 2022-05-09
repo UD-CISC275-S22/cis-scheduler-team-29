@@ -62,7 +62,11 @@ export function SemesterAdd({
                 <Button variant="secondary" onClick={handleClose}>
                     Close
                 </Button>
-                <Button variant="primary" onClick={saveChanges}>
+                <Button
+                    data-testid="Savechangessemester"
+                    variant="primary"
+                    onClick={saveChanges}
+                >
                     Save Changes
                 </Button>
             </Modal.Footer>

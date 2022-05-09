@@ -19,10 +19,18 @@ export function EditCourseModal({
 
     return (
         <div>
-            <Button variant="success" onClick={handleShowAddModal}>
+            <Button
+                data-testid="editbuttonforsinglecourse"
+                variant="success"
+                onClick={handleShowAddModal}
+            >
                 Edit
             </Button>
-            <Button onClick={() => deleteCourse(course.Code)} variant="danger">
+            <Button
+                data-testid="deletebuttonforsinglecourse"
+                onClick={() => deleteCourse(course.Code)}
+                variant="danger"
+            >
                 X
             </Button>
             <CourseEditor

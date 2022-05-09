@@ -36,13 +36,7 @@ export function PlanView({
         handleClose();
     }
     return (
-        <Modal
-            show={show}
-            centered
-            onHide={handleClose}
-            animation={true}
-            size="xl"
-        >
+        <Modal show={show} onHide={handleClose} animation={true} size="xl">
             <Modal.Header closeButton>
                 <Modal.Title>{plan.id}</Modal.Title>
             </Modal.Header>
@@ -53,6 +47,7 @@ export function PlanView({
                         plan={plan}
                         plans={plans}
                         setPlan={setPlan}
+                        saveDataKey={saveDataKey}
                     ></SemesterModal>
                     <PlanViewModal
                         show={showPlanViewModal}
@@ -64,6 +59,7 @@ export function PlanView({
             </Modal.Body>
             <Modal.Footer>
                 <Button
+                    data-testid="deletePlanButton"
                     onClick={() => deletePlan(plan.id)}
                     variant="danger"
                     className="me-8"

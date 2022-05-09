@@ -44,6 +44,7 @@ export function NewPlanList({
             {plans.map((plan: Plan) => (
                 <div key={plan.id}>
                     <Button
+                        data-testid={plan.id}
                         className="btn effect02"
                         target="_blank"
                         onClick={() => handleShowAddModal(plan)}
