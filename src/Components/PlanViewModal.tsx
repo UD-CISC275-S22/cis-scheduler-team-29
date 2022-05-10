@@ -17,9 +17,11 @@ export function PlanViewModal({
     return (
         <Modal show={show} onHide={handleClose} animation={false}>
             <Modal.Header closeButton>
-                <Modal.Title>Current Schedule</Modal.Title>
+                <Modal.Title data-testid="viewModalTitle">
+                    Current Schedule
+                </Modal.Title>
             </Modal.Header>
-            <Modal.Body>
+            <Modal.Body data-testid="viewPlanSemester">
                 {/* Title */}
                 <Stack gap={3}>
                     {semesters.map((semester: Semester) => (
