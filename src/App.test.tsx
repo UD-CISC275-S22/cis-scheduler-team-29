@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen, within } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import App from "./App";
 import userEvent from "@testing-library/user-event";
 
@@ -159,3 +159,54 @@ describe("Courses", () => {
 // addcoursetest
 // Savechangessemester
 // autocompletebutton
+describe("View", () => {
+    beforeEach(() => {
+        render(<App />);
+    });
+    test("view plan button shows up", () => {
+        const newPlanButton = screen.getByTestId("newPlanButton");
+        newPlanButton.click();
+        const createNewPlanButton = screen.getByTestId("savePlanButton");
+        const input = screen.getByTestId("addPlanInputName");
+        userEvent.type(input, "test plan");
+        createNewPlanButton.click();
+        const newCreatedPlan = screen.getByTestId("test plan");
+        newCreatedPlan.click();
+        const text = screen.getByRole("button", { name: /View/i });
+        expect(text).toBeInTheDocument();
+    });
+    test("can view an empty plan", () => {
+        const newPlanButton = screen.getByTestId("newPlanButton");
+        newPlanButton.click();
+        const createNewPlanButton = screen.getByTestId("savePlanButton");
+        const input = screen.getByTestId("addPlanInputName");
+        userEvent.type(input, "test plan");
+        createNewPlanButton.click();
+        const newCreatedPlan = screen.getByTestId("test plan");
+        newCreatedPlan.click();
+        const viewPlanButton = screen.getByTestId("viewPlanButton");
+        viewPlanButton.click();
+        const viewPlanModalTitle = screen.getByTestId("viewModalTitle");
+        expect(viewPlanModalTitle !== null);
+    });
+    /*
+    test("can view a plan with an empty semester", () => {
+        const newPlanButton = screen.getByTestId("newPlanButton");
+        newPlanButton.click();
+        const createNewPlanButton = screen.getByTestId("savePlanButton");
+        const input = screen.getByTestId("addPlanInputName");
+        userEvent.type(input, "test plan");
+        createNewPlanButton.click();
+        const newCreatedPlan = screen.getByTestId("test plan");
+        newCreatedPlan.click();
+        const addsemesterbutton = screen.getByTestId("addsemesterbutton");
+        addsemesterbutton.click();
+        const save = screen.getByTestId("Savechangessemester");
+        save.click();
+        const viewPlanButton = screen.getByTestId("viewPlanButton");
+        viewPlanButton.click();
+        const viewPlanSemester = screen.getByTestId("viewPlanSemester");
+        expect(viewPlanSemester !== null);
+    });
+    */
+});
