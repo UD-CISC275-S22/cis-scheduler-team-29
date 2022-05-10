@@ -82,7 +82,7 @@
         at keyboardImplementationWrapper (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/@testing-library/user-event/dist/keyboard/index.js:55:65)
         at typeImplementation (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/@testing-library/user-event/dist/type/typeImplementation.js:49:51)
         at Object.type (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/@testing-library/user-event/dist/type/index.js:27:60)
-        at Object.<anonymous> (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/App.test.tsx:41:19)
+        at Object.<anonymous> (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/App.test.tsx:42:19)
         at Promise.then.completed (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/jest-circus/build/utils.js:391:28)
         at new Promise (<anonymous>)
         at callAsyncCircusFn (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/jest-circus/build/utils.js:316:10)
@@ -161,428 +161,179 @@
       at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
 
-FAIL src/App.test.tsx (8.978 s)
-  ✓ renders the course name somewhere (152 ms)
+FAIL src/App.test.tsx (6.025 s)
+  ✓ renders the course name somewhere (112 ms)
   Testing plan
-    ✓ Add new plan button shows up (22 ms)
-    ✓ clicking new plan shows modal (86 ms)
-    ✓ can add a plan (148 ms)
-    ✓ can not add an empty plan (75 ms)
-    ✓ can delete a plan (173 ms)
+    ✓ Add new plan button shows up (16 ms)
+    ✓ clicking new plan shows modal (67 ms)
+    ✓ can add a plan (99 ms)
+    ✓ can not add an empty plan (58 ms)
+    ✓ can delete a plan (119 ms)
   Courses
-    ✓ can add course (459 ms)
-    ✕ can search course (2473 ms)
-    ✓ can delete a SINGLE selected course (236 ms)
-    ✓ can edit a course (347 ms)
+    ✓ can add course (334 ms)
+    ✕ can search course (651 ms)
+    ✓ can delete a SINGLE selected course (174 ms)
+    ✓ can edit a course (all fields, course: code/name/credit/desc.. (542 ms)
   View
-    ✓ view plan button shows up (203 ms)
-    ✓ can view an empty plan (129 ms)
+    ✓ view plan button shows up (125 ms)
+    ✓ can view an empty plan (84 ms)
 
   ● Courses › can search course
 
-    TestingLibraryElementError: Unable to find an element with the text: /MATH242/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+    TestingLibraryElementError: Unable to find an accessible element with the role "textbox"
+
+    Here are the accessible roles:
+
+      combobox:
+
+      Name "Courses":
+      [36m<input[39m
+        [33maria-autocomplete[39m=[32m"list"[39m
+        [33maria-expanded[39m=[32m"false"[39m
+        [33maria-invalid[39m=[32m"false"[39m
+        [33mautocapitalize[39m=[32m"none"[39m
+        [33mautocomplete[39m=[32m"off"[39m
+        [33mclass[39m=[32m"MuiOutlinedInput-input MuiInputBase-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-nxo287-MuiInputBase-input-MuiOutlinedInput-input"[39m
+        [33mid[39m=[32m"controllable-states-demo"[39m
+        [33mrole[39m=[32m"combobox"[39m
+        [33mspellcheck[39m=[32m"false"[39m
+        [33mtype[39m=[32m"text"[39m
+        [33mvalue[39m=[32m"CISC108"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
+      button:
+
+      Name "Open":
+      [36m<button[39m
+        [33maria-label[39m=[32m"Open"[39m
+        [33mclass[39m=[32m"MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-qzbt6i-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"[39m
+        [33mtabindex[39m=[32m"-1"[39m
+        [33mtitle[39m=[32m"Open"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
 
     Ignored nodes: comments, <script />, <style />
-    [36m<body[39m
-      [33mclass[39m=[32m"modal-open"[39m
-      [33mdata-rr-ui-modal-open[39m=[32m""[39m
-      [33mstyle[39m=[32m"padding-right: 2048px;"[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"MuiAutocomplete-root MuiAutocomplete-hasClearIcon MuiAutocomplete-hasPopupIcon css-2w5bur-MuiAutocomplete-root"[39m
+      [33mdata-testid[39m=[32m"autocompletebutton"[39m
     [36m>[39m
-      [36m<div>[39m
-        [36m<body[39m
-          [33mclass[39m=[32m"App"[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"[39m
+      [36m>[39m
+        [36m<label[39m
+          [33mclass[39m=[32m"MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"[39m
+          [33mdata-shrink[39m=[32m"true"[39m
+          [33mfor[39m=[32m"controllable-states-demo"[39m
+          [33mid[39m=[32m"controllable-states-demo-label"[39m
         [36m>[39m
+          [0mCourses[0m
+        [36m</label>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-154xyx0-MuiInputBase-root-MuiOutlinedInput-root"[39m
+        [36m>[39m
+          [36m<input[39m
+            [33maria-autocomplete[39m=[32m"list"[39m
+            [33maria-expanded[39m=[32m"false"[39m
+            [33maria-invalid[39m=[32m"false"[39m
+            [33mautocapitalize[39m=[32m"none"[39m
+            [33mautocomplete[39m=[32m"off"[39m
+            [33mclass[39m=[32m"MuiOutlinedInput-input MuiInputBase-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-nxo287-MuiInputBase-input-MuiOutlinedInput-input"[39m
+            [33mid[39m=[32m"controllable-states-demo"[39m
+            [33mrole[39m=[32m"combobox"[39m
+            [33mspellcheck[39m=[32m"false"[39m
+            [33mtype[39m=[32m"text"[39m
+            [33mvalue[39m=[32m"CISC108"[39m
+          [36m/>[39m
           [36m<div[39m
-            [33mclass[39m=[32m"header"[39m
+            [33mclass[39m=[32m"MuiAutocomplete-endAdornment css-1q60rmi-MuiAutocomplete-endAdornment"[39m
           [36m>[39m
-            [36m<header>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"headertopright"[39m
+            [36m<button[39m
+              [33maria-label[39m=[32m"Clear"[39m
+              [33mclass[39m=[32m"MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-clearIndicator css-1glvl0p-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-clearIndicator"[39m
+              [33mtabindex[39m=[32m"-1"[39m
+              [33mtitle[39m=[32m"Clear"[39m
+              [33mtype[39m=[32m"button"[39m
+            [36m>[39m
+              [36m<svg[39m
+                [33maria-hidden[39m=[32m"true"[39m
+                [33mclass[39m=[32m"MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"[39m
+                [33mdata-testid[39m=[32m"CloseIcon"[39m
+                [33mfocusable[39m=[32m"false"[39m
+                [33mviewBox[39m=[32m"0 0 24 24"[39m
               [36m>[39m
-                [36m<p>[39m
-                  [0mTBD Resources[0m
-                [36m</p>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"headertopleft"[39m
-              [36m>[39m
-                [36m<p>[39m
-                  [0mUniversity of Delaware[0m
-                [36m</p>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mid[39m=[32m"textbox"[39m
-              [36m>[39m
-                [36m<p[39m
-                  [33mclass[39m=[32m"alignleft"[39m
+                [36m<path[39m
+                  [33md[39m=[32m"M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"[39m
                 [36m/>[39m
-                [36m<p[39m
-                  [33mclass[39m=[32m"aligncenter"[39m
-                [36m>[39m
-                  [36m<div[39m
-                    [33mclass[39m=[32m"Welcomemiddle"[39m
-                  [36m>[39m
-                    [36m<h1>[39m
-                      [0mWelcome[0m
-                    [36m</h1>[39m
-                    [36m<h1>[39m
-                      [0mto the[0m
-                    [36m</h1>[39m
-                    [36m<h1>[39m
-                      [0mUD Course[0m
-                    [36m</h1>[39m
-                    [36m<h1>[39m
-                      [0mScheduler![0m
-                    [36m</h1>[39m
-                  [36m</div>[39m
-                [36m</p>[39m
-                [36m<p[39m
-                  [33mclass[39m=[32m"vieweditdegreeplan"[39m
-                [36m>[39m
-                  [36m<p>[39m
-                    [0mView/Edit your saved Degree Plans[0m
-                    [36m<div>[39m
-                      [0m------------------------[0m
-                    [36m</div>[39m
-                    [36m<div>[39m
-                      [36m<div[39m
-                        [33mclass[39m=[32m"planlist vstack gap-2"[39m
-                      [36m>[39m
-                        [36m<div>[39m
-                          [36m<a[39m
-                            [33mclass[39m=[32m"btn effect02 btn btn-primary"[39m
-                            [33mdata-testid[39m=[32m"test plan"[39m
-                            [33mrole[39m=[32m"button"[39m
-                            [33mtabindex[39m=[32m"0"[39m
-                            [33mtarget[39m=[32m"_blank"[39m
-                          [36m>[39m
-                            [36m<span>[39m
-                              [0mtest plan[0m
-                            [36m</span>[39m
-                          [36m</a>[39m
-                        [36m</div>[39m
-                      [36m</div>[39m
-                    [36m</div>[39m
-                  [36m</p>[39m
-                [36m</p>[39m
-              [36m</div>[39m
-            [36m</header>[39m
+              [36m</svg>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"[39m
+              [36m/>[39m
+            [36m</button>[39m
+            [36m<button[39m
+              [33maria-label[39m=[32m"Open"[39m
+              [33mclass[39m=[32m"MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-qzbt6i-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"[39m
+              [33mtabindex[39m=[32m"-1"[39m
+              [33mtitle[39m=[32m"Open"[39m
+              [33mtype[39m=[32m"button"[39m
+            [36m>[39m
+              [36m<svg[39m
+                [33maria-hidden[39m=[32m"true"[39m
+                [33mclass[39m=[32m"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"[39m
+                [33mdata-testid[39m=[32m"ArrowDropDownIcon"[39m
+                [33mfocusable[39m=[32m"false"[39m
+                [33mviewBox[39m=[32m"0 0 24 24"[39m
+              [36m>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"M7 10l5 5 5-5z"[39m
+                [36m/>[39m
+              [36m</svg>[39m
+              [36m<span[39m
+                [33mclass[39m=[32m"MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"[39m
+              [36m/>[39m
+            [36m</button>[39m
           [36m</div>[39m
-          [36m<div>[39m
-            [36m<a[39m
-              [33mclass[39m=[32m"btn effect01 btn btn-primary"[39m
-              [33mdata-testid[39m=[32m"newPlanButton"[39m
-              [33mrole[39m=[32m"button"[39m
-              [33mtabindex[39m=[32m"0"[39m
-              [33mtarget[39m=[32m"_blank"[39m
+          [36m<fieldset[39m
+            [33maria-hidden[39m=[32m"true"[39m
+            [33mclass[39m=[32m"MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"[39m
+          [36m>[39m
+            [36m<legend[39m
+              [33mclass[39m=[32m"css-1in441m"[39m
             [36m>[39m
               [36m<span>[39m
-                [0m📂New Plan[0m
+                [0mCourses[0m
               [36m</span>[39m
-            [36m</a>[39m
-          [36m</div>[39m
-        [36m</body>[39m
-      [36m</div>[39m
-      [36m<div[39m
-        [33mclass[39m=[32m"fade modal-backdrop show"[39m
-      [36m/>[39m
-      [36m<div[39m
-        [33maria-modal[39m=[32m"true"[39m
-        [33mclass[39m=[32m"fade modal show"[39m
-        [33mrole[39m=[32m"dialog"[39m
-        [33mstyle[39m=[32m"display: block; padding-right: 0px;"[39m
-        [33mtabindex[39m=[32m"-1"[39m
-      [36m>[39m
-        [36m<div[39m
-          [33mclass[39m=[32m"modal-dialog modal-xl"[39m
-        [36m>[39m
-          [36m<div[39m
-            [33mclass[39m=[32m"modal-content"[39m
-          [36m>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"modal-header"[39m
-            [36m>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"modal-title h4"[39m
-              [36m>[39m
-                [0mtest plan[0m
-              [36m</div>[39m
-              [36m<button[39m
-                [33maria-label[39m=[32m"Close"[39m
-                [33mclass[39m=[32m"btn-close"[39m
-                [33mtype[39m=[32m"button"[39m
-              [36m/>[39m
-            [36m</div>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"modal-body"[39m
-            [36m>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"container"[39m
-              [36m>[39m
-                [36m<h4>[39m
-                  [36m<button[39m
-                    [33mclass[39m=[32m"m-4 btn btn-success"[39m
-                    [33mdata-testid[39m=[32m"addsemesterbutton"[39m
-                    [33mtype[39m=[32m"button"[39m
-                  [36m>[39m
-                    [0mAdd New Semester[0m
-                  [36m</button>[39m
-                [36m</h4>[39m
-                [36m<div>[39m
-                  [36m<div>[39m
-                    [36m<div[39m
-                      [33mclass[39m=[32m"MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 SemesterList css-1aobuha-MuiGrid-root"[39m
-                    [36m>[39m
-                      [36m<div[39m
-                        [33mclass[39m=[32m"hey"[39m
-                      [36m>[39m
-                        [36m<div[39m
-                          [33mclass[39m=[32m"hstack gap-0"[39m
-                        [36m>[39m
-                          [36m<div[39m
-                            [33mclass[39m=[32m"col"[39m
-                          [36m>[39m
-                            [36m<h3>[39m
-                              [0mSummer 2022[0m
-                            [36m</h3>[39m
-                            [36m<div>[39m
-                              [36m<div>[39m
-                                [36m<div[39m
-                                  [33mclass[39m=[32m"MuiGrid-root css-vj1n65-MuiGrid-root"[39m
-                                [36m>[39m
-                                  [36m<div[39m
-                                    [33mclass[39m=[32m"MuiAutocomplete-root Mui-focused MuiAutocomplete-hasClearIcon MuiAutocomplete-hasPopupIcon css-2w5bur-MuiAutocomplete-root"[39m
-                                    [33mdata-testid[39m=[32m"autocompletebutton"[39m
-                                  [36m>[39m
-                                    [36m<div[39m
-                                      [33mclass[39m=[32m"MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"[39m
-                                    [36m>[39m
-                                      [36m<label[39m
-                                        [33mclass[39m=[32m"MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-focused css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"[39m
-                                        [33mdata-shrink[39m=[32m"true"[39m
-                                        [33mfor[39m=[32m"controllable-states-demo"[39m
-                                        [33mid[39m=[32m"controllable-states-demo-label"[39m
-                                      [36m>[39m
-                                        [0mCourses[0m
-                                      [36m</label>[39m
-                                      [36m<div[39m
-                                        [33mclass[39m=[32m"MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth Mui-focused MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-154xyx0-MuiInputBase-root-MuiOutlinedInput-root"[39m
-                                      [36m>[39m
-                                        [36m<input[39m
-                                          [33maria-autocomplete[39m=[32m"list"[39m
-                                          [33maria-expanded[39m=[32m"false"[39m
-                                          [33maria-invalid[39m=[32m"false"[39m
-                                          [33mautocapitalize[39m=[32m"none"[39m
-                                          [33mautocomplete[39m=[32m"off"[39m
-                                          [33mclass[39m=[32m"MuiOutlinedInput-input MuiInputBase-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-nxo287-MuiInputBase-input-MuiOutlinedInput-input"[39m
-                                          [33mid[39m=[32m"controllable-states-demo"[39m
-                                          [33mrole[39m=[32m"combobox"[39m
-                                          [33mspellcheck[39m=[32m"false"[39m
-                                          [33mtype[39m=[32m"text"[39m
-                                          [33mvalue[39m=[32m"CISC108MATH242"[39m
-                                        [36m/>[39m
-                                        [36m<div[39m
-                                          [33mclass[39m=[32m"MuiAutocomplete-endAdornment css-1q60rmi-MuiAutocomplete-endAdornment"[39m
-                                        [36m>[39m
-                                          [36m<button[39m
-                                            [33maria-label[39m=[32m"Clear"[39m
-                                            [33mclass[39m=[32m"MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-clearIndicator css-1glvl0p-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-clearIndicator"[39m
-                                            [33mtabindex[39m=[32m"-1"[39m
-                                            [33mtitle[39m=[32m"Clear"[39m
-                                            [33mtype[39m=[32m"button"[39m
-                                          [36m>[39m
-                                            [36m<svg[39m
-                                              [33maria-hidden[39m=[32m"true"[39m
-                                              [33mclass[39m=[32m"MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"[39m
-                                              [33mdata-testid[39m=[32m"CloseIcon"[39m
-                                              [33mfocusable[39m=[32m"false"[39m
-                                              [33mviewBox[39m=[32m"0 0 24 24"[39m
-                                            [36m>[39m
-                                              [36m<path[39m
-                                                [33md[39m=[32m"M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"[39m
-                                              [36m/>[39m
-                                            [36m</svg>[39m
-                                            [36m<span[39m
-                                              [33mclass[39m=[32m"MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"[39m
-                                            [36m/>[39m
-                                          [36m</button>[39m
-                                          [36m<button[39m
-                                            [33maria-label[39m=[32m"Close"[39m
-                                            [33mclass[39m=[32m"MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator MuiAutocomplete-popupIndicatorOpen css-113ntv0-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"[39m
-                                            [33mtabindex[39m=[32m"-1"[39m
-                                            [33mtitle[39m=[32m"Close"[39m
-                                            [33mtype[39m=[32m"button"[39m
-                                          [36m>[39m
-                                            [36m<svg[39m
-                                              [33maria-hidden[39m=[32m"true"[39m
-                                              [33mclass[39m=[32m"MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"[39m
-                                              [33mdata-testid[39m=[32m"ArrowDropDownIcon"[39m
-                                              [33mfocusable[39m=[32m"false"[39m
-                                              [33mviewBox[39m=[32m"0 0 24 24"[39m
-                                            [36m>[39m
-                                              [36m<path[39m
-                                                [33md[39m=[32m"M7 10l5 5 5-5z"[39m
-                                              [36m/>[39m
-                                            [36m</svg>[39m
-                                            [36m<span[39m
-                                              [33mclass[39m=[32m"MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"[39m
-                                            [36m/>[39m
-                                          [36m</button>[39m
-                                        [36m</div>[39m
-                                        [36m<fieldset[39m
-                                          [33maria-hidden[39m=[32m"true"[39m
-                                          [33mclass[39m=[32m"MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"[39m
-                                        [36m>[39m
-                                          [36m<legend[39m
-                                            [33mclass[39m=[32m"css-1in441m"[39m
-                                          [36m>[39m
-                                            [36m<span>[39m
-                                              [0mCourses[0m
-                                            [36m</span>[39m
-                                          [36m</legend>[39m
-                                        [36m</fieldset>[39m
-                                      [36m</div>[39m
-                                    [36m</div>[39m
-                                  [36m</div>[39m
-                                  [36m<div>[39m
-                                    [36m<button[39m
-                                      [33mclass[39m=[32m"MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root  css-1e6y48t-MuiButtonBase-root-MuiButton-root"[39m
-                                      [33mdata-testid[39m=[32m"addcoursetest"[39m
-                                      [33mstyle[39m=[32m"text-align: center;"[39m
-                                      [33mtabindex[39m=[32m"0"[39m
-                                      [33mtype[39m=[32m"button"[39m
-                                    [36m>[39m
-                                      [0mAdd Course[0m
-                                      [36m<span[39m
-                                        [33mclass[39m=[32m"MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"[39m
-                                      [36m/>[39m
-                                    [36m</button>[39m
-                                  [36m</div>[39m
-                                [36m</div>[39m
-                              [36m</div>[39m
-                              [36m<div[39m
-                                [33mclass[39m=[32m"vstack gap-3"[39m
-                              [36m>[39m
-                                [36m<table[39m
-                                  [33mclass[39m=[32m"table"[39m
-                                [36m>[39m
-                                  [36m<div[39m
-                                    [33mclass[39m=[32m"row"[39m
-                                  [36m>[39m
-                                    [36m<div[39m
-                                      [33mclass[39m=[32m"col"[39m
-                                    [36m>[39m
-                                      [0mCourse Code[0m
-                                    [36m</div>[39m
-                                    [36m<div[39m
-                                      [33mclass[39m=[32m"col"[39m
-                                    [36m>[39m
-                                      [0mCredits[0m
-                                    [36m</div>[39m
-                                    [36m<div[39m
-                                      [33mclass[39m=[32m"col"[39m
-                                    [36m>[39m
-                                      [0mEdit[0m
-                                    [36m</div>[39m
-                                  [36m</div>[39m
-                                [36m</table>[39m
-                              [36m</div>[39m
-                            [36m</div>[39m
-                            [36m<button[39m
-                              [33mclass[39m=[32m"me-8 btn btn-danger"[39m
-                              [33mtype[39m=[32m"button"[39m
-                            [36m>[39m
-                              [0mDelete Semester[0m
-                            [36m</button>[39m
-                          [36m</div>[39m
-                        [36m</div>[39m
-                      [36m</div>[39m
-                    [36m</div>[39m
-                  [36m</div>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"modal-footer"[39m
-            [36m>[39m
-              [36m<button[39m
-                [33mclass[39m=[32m"me-8 btn btn-danger"[39m
-                [33mdata-testid[39m=[32m"deletePlanButton"[39m
-                [33mtype[39m=[32m"button"[39m
-              [36m>[39m
-                [0mDelete Plan[0m
-              [36m</button>[39m
-              [36m<button[39m
-                [33mclass[39m=[32m"btn btn-primary"[39m
-                [33mdata-testid[39m=[32m"viewPlanButton"[39m
-                [33mtype[39m=[32m"button"[39m
-              [36m>[39m
-                [0mView[0m
-              [36m</button>[39m
-              [36m<button[39m
-                [33mclass[39m=[32m"btn btn-secondary"[39m
-                [33mtype[39m=[32m"button"[39m
-              [36m>[39m
-                [0mClose[0m
-              [36m</button>[39m
-              [36m<button[39m
-                [33mclass[39m=[32m"btn btn-primary"[39m
-                [33mtype[39m=[32m"button"[39m
-              [36m>[39m
-                [0mSave Changes[0m
-              [36m</button>[39m
-            [36m</div>[39m
-          [36m</div>[39m
+            [36m</legend>[39m
+          [36m</fieldset>[39m
         [36m</div>[39m
       [36m</div>[39m
-      [36m<div[39m
-        [33mclass[39m=[32m"MuiAutocomplete-popper css-1s5lphu-MuiPopper-root-MuiAutocomplete-popper"[39m
-        [33mdata-popper-escaped[39m=[32m""[39m
-        [33mdata-popper-placement[39m=[32m"bottom"[39m
-        [33mdata-popper-reference-hidden[39m=[32m""[39m
-        [33mrole[39m=[32m"presentation"[39m
-        [33mstyle[39m=[32m"position: absolute; top: 0px; left: 0px; width: 0px; margin: 0px; transform: translate(0px, 0px);"[39m
-      [36m>[39m
-        [36m<div[39m
-          [33mclass[39m=[32m"MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiAutocomplete-paper css-9e5uuu-MuiPaper-root-MuiAutocomplete-paper"[39m
-        [36m>[39m
-          [36m<div[39m
-            [33mclass[39m=[32m"MuiAutocomplete-noOptions css-6wwd73-MuiAutocomplete-noOptions"[39m
-            [33mrole[39m=[32m"presentation"[39m
-          [36m>[39m
-            [0mNo options[0m
-          [36m</div>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
+    [36m</div>[39m
 
-       99 |         userEvent.type(input2, "MATH242");
-      100 |         addcourse.click();
-    > 101 |         const checkchange = screen.getByText(/MATH242/i);
-          |                                    ^
-      102 |         expect(checkchange).toBeInTheDocument;
-      103 |         //    note to FIX THIS (NOT WORKING, don't know whats up)
-      104 |         //    check how i added and searched course MATH242.
+      100 |         // const input2 = screen.getByTestId("autocompletebutton");
+      101 |         // userEvent.type(input2, "MATH242");
+    > 102 |         const inputt = within(autocomplete).getByRole("textbox");
+          |                                             ^
+      103 |         fireEvent.change(inputt, { target: { value: "MATH242" } });
+      104 |         await wait();
+      105 |         fireEvent.keyDown(autocomplete, { key: "ArrowDown " });
 
       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
       at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
       at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/App.test.tsx:101:36)
-      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
-      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
-      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
-      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
+      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/App.test.tsx:102:45)
 
 ----------------------|---------|----------|---------|---------|-------------------
 File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ----------------------|---------|----------|---------|---------|-------------------
-All files             |   75.53 |    79.16 |   71.23 |      76 |                   
+All files             |   76.97 |    79.16 |   73.97 |    77.6 |                   
  src                  |    87.5 |       75 |     100 |    87.5 |                   
   App.tsx             |    87.5 |       75 |     100 |    87.5 | 14                
- src/Components       |    74.8 |       80 |   70.83 |   75.21 |                   
+ src/Components       |   76.33 |       80 |   73.61 |   76.92 |                   
   AddCourses.tsx      |   82.14 |    66.66 |   85.71 |    87.5 | 48-49,70          
-  EditCourse.tsx      |      70 |      100 |      50 |      70 | 63-92             
+  EditCourse.tsx      |      90 |      100 |   83.33 |      90 | 72                
   EditCourseModal.tsx |     100 |      100 |     100 |     100 |                   
   ListCourses.tsx     |     100 |      100 |     100 |     100 |                   
   NewPlanList.tsx     |   93.33 |      100 |    87.5 |     100 |                   
@@ -603,5 +354,5 @@ All files             |   75.53 |    79.16 |   71.23 |      76 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 11 passed, 12 total
 Snapshots:   0 total
-Time:        9.828 s
+Time:        6.672 s
 Ran all test suites.
