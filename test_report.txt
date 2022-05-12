@@ -161,22 +161,26 @@
       at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
 
-FAIL src/App.test.tsx (6.025 s)
-  ✓ renders the course name somewhere (112 ms)
+FAIL src/App.test.tsx (6.343 s)
+  ✓ renders the course name somewhere (121 ms)
   Testing plan
-    ✓ Add new plan button shows up (16 ms)
-    ✓ clicking new plan shows modal (67 ms)
-    ✓ can add a plan (99 ms)
-    ✓ can not add an empty plan (58 ms)
-    ✓ can delete a plan (119 ms)
+    ✓ Add new plan button shows up (15 ms)
+    ✓ clicking new plan shows modal (61 ms)
+    ✓ can add a plan (106 ms)
+    ✓ can not add an empty plan (54 ms)
+    ✓ can delete a plan (122 ms)
   Courses
-    ✓ can add course (334 ms)
-    ✕ can search course (651 ms)
-    ✓ can delete a SINGLE selected course (174 ms)
-    ✓ can edit a course (all fields, course: code/name/credit/desc.. (542 ms)
+    ✓ can add course (342 ms)
+    ✕ can search course (661 ms)
+    ✓ can delete a SINGLE selected course (176 ms)
+    ✓ can edit a course (all fields, course: code/name/credit/desc.. (543 ms)
   View
-    ✓ view plan button shows up (125 ms)
-    ✓ can view an empty plan (84 ms)
+    ✓ view plan button shows up (135 ms)
+    ✓ can view an empty plan (81 ms)
+  Semesters
+    ✓ can add a semester (121 ms)
+    ✓ can delete a semester (119 ms)
+    ✓ can delete all semesters (119 ms)
 
   ● Courses › can search course
 
@@ -222,6 +226,7 @@ FAIL src/App.test.tsx (6.025 s)
     [36m>[39m
       [36m<div[39m
         [33mclass[39m=[32m"MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"[39m
+        [33mdata-testid[39m=[32m"autocompleteInput"[39m
       [36m>[39m
         [36m<label[39m
           [33mclass[39m=[32m"MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"[39m
@@ -328,22 +333,22 @@ FAIL src/App.test.tsx (6.025 s)
 ----------------------|---------|----------|---------|---------|-------------------
 File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ----------------------|---------|----------|---------|---------|-------------------
-All files             |   76.97 |    79.16 |   73.97 |    77.6 |                   
+All files             |   78.57 |    79.16 |   77.33 |   79.36 |                   
  src                  |    87.5 |       75 |     100 |    87.5 |                   
   App.tsx             |    87.5 |       75 |     100 |    87.5 | 14                
- src/Components       |   76.33 |       80 |   73.61 |   76.92 |                   
-  AddCourses.tsx      |   82.14 |    66.66 |   85.71 |    87.5 | 48-49,70          
+ src/Components       |   78.03 |       80 |   77.02 |   78.81 |                   
+  AddCourses.tsx      |      80 |    66.66 |   85.71 |   85.71 | 44-45,65          
   EditCourse.tsx      |      90 |      100 |   83.33 |      90 | 72                
   EditCourseModal.tsx |     100 |      100 |     100 |     100 |                   
   ListCourses.tsx     |     100 |      100 |     100 |     100 |                   
   NewPlanList.tsx     |   93.33 |      100 |    87.5 |     100 |                   
   PlanAdd.tsx         |     100 |      100 |     100 |     100 |                   
-  PlanView.tsx        |   66.66 |      100 |      60 |   71.42 | 35-36             
+  PlanView.tsx        |   53.84 |      100 |      50 |   54.54 | 35-37,42-43       
   PlanViewModal.tsx   |     100 |      100 |     100 |     100 |                   
   SemesterAdd.tsx     |      75 |       50 |      50 |      75 | 18,56             
-  SemesterList.tsx    |   71.42 |      100 |      60 |   71.42 | 23,40             
-  SemesterModal.tsx   |   66.66 |       75 |   57.14 |   61.53 | 25,34-38          
-  SemesterView.tsx    |      50 |      100 |      50 |      50 | 37                
+  SemesterList.tsx    |   71.42 |      100 |      60 |   71.42 | 21,38             
+  SemesterModal.tsx   |   93.33 |       75 |    87.5 |    92.3 | 23                
+  SemesterView.tsx    |     100 |      100 |     100 |     100 |                   
   ShowHidePlans.tsx   |      90 |      100 |      80 |    87.5 | 19                
   TableView.tsx       |       0 |      100 |       0 |       0 | 5-32              
  src/Interfaces       |       0 |        0 |       0 |       0 |                   
@@ -352,7 +357,7 @@ All files             |   76.97 |    79.16 |   73.97 |    77.6 |
   Semester.ts         |       0 |        0 |       0 |       0 |                   
 ----------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
-Tests:       1 failed, 11 passed, 12 total
+Tests:       1 failed, 14 passed, 15 total
 Snapshots:   0 total
-Time:        6.672 s
+Time:        7.058 s
 Ran all test suites.
