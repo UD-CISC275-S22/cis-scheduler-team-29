@@ -11,15 +11,13 @@ export function SemesterView({
     deleteSemester,
     courses,
     plans,
-    setPlan,
-    saveDataKey
+    setPlan
 }: {
     semester: Semester;
     deleteSemester: (id: string) => void;
     courses: Courses[];
     setPlan: (plans: Plan[]) => void;
     plans: Plan[];
-    saveDataKey: string;
 }): JSX.Element {
     return (
         <Stack direction="horizontal" gap={0}>
@@ -30,10 +28,10 @@ export function SemesterView({
                     semester={semester}
                     plans={plans}
                     setPlan={setPlan}
-                    saveDataKey={saveDataKey}
                 ></AddCourse>
 
                 <Button
+                    data-testid="deleteSemester"
                     onClick={() => deleteSemester(semester.id)}
                     variant="danger"
                     className="me-8"
