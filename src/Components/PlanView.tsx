@@ -73,7 +73,12 @@ export function PlanView({
                 >
                     Delete Plan
                 </Button>
-                <Button onClick={handleShowPlanViewModal}>View</Button>
+                <Button
+                    data-testid="viewPlanButton"
+                    onClick={handleShowPlanViewModal}
+                >
+                    View
+                </Button>
                 <Button variant="secondary" onClick={dontSave}>
                     Close
                 </Button>
