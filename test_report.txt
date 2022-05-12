@@ -161,26 +161,26 @@
       at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
 
-FAIL src/App.test.tsx (6.343 s)
-  ✓ renders the course name somewhere (121 ms)
+FAIL src/App.test.tsx (8.635 s)
+  ✓ renders the course name somewhere (154 ms)
   Testing plan
-    ✓ Add new plan button shows up (15 ms)
-    ✓ clicking new plan shows modal (61 ms)
-    ✓ can add a plan (106 ms)
-    ✓ can not add an empty plan (54 ms)
-    ✓ can delete a plan (122 ms)
+    ✓ Add new plan button shows up (24 ms)
+    ✓ clicking new plan shows modal (88 ms)
+    ✓ can add a plan (155 ms)
+    ✓ can not add an empty plan (80 ms)
+    ✓ can delete a plan (172 ms)
   Courses
-    ✓ can add course (342 ms)
-    ✕ can search course (661 ms)
-    ✓ can delete a SINGLE selected course (176 ms)
-    ✓ can edit a course (all fields, course: code/name/credit/desc.. (543 ms)
+    ✓ can add course (473 ms)
+    ✕ can search course (937 ms)
+    ✓ can delete a SINGLE selected course (251 ms)
+    ✓ can edit a course (all fields, course: code/name/credit/desc.. (807 ms)
   View
-    ✓ view plan button shows up (135 ms)
-    ✓ can view an empty plan (81 ms)
+    ✓ view plan button shows up (193 ms)
+    ✓ can view an empty plan (112 ms)
   Semesters
-    ✓ can add a semester (121 ms)
-    ✓ can delete a semester (119 ms)
-    ✓ can delete all semesters (119 ms)
+    ✓ can add a semester (166 ms)
+    ✓ can delete a semester (171 ms)
+    ✓ can delete all semesters (171 ms)
 
   ● Courses › can search course
 
@@ -359,5 +359,5 @@ All files             |   78.57 |    79.16 |   77.33 |   79.36 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 14 passed, 15 total
 Snapshots:   0 total
-Time:        7.058 s
+Time:        9.55 s
 Ran all test suites.
