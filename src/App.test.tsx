@@ -241,3 +241,64 @@ describe("View", () => {
     });
     */
 });
+describe("Semesters", () => {
+    beforeEach(() => {
+        render(<App />);
+    });
+    test("can add a semester", () => {
+        const newPlanButton = screen.getByTestId("newPlanButton");
+        newPlanButton.click();
+        const createNewPlanButton = screen.getByTestId("savePlanButton");
+        const input = screen.getByTestId("addPlanInputName");
+        userEvent.type(input, "test plan");
+        createNewPlanButton.click();
+        const newCreatedPlan = screen.getByTestId("test plan");
+        newCreatedPlan.click();
+        const addsemesterbutton = screen.getByTestId("addsemesterbutton");
+        addsemesterbutton.click();
+        const save = screen.getByTestId("Savechangessemester");
+        save.click();
+        const checksemester = screen.getByText(/Summer 2022/i);
+        expect(checksemester).toBeInTheDocument;
+    });
+    test("can delete a semester", () => {
+        const newPlanButton = screen.getByTestId("newPlanButton");
+        newPlanButton.click();
+        const createNewPlanButton = screen.getByTestId("savePlanButton");
+        const input = screen.getByTestId("addPlanInputName");
+        userEvent.type(input, "test plan");
+        createNewPlanButton.click();
+        const newCreatedPlan = screen.getByTestId("test plan");
+        newCreatedPlan.click();
+        const addsemesterbutton = screen.getByTestId("addsemesterbutton");
+        addsemesterbutton.click();
+        const save = screen.getByTestId("Savechangessemester");
+        save.click();
+        const addcourse = screen.getByTestId("addcoursetest");
+        expect(addcourse !== null);
+        const deleteSemester = screen.getByTestId("deleteSemester");
+        deleteSemester.click();
+        expect(addcourse === null);
+    });
+    test("can delete all semesters", () => {
+        const newPlanButton = screen.getByTestId("newPlanButton");
+        newPlanButton.click();
+        const createNewPlanButton = screen.getByTestId("savePlanButton");
+        const input = screen.getByTestId("addPlanInputName");
+        userEvent.type(input, "test plan");
+        createNewPlanButton.click();
+        const newCreatedPlan = screen.getByTestId("test plan");
+        newCreatedPlan.click();
+        const addsemesterbutton = screen.getByTestId("addsemesterbutton");
+        addsemesterbutton.click();
+        const save = screen.getByTestId("Savechangessemester");
+        save.click();
+        const addcourse = screen.getByTestId("addcoursetest");
+        expect(addcourse !== null);
+        const deleteAllSemesters = screen.getByTestId(
+            "deleteAllSemestersButton"
+        );
+        deleteAllSemesters.click();
+        expect(addcourse === null);
+    });
+});
