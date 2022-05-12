@@ -39,7 +39,7 @@ describe("Testing plan", () => {
         const createNewPlanButton = screen.getByTestId("savePlanButton");
         createNewPlanButton.click();
         const totalButtons = screen.queryAllByRole("button");
-        expect(totalButtons.length === 1);
+        expect(totalButtons.length).toBe(1);
     });
     test("can delete a plan", () => {
         const newPlanButton = screen.getByTestId("newPlanButton");
@@ -187,7 +187,6 @@ describe("View", () => {
         const viewPlanModalTitle = screen.getByTestId("viewModalTitle");
         expect(viewPlanModalTitle !== null);
     });
-    /*
     test("can view a plan with an empty semester", () => {
         const newPlanButton = screen.getByTestId("newPlanButton");
         newPlanButton.click();
@@ -203,8 +202,7 @@ describe("View", () => {
         save.click();
         const viewPlanButton = screen.getByTestId("viewPlanButton");
         viewPlanButton.click();
-        const viewPlanSemester = screen.getByTestId("viewPlanSemester");
-        expect(viewPlanSemester !== null);
+        const viewPlanSemester = screen.getAllByText("Summer 2022");
+        expect(viewPlanSemester.length).toBe(2);
     });
-    */
 });
