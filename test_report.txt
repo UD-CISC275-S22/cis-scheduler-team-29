@@ -2,185 +2,28 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test "--coverage"
 
-  console.error
-    Warning: validateDOMNesting(...): <h1> cannot appear as a descendant of <p>.
-        at h1
-        at div
-        at p
-        at div
-        at header
-        at div
-        at body
-        at App (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/App.tsx:18:30)
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at validateDOMNesting (node_modules/react-dom/cjs/react-dom.development.js:10083:7)
-      at createInstance (node_modules/react-dom/cjs/react-dom.development.js:10181:5)
-      at completeWork (node_modules/react-dom/cjs/react-dom.development.js:19464:28)
-      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
-      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
-
-  console.error
-    Warning: validateDOMNesting(...): <div> cannot appear as a descendant of <p>.
-        at div
-        at p
-        at div
-        at header
-        at div
-        at body
-        at App (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/App.tsx:18:30)
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at validateDOMNesting (node_modules/react-dom/cjs/react-dom.development.js:10083:7)
-      at createInstance (node_modules/react-dom/cjs/react-dom.development.js:10181:5)
-      at completeWork (node_modules/react-dom/cjs/react-dom.development.js:19464:28)
-      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
-      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
-
-  console.error
-    Warning: validateDOMNesting(...): <p> cannot appear as a descendant of <p>.
-        at p
-        at p
-        at div
-        at header
-        at div
-        at body
-        at App (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/App.tsx:18:30)
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at validateDOMNesting (node_modules/react-dom/cjs/react-dom.development.js:10083:7)
-      at createInstance (node_modules/react-dom/cjs/react-dom.development.js:10181:5)
-      at completeWork (node_modules/react-dom/cjs/react-dom.development.js:19464:28)
-      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
-      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
-
-  console.error
-    Warning: validateDOMNesting(...): <body> cannot appear as a child of <div>.
-        at body
-        at App (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/App.tsx:18:30)
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at validateDOMNesting (node_modules/react-dom/cjs/react-dom.development.js:10081:7)
-      at createInstance (node_modules/react-dom/cjs/react-dom.development.js:10181:5)
-      at completeWork (node_modules/react-dom/cjs/react-dom.development.js:19464:28)
-      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
-      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
-
-  console.error
-    Error: Expected key descriptor but found "" in ""
-        See https://github.com/testing-library/user-event/blob/main/README.md#keyboardtext-options
-        for more information about how userEvent parses your input.
-        at assertDescriptor (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/@testing-library/user-event/dist/keyboard/getNextKeyDef.js:140:11)
-        at readPrintableChar (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/@testing-library/user-event/dist/keyboard/getNextKeyDef.js:98:3)
-        at readNextDescriptor (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/@testing-library/user-event/dist/keyboard/getNextKeyDef.js:92:23)
-        at getNextKeyDef (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/@testing-library/user-event/dist/keyboard/getNextKeyDef.js:53:7)
-        at keyboardImplementation (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/@testing-library/user-event/dist/keyboard/keyboardImplementation.js:38:106)
-        at keyboardImplementationWrapper (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/@testing-library/user-event/dist/keyboard/index.js:55:65)
-        at typeImplementation (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/@testing-library/user-event/dist/type/typeImplementation.js:49:51)
-        at Object.type (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/@testing-library/user-event/dist/type/index.js:27:60)
-        at Object.<anonymous> (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/App.test.tsx:42:19)
-        at Promise.then.completed (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/jest-circus/build/utils.js:391:28)
-        at new Promise (<anonymous>)
-        at callAsyncCircusFn (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/jest-circus/build/utils.js:316:10)
-        at _callCircusTest (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/jest-circus/build/run.js:218:40)
-        at _runTest (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/jest-circus/build/run.js:155:3)
-        at _runTestsForDescribeBlock (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/jest-circus/build/run.js:66:9)
-        at _runTestsForDescribeBlock (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/jest-circus/build/run.js:60:9)
-        at run (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/jest-circus/build/run.js:25:3)
-        at runAndTransformResultsToJestFormat (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:170:21)
-        at jestAdapter (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:82:19)
-        at runTestInternal (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/jest-runner/build/runTest.js:389:16)
-        at runTest (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/jest-runner/build/runTest.js:475:34)
-        at TestRunner.runTests (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/jest-runner/build/index.js:111:12)
-        at TestScheduler.scheduleTests (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/@jest/core/build/TestScheduler.js:333:13)
-        at runJest (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/@jest/core/build/runJest.js:404:19)
-        at _run10000 (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/@jest/core/build/cli/index.js:320:7)
-        at runCLI (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/@jest/core/build/cli/index.js:173:3)
-        at Object.run (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/jest-cli/build/cli/index.js:155:37)
-
-  console.error
-    Warning: validateDOMNesting(...): <div> cannot appear as a child of <table>.
-        at div
-        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-bootstrap/cjs/Row.js:22:3
-        at table
-        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-bootstrap/cjs/Table.js:21:3
-        at div
-        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-bootstrap/cjs/Stack.js:23:7
-        at ListCourses (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/Components/ListCourses.tsx:8:5)
-        at div
-        at AddCourse (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/Components/AddCourses.tsx:14:5)
-        at div
-        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-bootstrap/cjs/Col.js:72:8
-        at div
-        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-bootstrap/cjs/Stack.js:23:7
-        at SemesterView (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/Components/SemesterView.tsx:10:5)
-        at div
-        at div
-        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/@emotion/react/dist/emotion-element-e89f38a3.cjs.dev.js:64:23
-        at Grid (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/@mui/material/node/Grid/Grid.js:315:49)
-        at div
-        at SemesterList (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/Components/SemesterList.tsx:8:5)
-        at div
-        at SemesterModal (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/Components/SemesterModal.tsx:9:5)
-        at div
-        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-bootstrap/cjs/Container.js:24:3
-        at div
-        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-bootstrap/cjs/createWithBsPrefix.js:31:5
-        at div
-        at div
-        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-bootstrap/cjs/ModalDialog.js:21:3
-        at div
-        at Transition (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-transition-group/cjs/Transition.js:133:30)
-        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-bootstrap/cjs/TransitionWrapper.js:24:3
-        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-bootstrap/cjs/Fade.js:38:3
-        at DialogTransition
-        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/@restart/ui/cjs/Modal.js:75:5
-        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-bootstrap/cjs/Modal.js:85:3
-        at PlanView (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/Components/PlanView.tsx:10:5)
-        at div
-        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-bootstrap/cjs/Stack.js:23:7
-        at NewPlanList (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/Components/NewPlanList.tsx:8:5)
-        at div
-        at p
-        at p
-        at div
-        at header
-        at div
-        at body
-        at App (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/App.tsx:18:30)
-
-      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
-      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
-      at validateDOMNesting (node_modules/react-dom/cjs/react-dom.development.js:10081:7)
-      at createInstance (node_modules/react-dom/cjs/react-dom.development.js:10181:5)
-      at completeWork (node_modules/react-dom/cjs/react-dom.development.js:19464:28)
-      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
-      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
-
-FAIL src/App.test.tsx (8.635 s)
-  ✓ renders the course name somewhere (154 ms)
+FAIL src/App.test.tsx (6.422 s)
+  ✓ renders the course name somewhere (52 ms)
   Testing plan
-    ✓ Add new plan button shows up (24 ms)
-    ✓ clicking new plan shows modal (88 ms)
-    ✓ can add a plan (155 ms)
-    ✓ can not add an empty plan (80 ms)
-    ✓ can delete a plan (172 ms)
+    ✓ Add new plan button shows up (17 ms)
+    ✓ clicking new plan shows modal (67 ms)
+    ✓ can add a plan (108 ms)
+    ✓ can not add an empty plan (33 ms)
+    ✓ can delete a plan (127 ms)
   Courses
-    ✓ can add course (473 ms)
-    ✕ can search course (937 ms)
-    ✓ can delete a SINGLE selected course (251 ms)
-    ✓ can edit a course (all fields, course: code/name/credit/desc.. (807 ms)
+    ✓ can add course (277 ms)
+    ✕ can search course (656 ms)
+    ✓ can delete a SINGLE selected course (170 ms)
+    ✓ can edit a course (all fields, course: code/name/credit/desc.. (537 ms)
   View
-    ✓ view plan button shows up (193 ms)
-    ✓ can view an empty plan (112 ms)
+    ✓ view plan button shows up (142 ms)
+    ✓ can view an empty plan (77 ms)
+    ✓ can view a plan with an empty semester (140 ms)
+    ✓ can view a plan with a non-empty semester (151 ms)
   Semesters
-    ✓ can add a semester (166 ms)
-    ✓ can delete a semester (171 ms)
-    ✓ can delete all semesters (171 ms)
+    ✓ can add a semester (114 ms)
+    ✓ can delete a semester (108 ms)
+    ✓ can delete all semesters (119 ms)
 
   ● Courses › can search course
 
@@ -316,19 +159,19 @@ FAIL src/App.test.tsx (8.635 s)
       [36m</div>[39m
     [36m</div>[39m
 
-      100 |         // const input2 = screen.getByTestId("autocompletebutton");
-      101 |         // userEvent.type(input2, "MATH242");
-    > 102 |         const inputt = within(autocomplete).getByRole("textbox");
+       98 |         // const input2 = screen.getByTestId("autocompletebutton");
+       99 |         // userEvent.type(input2, "MATH242");
+    > 100 |         const inputt = within(autocomplete).getByRole("textbox");
           |                                             ^
-      103 |         fireEvent.change(inputt, { target: { value: "MATH242" } });
-      104 |         await wait();
-      105 |         fireEvent.keyDown(autocomplete, { key: "ArrowDown " });
+      101 |         fireEvent.change(inputt, { target: { value: "MATH242" } });
+      102 |         await wait();
+      103 |         fireEvent.keyDown(autocomplete, { key: "ArrowDown " });
 
       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
       at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
       at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
       at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/App.test.tsx:102:45)
+      at Object.<anonymous> (src/App.test.tsx:100:45)
 
 ----------------------|---------|----------|---------|---------|-------------------
 File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
@@ -357,7 +200,7 @@ All files             |   78.57 |    79.16 |   77.33 |   79.36 |
   Semester.ts         |       0 |        0 |       0 |       0 |                   
 ----------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
-Tests:       1 failed, 14 passed, 15 total
+Tests:       1 failed, 16 passed, 17 total
 Snapshots:   0 total
-Time:        9.55 s
+Time:        7.09 s
 Ran all test suites.
