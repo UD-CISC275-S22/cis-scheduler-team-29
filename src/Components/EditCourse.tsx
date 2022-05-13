@@ -47,12 +47,8 @@ export function CourseEditor({
                     </Col>
                 </Form.Group>
                 {/* COURSE NAME */}
-                <Form.Group
-                    data-testid="coursenameedit"
-                    controlId="formCourseCredit"
-                    as={Row}
-                >
-                    <Form.Label column sm={2}>
+                <Form.Group controlId="formCourseCredit" as={Row}>
+                    <Form.Label data-testid="coursenameedit" column sm={2}>
                         Name:
                     </Form.Label>
                     <Col>
@@ -65,7 +61,7 @@ export function CourseEditor({
                     </Col>
                 </Form.Group>
                 <Form.Group controlId="formCourseCredit" as={Row}>
-                    <Form.Label column sm={2}>
+                    <Form.Label data-testid="coursecreditedit" column sm={2}>
                         Credit:
                     </Form.Label>
                     <Col>
@@ -79,7 +75,7 @@ export function CourseEditor({
                 </Form.Group>
                 {/* COURSE STATUS (CHANGE TO DESC LATER)*/}
                 <Form.Group controlId="formCourseStatus" as={Row}>
-                    <Form.Label column sm={2}>
+                    <Form.Label data-testid="coursedescedit" column sm={2}>
                         Status:
                     </Form.Label>
                     <Col>

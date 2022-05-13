@@ -33,8 +33,16 @@ export function PlanView({
     const handleShowPlanViewModal = () => setPlanViewModal(true);
     function saveChanges() {
         localStorage.setItem(saveDataKey, JSON.stringify(plans));
+        setPlan([...plans]);
         handleClose();
     }
+
+    const COPYPLANS = JSON.parse(JSON.stringify(plans)) as typeof plans;
+    function dontSave() {
+        setPlan([...COPYPLANS]);
+        handleClose();
+    }
+
     return (
         <Modal show={show} onHide={handleClose} animation={true} size="xl">
             <Modal.Header closeButton>
@@ -47,7 +55,6 @@ export function PlanView({
                         plan={plan}
                         plans={plans}
                         setPlan={setPlan}
-                        saveDataKey={saveDataKey}
                     ></SemesterModal>
                     <PlanViewModal
                         show={showPlanViewModal}
@@ -72,7 +79,7 @@ export function PlanView({
                 >
                     View
                 </Button>
-                <Button variant="secondary" onClick={handleClose}>
+                <Button variant="secondary" onClick={dontSave}>
                     Close
                 </Button>
                 <Button variant="primary" onClick={saveChanges}>
