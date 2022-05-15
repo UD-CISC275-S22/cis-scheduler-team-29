@@ -16,7 +16,7 @@ if (previousData !== null) {
 
 function App(): JSX.Element {
     const [plans, setPlan] = useState<Plan[]>(loadedData);
-    const [course] = useState<Courses[]>([]);
+    const courses: Courses[] = [];
     return (
         <body className="App">
             <div className="header">
@@ -44,7 +44,7 @@ function App(): JSX.Element {
                                 {plans.length === 0 && <div>No Plans</div>}
                                 <div>
                                     <NewPlanList
-                                        course={course}
+                                        course={courses}
                                         plans={plans}
                                         setPlan={setPlan}
                                         saveDataKey={saveDataKey}
