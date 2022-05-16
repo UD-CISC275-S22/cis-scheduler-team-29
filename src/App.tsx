@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import { NewPlanList } from "./Components/NewPlanList";
+import { PlanView } from "./Components/PlanView";
 import { ShowHidePlans } from "./Components/ShowHidePlans";
 import { Courses } from "./Interfaces/Courses";
 import { Plan } from "./Interfaces/Plan";
@@ -17,6 +18,32 @@ if (previousData !== null) {
 function App(): JSX.Element {
     const [plans, setPlan] = useState<Plan[]>(loadedData);
     const [course] = useState<Courses[]>([]);
+    const [plansToShow, setPlansToShow] = useState<Plan[]>([]);
+
+    const handleShowAddModal = (plan: Plan) => {
+        if (plansToShow.includes(plan)) {
+            setPlansToShow([
+                ...plansToShow.filter(
+                    (planX: Plan): boolean => planX.id !== plan.id
+                )
+            ]);
+        } else {
+            setPlansToShow([...plansToShow, plan]);
+        }
+    };
+
+    function deletePlan(id: string) {
+        setPlan(plans.filter((plan: Plan): boolean => plan.id !== id));
+        localStorage.setItem(
+            saveDataKey,
+            JSON.stringify(
+                plans.filter((plan: Plan): boolean => plan.id !== id)
+            )
+        );
+        setPlansToShow(
+            plansToShow.filter((plan: Plan): boolean => plan.id !== id)
+        );
+    }
     return (
         <div className="App">
             <div className="header">
@@ -44,10 +71,8 @@ function App(): JSX.Element {
                                 {plans.length === 0 && <div>No Plans</div>}
                                 <div>
                                     <NewPlanList
-                                        course={course}
                                         plans={plans}
-                                        setPlan={setPlan}
-                                        saveDataKey={saveDataKey}
+                                        handleShowAddModal={handleShowAddModal}
                                     ></NewPlanList>
                                 </div>
                             </div>
@@ -60,6 +85,21 @@ function App(): JSX.Element {
                 setPlan={setPlan}
                 saveDataKey={saveDataKey}
             ></ShowHidePlans>
+            {plansToShow.map((plan: Plan) => (
+                <div key={plan.id} className="planShow">
+                    <PlanView
+                        course={course}
+                        plan={plan}
+                        plans={plans}
+                        deletePlan={deletePlan}
+                        semesters={plan.semesters}
+                        setPlan={setPlan}
+                        saveDataKey={saveDataKey}
+                        plansToShow={plansToShow}
+                        setPlansToShow={setPlansToShow}
+                    ></PlanView>
+                </div>
+            ))}
         </div>
     );
 }

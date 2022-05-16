@@ -36,13 +36,13 @@ export function PlanViewModal({
                             {semester.course.map((courses: Courses) => (
                                 <Row
                                     className="Row_ListCourses"
-                                    key={courses.ID}
+                                    key={courses.name}
                                 >
                                     <Col className="Code_Col">
-                                        {courses.Code}
+                                        {courses.code}
                                     </Col>
                                     <Col className="Credit_Col">
-                                        {courses.Credits}
+                                        {courses.credits}
                                     </Col>
                                 </Row>
                             ))}
