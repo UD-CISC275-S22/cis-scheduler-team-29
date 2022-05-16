@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Button, Modal } from "react-bootstrap";
+import { Container, Button, Row, Col } from "react-bootstrap";
 import { Courses } from "../Interfaces/Courses";
 import { Plan } from "../Interfaces/Plan";
 import { Semester } from "../Interfaces/Semester";
@@ -13,9 +13,9 @@ export function PlanView({
     deletePlan,
     semesters,
     setPlan,
-    show,
-    handleClose,
-    saveDataKey
+    saveDataKey,
+    plansToShow,
+    setPlansToShow
 }: {
     course: Courses[];
     plan: Plan;
@@ -23,9 +23,9 @@ export function PlanView({
     deletePlan: (id: string) => void;
     semesters: Semester[];
     setPlan: (plans: Plan[]) => void;
-    show: boolean;
-    handleClose: () => void;
     saveDataKey: string;
+    plansToShow: Plan[];
+    setPlansToShow: (plans: Plan[]) => void;
 }): JSX.Element {
     const [showPlanViewModal, setPlanViewModal] = useState(false);
 
@@ -34,22 +34,23 @@ export function PlanView({
     function saveChanges() {
         localStorage.setItem(saveDataKey, JSON.stringify(plans));
         setPlan([...plans]);
-        handleClose();
     }
 
     const COPYPLANS = JSON.parse(JSON.stringify(plans)) as typeof plans;
-    function dontSave() {
+    function dontSave(plan: Plan) {
         setPlan([...COPYPLANS]);
-        handleClose();
+        setPlansToShow([
+            ...plansToShow.filter(
+                (planX: Plan): boolean => planX.id !== plan.id
+            )
+        ]);
     }
 
     return (
-        <Modal show={show} onHide={handleClose} animation={true} size="xl">
-            <Modal.Header closeButton>
-                <Modal.Title>{plan.id}</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-                <Container>
+        <Container>
+            <Row>
+                <Col>
+                    <h3>{plan.id}</h3>
                     <SemesterModal
                         realSemesters={semesters}
                         plan={plan}
@@ -62,30 +63,28 @@ export function PlanView({
                         semesters={plan.semesters}
                         course={course}
                     ></PlanViewModal>
-                </Container>
-            </Modal.Body>
-            <Modal.Footer>
-                <Button
-                    data-testid="deletePlanButton"
-                    onClick={() => deletePlan(plan.id)}
-                    variant="danger"
-                    className="me-8"
-                >
-                    Delete Plan
-                </Button>
-                <Button
-                    data-testid="viewPlanButton"
-                    onClick={handleShowPlanViewModal}
-                >
-                    View
-                </Button>
-                <Button variant="secondary" onClick={dontSave}>
-                    Close
-                </Button>
-                <Button variant="primary" onClick={saveChanges}>
-                    Save Changes
-                </Button>
-            </Modal.Footer>
-        </Modal>
+                    <Button
+                        data-testid="deletePlanButton"
+                        onClick={() => deletePlan(plan.id)}
+                        variant="danger"
+                        className="me-8"
+                    >
+                        Delete Plan
+                    </Button>
+                    <Button
+                        data-testid="viewPlanButton"
+                        onClick={handleShowPlanViewModal}
+                    >
+                        View
+                    </Button>
+                    <Button variant="secondary" onClick={() => dontSave(plan)}>
+                        Close
+                    </Button>
+                    <Button variant="primary" onClick={saveChanges}>
+                        Save Changes
+                    </Button>
+                </Col>
+            </Row>
+        </Container>
     );
 }
