@@ -45,7 +45,7 @@ function App(): JSX.Element {
         );
     }
     return (
-        <body className="App">
+        <div className="App">
             <div className="header">
                 <header>
                     <div className="headertopright">
@@ -55,19 +55,19 @@ function App(): JSX.Element {
                         <p>University of Delaware</p>
                     </div>
                     <div id="textbox">
-                        <p className="alignleft"></p>
-                        <p className="aligncenter">
+                        <div className="alignleft"></div>
+                        <div className="aligncenter">
                             <div className="Welcomemiddle">
                                 <h1>Welcome</h1>
                                 <h1>to the</h1>
                                 <h1>UD Course</h1>
                                 <h1>Scheduler!</h1>
                             </div>
-                        </p>
-                        <p className="vieweditdegreeplan">
-                            <p>
+                        </div>
+                        <div className="vieweditdegreeplan">
+                            <div>
                                 View/Edit your saved Degree Plans
-                                <div>------------------------</div>
+                                <p>------------------------</p>
                                 {plans.length === 0 && <div>No Plans</div>}
                                 <div>
                                     <NewPlanList
@@ -75,8 +75,8 @@ function App(): JSX.Element {
                                         handleShowAddModal={handleShowAddModal}
                                     ></NewPlanList>
                                 </div>
-                            </p>
-                        </p>
+                            </div>
+                        </div>
                     </div>
                 </header>
             </div>
@@ -100,7 +100,7 @@ function App(): JSX.Element {
                     ></PlanView>
                 </div>
             ))}
-        </body>
+        </div>
     );
 }
 

@@ -2,14 +2,17 @@ import * as React from "react";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import { Courses } from "../Interfaces/Courses";
-import COURSES2 from "../Data/CISC_Courses.json";
 import { ListCourses } from "./ListCourses";
 import { Semester } from "../Interfaces/Semester";
 import { Plan } from "../Interfaces/Plan";
-import { Button, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
+import catalog from "../Data/catalog.json";
 
-const COURSE_LIST: Courses[] = COURSES2.map((crse) => crse);
-
+const COURSES: Courses[] = Object.values(catalog)
+    .flat()
+    .map((category) => Object.values(category).flat())
+    .flat()
+    .map((crs) => ({ ...crs }));
 export function AddCourse({
     courses,
     semester,
@@ -22,22 +25,20 @@ export function AddCourse({
     plans: Plan[];
 }): JSX.Element {
     const [inputValue, setInputValue] = React.useState("");
-    const [value, setValue] = React.useState<string | null>(
-        COURSE_LIST[0].Code
-    );
+    const [value, setValue] = React.useState<string | null>(COURSES[0].code);
 
     function editCourse(course: Courses, newCourse: Courses): void {
         semester.course = courses.map((c) => {
-            if (c.Code !== course.Code) return c;
+            if (c.code !== course.code) return c;
             return newCourse;
         });
         setPlan([...plans]);
     }
     function addCourse(code: string) {
-        if (!courses.find((c) => c.Code === code) && code !== "") {
+        if (!courses.find((c) => c.code === code) && code !== "") {
             semester.course = [
                 ...courses,
-                ...COURSE_LIST.filter((obj) => obj.Code === code)
+                ...COURSES.filter((obj) => obj.code === code)
             ];
             setPlan([...plans]);
         } else {
@@ -47,7 +48,7 @@ export function AddCourse({
     }
 
     function deleteCourse(code: string) {
-        semester.course = [...courses.filter((obj) => obj.Code !== code)];
+        semester.course = [...courses.filter((obj) => obj.code !== code)];
         setPlan([...plans]);
     }
 
@@ -69,8 +70,8 @@ export function AddCourse({
                             setInputValue(newInputValue);
                         }}
                         id="controllable-states-demo"
-                        options={COURSE_LIST.map(
-                            (test: Courses): string => test.Code
+                        options={COURSES.map(
+                            (test: Courses): string => test.code
                         )}
                         sx={{ width: 200, textAlign: "center" }}
                         renderInput={(params) => (
@@ -81,7 +82,7 @@ export function AddCourse({
                             />
                         )}
                     />
-                    <div>
+                    {/* <div>
                         <Button
                             style={{ textAlign: "center" }}
                             onClick={() => addCourse(inputValue)}
@@ -89,13 +90,14 @@ export function AddCourse({
                         >
                             Add Course
                         </Button>
-                    </div>
-                    {/* <button
-                    style={{ textAlign: "center" }}
-                    onClick={() => addCourse(inputValue)}
-                >
-                    Add Course
-                </button> */}
+                    </div> */}
+                    <button
+                        style={{ textAlign: "center" }}
+                        onClick={() => addCourse(inputValue)}
+                        data-testid="addcoursetest"
+                    >
+                        Add Course
+                    </button>
                 </Grid>
             </div>
             <ListCourses
