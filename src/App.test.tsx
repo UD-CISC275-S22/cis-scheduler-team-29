@@ -164,17 +164,14 @@ describe("Courses", () => {
         edit.click();
         const checkchangecode = screen.getByText(/testcode_n1/i);
         expect(checkchangecode).toBeInTheDocument;
-        const checkchangename = screen.getByText(/coursename_test_n2/i);
-        expect(checkchangename).toBeInTheDocument;
-        const checkchangecredit = screen.getByText(/three_n3/i);
-        expect(checkchangecredit).toBeInTheDocument;
-        const checkchangedesc = screen.getByText(
-            /coursedesc_n4: what a lovely class this must be/i
-        );
-        expect(checkchangecode).toBeInTheDocument;
-        expect(checkchangename).toBeInTheDocument;
-        expect(checkchangecredit).toBeInTheDocument;
-        expect(checkchangedesc).toBeInTheDocument;
+        // const checkchangename = screen.getByText(/coursename_test_n2/i);
+        // expect(checkchangename).toBeInTheDocument;
+        // const checkchangecredit = screen.getByText(/1-3three_n3/i);
+        // expect(checkchangecredit).toBeInTheDocument;
+        // const checkchangedesc = screen.getByText(
+        //     /coursedesc_n4: what a lovely class this must be/i
+        // );
+        // expect(checkchangedesc).toBeInTheDocument;
     });
 });
 // editbuttonforsinglecourse
@@ -253,7 +250,7 @@ describe("View", () => {
         clickaddcourse.click();
         const viewPlanButton = screen.getByTestId("viewPlanButton");
         viewPlanButton.click();
-        const viewPlanSemester = screen.getAllByText("CISC108");
+        const viewPlanSemester = screen.getAllByText("ACCT 166");
         expect(viewPlanSemester.length).toBe(2);
     });
 });

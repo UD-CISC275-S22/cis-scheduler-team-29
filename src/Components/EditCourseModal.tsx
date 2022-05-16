@@ -28,7 +28,7 @@ export function EditCourseModal({
             </Button>
             <Button
                 data-testid="deletebuttonforsinglecourse"
-                onClick={() => deleteCourse(course.Code)}
+                onClick={() => deleteCourse(course.code)}
                 variant="danger"
             >
                 X

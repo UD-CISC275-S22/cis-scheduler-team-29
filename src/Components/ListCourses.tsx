@@ -27,10 +27,10 @@ export function ListCourses({
                         <tr
                             data-testid="columncolortest"
                             className="Row_ListCourses"
-                            key={courses.ID}
+                            key={courses.code}
                         >
-                            <td className="Code_Col">{courses.Code}</td>
-                            <td className="Credit_Col">{courses.Credits}</td>
+                            <td className="Code_Col">{courses.code}</td>
+                            <td className="Credit_Col">{courses.credits}</td>
                             <td>
                                 <EditCourseModal
                                     course={courses}
