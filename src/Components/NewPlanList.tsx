@@ -9,17 +9,13 @@ export function NewPlanList({
     plans: Plan[];
     handleShowAddModal: (plan: Plan) => void;
 }): JSX.Element {
-    // function rightPlan(id: string) {
-    //     const rP = plans.filter((plan: Plan): boolean => plan.id === id);
-    // }
-
     return (
-        <Stack gap={2} className="planlist">
+        <Stack direction="horizontal" gap={2}>
             {plans.map((plan: Plan) => (
                 <div key={plan.id}>
                     <Button
                         data-testid={plan.id}
-                        className="btn effect02"
+                        className="plans"
                         target="_blank"
                         onClick={() => handleShowAddModal(plan)}
                     >

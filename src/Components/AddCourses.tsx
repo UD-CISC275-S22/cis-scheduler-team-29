@@ -7,6 +7,8 @@ import { Semester } from "../Interfaces/Semester";
 import { Plan } from "../Interfaces/Plan";
 import { Grid } from "@mui/material";
 import catalog from "../Data/catalog.json";
+import { useState } from "react";
+import { CreateCourseModal } from "./CreateCourseModal";
 
 const COURSES: Courses[] = Object.values(catalog)
     .flat()
@@ -28,6 +30,10 @@ export function AddCourse({
 }): JSX.Element {
     const [inputValue, setInputValue] = React.useState("");
     const [value, setValue] = React.useState<string | null>(COURSES[0].code);
+    const [showCreateCourseModal, setCreateCourseModal] = useState(false);
+
+    const handleCloseCreateCourseModal = () => setCreateCourseModal(false);
+    const handleShowCreateCourseModal = () => setCreateCourseModal(true);
 
     function editCourse(course: Courses, newCourse: Courses): void {
         semester.course = courses.map((c) => {
@@ -60,6 +66,36 @@ export function AddCourse({
         semester.course = [...courses.filter((obj) => obj.code !== code)];
         setPlan([...plans]);
     }
+    function clearCourses() {
+        semester.course = [];
+        setPlan([...plans]);
+    }
+
+    function createCourse(
+        code: string,
+        name: string,
+        descr: string,
+        credits: string,
+        preReq: string,
+        restrict: string,
+        breadth: string,
+        typ: string
+    ) {
+        const newCourse: Courses = {
+            code: code,
+            name: name,
+            descr: descr,
+            credits: credits,
+            preReq: preReq,
+            restrict: restrict,
+            breadth: breadth,
+            typ: typ
+        };
+        if (!COURSES.find((course) => course.name === name)) {
+            COURSES.push(newCourse);
+        }
+        handleCloseCreateCourseModal();
+    }
 
     return (
         <div>
@@ -91,15 +127,6 @@ export function AddCourse({
                             />
                         )}
                     />
-                    {/* <div>
-                        <Button
-                            style={{ textAlign: "center" }}
-                            onClick={() => addCourse(inputValue)}
-                            data-testid="addcoursetest"
-                        >
-                            Add Course
-                        </Button>
-                    </div> */}
                     <button
                         style={{ textAlign: "center" }}
                         onClick={() => addCourse(inputValue)}
@@ -107,12 +134,25 @@ export function AddCourse({
                     >
                         Add Course
                     </button>
+                    <button
+                        style={{ textAlign: "center" }}
+                        onClick={handleShowCreateCourseModal}
+                        data-testid="createCourseModal"
+                    >
+                        Create Course
+                    </button>
+                    <CreateCourseModal
+                        show={showCreateCourseModal}
+                        handleClose={handleCloseCreateCourseModal}
+                        createCourse={createCourse}
+                    ></CreateCourseModal>
                 </Grid>
             </div>
             <ListCourses
                 course={courses}
                 editCourse={editCourse}
                 deleteCourse={deleteCourse}
+                clearCourses={clearCourses}
             ></ListCourses>
         </div>
     );

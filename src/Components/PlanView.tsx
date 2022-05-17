@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import { Container, Button, Row, Col } from "react-bootstrap";
-import { Courses } from "../Interfaces/Courses";
 import { Plan } from "../Interfaces/Plan";
 import { Semester } from "../Interfaces/Semester";
 import { PlanViewModal } from "./PlanViewModal";
 import { SemesterModal } from "./SemesterModal";
 
 export function PlanView({
-    course,
     plan,
     plans,
     deletePlan,
@@ -17,7 +15,6 @@ export function PlanView({
     plansToShow,
     setPlansToShow
 }: {
-    course: Courses[];
     plan: Plan;
     plans: Plan[];
     deletePlan: (id: string) => void;
@@ -47,7 +44,7 @@ export function PlanView({
     }
 
     return (
-        <Container>
+        <Container fluid={"xxl"}>
             <Row>
                 <Col>
                     <h3>{plan.id}</h3>
@@ -56,12 +53,12 @@ export function PlanView({
                         plan={plan}
                         plans={plans}
                         setPlan={setPlan}
+                        dontSave={dontSave}
                     ></SemesterModal>
                     <PlanViewModal
                         show={showPlanViewModal}
                         handleClose={handleClosePlanViewModal}
                         semesters={plan.semesters}
-                        course={course}
                     ></PlanViewModal>
                     <Button
                         data-testid="deletePlanButton"
@@ -77,14 +74,14 @@ export function PlanView({
                     >
                         View
                     </Button>
-                    <Button variant="secondary" onClick={() => dontSave(plan)}>
-                        Close
-                    </Button>
                     <Button variant="primary" onClick={saveChanges}>
                         Save Changes
                     </Button>
                 </Col>
             </Row>
+            <div className="divider">
+                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+            </div>
         </Container>
     );
 }
