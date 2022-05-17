@@ -3,7 +3,6 @@ import "./App.css";
 import { NewPlanList } from "./Components/NewPlanList";
 import { PlanView } from "./Components/PlanView";
 import { ShowHidePlans } from "./Components/ShowHidePlans";
-import { Courses } from "./Interfaces/Courses";
 import { Plan } from "./Interfaces/Plan";
 import UDLOGO from "../src/UDPrimaryLogo2945.png";
 
@@ -18,7 +17,6 @@ if (previousData !== null) {
 
 function App(): JSX.Element {
     const [plans, setPlan] = useState<Plan[]>(loadedData);
-    const [course] = useState<Courses[]>([]);
     const [plansToShow, setPlansToShow] = useState<Plan[]>([]);
 
     const handleShowAddModal = (plan: Plan) => {
@@ -107,7 +105,6 @@ function App(): JSX.Element {
                 {plansToShow.map((plan: Plan) => (
                     <div key={plan.id} className="planShow">
                         <PlanView
-                            course={course}
                             plan={plan}
                             plans={plans}
                             deletePlan={deletePlan}

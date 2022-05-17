@@ -1,16 +1,18 @@
 import { Courses } from "../Interfaces/Courses";
 import React from "react";
-import { Stack, Table } from "react-bootstrap";
+import { Button, Stack, Table } from "react-bootstrap";
 import { EditCourseModal } from "./EditCourseModal";
 
 export function ListCourses({
     course,
     editCourse,
-    deleteCourse
+    deleteCourse,
+    clearCourses
 }: {
     course: Courses[];
     editCourse: (course: Courses, newCourse: Courses) => void;
     deleteCourse: (name: string) => void;
+    clearCourses: () => void;
 }): JSX.Element {
     return (
         <Stack gap={3}>
@@ -40,6 +42,11 @@ export function ListCourses({
                             </td>
                         </tr>
                     ))}
+                    {course.length != 0 && (
+                        <Button size="sm" onClick={clearCourses}>
+                            Clear Courses
+                        </Button>
+                    )}
                 </tbody>
             </Table>
         </Stack>

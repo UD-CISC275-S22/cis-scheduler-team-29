@@ -9,12 +9,14 @@ export function SemesterModal({
     plan,
     plans,
     realSemesters,
-    setPlan
+    setPlan,
+    dontSave
 }: {
     plan: Plan;
     plans: Plan[];
     realSemesters: Semester[];
     setPlan: (plans: Plan[]) => void;
+    dontSave: (plan: Plan) => void;
 }): JSX.Element {
     const [showAddModal, setShowAddModal] = useState(false);
 
@@ -60,6 +62,9 @@ export function SemesterModal({
                     data-testid="deleteAllSemestersButton"
                 >
                     Delete All Semesters
+                </Button>
+                <Button variant="secondary" onClick={() => dontSave(plan)}>
+                    Close
                 </Button>
             </h4>
             <div>
