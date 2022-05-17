@@ -2,28 +2,28 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test "--coverage"
 
-FAIL src/App.test.tsx (6.084 s)
-  ✓ renders the course name somewhere (45 ms)
+FAIL src/App.test.tsx (8.361 s)
+  ✓ renders the course name somewhere (60 ms)
   Testing plan
-    ✓ Add new plan button shows up (13 ms)
-    ✓ clicking new plan shows modal (58 ms)
-    ✓ can add a plan (94 ms)
-    ✓ can not add an empty plan (47 ms)
-    ✓ can delete a plan (98 ms)
+    ✓ Add new plan button shows up (16 ms)
+    ✓ clicking new plan shows modal (77 ms)
+    ✓ can add a plan (141 ms)
+    ✓ can not add an empty plan (53 ms)
+    ✓ can delete a plan (137 ms)
   Courses
-    ✓ can add course (249 ms)
-    ✕ can search course (648 ms)
-    ✓ can delete a SINGLE selected course (163 ms)
-    ✓ can edit a course (all fields, course: code/name/credit/desc.. (472 ms)
+    ✓ can add course (364 ms)
+    ✕ can search course (926 ms)
+    ✓ can delete a SINGLE selected course (214 ms)
+    ✓ can edit a course (all fields, course: code/name/credit/desc.. (699 ms)
   View
-    ✓ view plan button shows up (118 ms)
-    ✓ can view an empty plan (67 ms)
-    ✓ can view a plan with an empty semester (118 ms)
-    ✓ can view a plan with a non-empty semester (126 ms)
+    ✓ view plan button shows up (167 ms)
+    ✓ can view an empty plan (91 ms)
+    ✓ can view a plan with an empty semester (164 ms)
+    ✓ can view a plan with a non-empty semester (176 ms)
   Semesters
-    ✓ can add a semester (92 ms)
-    ✓ can delete a semester (99 ms)
-    ✓ can delete all semesters (99 ms)
+    ✓ can add a semester (135 ms)
+    ✓ can delete a semester (138 ms)
+    ✓ can delete all semesters (129 ms)
 
   ● Courses › can search course
 
@@ -201,5 +201,5 @@ All files             |   83.08 |       76 |   79.48 |   83.87 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 16 passed, 17 total
 Snapshots:   0 total
-Time:        6.706 s
+Time:        9.148 s
 Ran all test suites.
