@@ -10,6 +10,7 @@ export function SemesterView({
     semester,
     deleteSemester,
     courses,
+    plan,
     plans,
     setPlan
 }: {
@@ -17,6 +18,7 @@ export function SemesterView({
     deleteSemester: (id: string) => void;
     courses: Courses[];
     setPlan: (plans: Plan[]) => void;
+    plan: Plan;
     plans: Plan[];
 }): JSX.Element {
     return (
@@ -26,6 +28,7 @@ export function SemesterView({
                 <AddCourse
                     courses={courses}
                     semester={semester}
+                    plan={plan}
                     plans={plans}
                     setPlan={setPlan}
                 ></AddCourse>
