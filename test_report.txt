@@ -2,28 +2,73 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test "--coverage"
 
-FAIL src/App.test.tsx (8.361 s)
-  ✓ renders the course name somewhere (60 ms)
+  console.error
+    Warning: validateDOMNesting(...): <button> cannot appear as a child of <tbody>.
+        at button
+        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-bootstrap/cjs/Button.js:28:3
+        at tbody
+        at table
+        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-bootstrap/cjs/Table.js:21:3
+        at div
+        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-bootstrap/cjs/Stack.js:23:7
+        at ListCourses (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/Components/ListCourses.tsx:7:5)
+        at div
+        at AddCourse (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/Components/AddCourses.tsx:19:5)
+        at div
+        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-bootstrap/cjs/Col.js:72:8
+        at div
+        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-bootstrap/cjs/Stack.js:23:7
+        at SemesterView (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/Components/SemesterView.tsx:10:5)
+        at div
+        at div
+        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/@emotion/react/dist/emotion-element-e89f38a3.cjs.dev.js:64:23
+        at Grid (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/@mui/material/node/Grid/Grid.js:315:49)
+        at div
+        at SemesterList (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/Components/SemesterList.tsx:8:5)
+        at div
+        at SemesterModal (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/Components/SemesterModal.tsx:9:5)
+        at div
+        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-bootstrap/cjs/Col.js:72:8
+        at div
+        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-bootstrap/cjs/Row.js:22:3
+        at div
+        at /home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/node_modules/react-bootstrap/cjs/Container.js:24:3
+        at PlanView (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/Components/PlanView.tsx:9:5)
+        at div
+        at div
+        at div
+        at App (/home/runner/work/cis-scheduler-team-29/cis-scheduler-team-29/src/App.tsx:19:30)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at validateDOMNesting (node_modules/react-dom/cjs/react-dom.development.js:10081:7)
+      at createInstance (node_modules/react-dom/cjs/react-dom.development.js:10181:5)
+      at completeWork (node_modules/react-dom/cjs/react-dom.development.js:19464:28)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
+
+FAIL src/App.test.tsx (6.345 s)
+  ✓ renders the course name somewhere (46 ms)
   Testing plan
-    ✓ Add new plan button shows up (16 ms)
-    ✓ clicking new plan shows modal (77 ms)
-    ✓ can add a plan (141 ms)
-    ✓ can not add an empty plan (53 ms)
-    ✓ can delete a plan (137 ms)
+    ✓ Add new plan button shows up (13 ms)
+    ✓ clicking new plan shows modal (59 ms)
+    ✓ can add a plan (102 ms)
+    ✓ can not add an empty plan (41 ms)
+    ✓ can delete a plan (100 ms)
   Courses
-    ✓ can add course (364 ms)
-    ✕ can search course (926 ms)
-    ✓ can delete a SINGLE selected course (214 ms)
-    ✓ can edit a course (all fields, course: code/name/credit/desc.. (699 ms)
+    ✓ can add course (366 ms)
+    ✕ can search course (670 ms)
+    ✓ can delete a SINGLE selected course (163 ms)
+    ✓ can edit a course (all fields, course: code/name/credit/desc.. (492 ms)
   View
-    ✓ view plan button shows up (167 ms)
-    ✓ can view an empty plan (91 ms)
-    ✓ can view a plan with an empty semester (164 ms)
-    ✓ can view a plan with a non-empty semester (176 ms)
+    ✓ view plan button shows up (123 ms)
+    ✓ can view an empty plan (65 ms)
+    ✓ can view a plan with an empty semester (125 ms)
+    ✓ can view a plan with a non-empty semester (134 ms)
   Semesters
-    ✓ can add a semester (135 ms)
-    ✓ can delete a semester (138 ms)
-    ✓ can delete all semesters (129 ms)
+    ✓ can add a semester (108 ms)
+    ✓ can delete a semester (101 ms)
+    ✓ can delete all semesters (100 ms)
 
   ● Courses › can search course
 
@@ -173,33 +218,34 @@ FAIL src/App.test.tsx (8.361 s)
       at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
       at Object.<anonymous> (src/App.test.tsx:100:45)
 
-----------------------|---------|----------|---------|---------|-------------------
-File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
-----------------------|---------|----------|---------|---------|-------------------
-All files             |   83.08 |       76 |   79.48 |   83.87 |                   
- src                  |   85.71 |    66.66 |    87.5 |      85 |                   
-  App.tsx             |   85.71 |    66.66 |    87.5 |      85 | 16,26-28          
- src/Components       |    82.6 |    78.94 |   78.57 |   83.65 |                   
-  AddCourses.tsx      |   78.57 |    71.42 |   82.35 |      84 | 41,54-55,75       
-  EditCourse.tsx      |    90.9 |      100 |   83.33 |    90.9 | 77                
-  EditCourseModal.tsx |     100 |      100 |     100 |     100 |                   
-  ListCourses.tsx     |     100 |      100 |     100 |     100 |                   
-  NewPlanList.tsx     |     100 |      100 |     100 |     100 |                   
-  PlanAdd.tsx         |     100 |      100 |     100 |     100 |                   
-  PlanView.tsx        |      50 |      100 |    37.5 |      50 | 35-36,41-44,80    
-  PlanViewModal.tsx   |     100 |      100 |     100 |     100 |                   
-  SemesterAdd.tsx     |      75 |       50 |      50 |      75 | 18,56             
-  SemesterList.tsx    |   71.42 |      100 |      60 |   71.42 | 23,42             
-  SemesterModal.tsx   |   93.33 |       75 |    87.5 |    92.3 | 23                
-  SemesterView.tsx    |     100 |      100 |     100 |     100 |                   
-  ShowHidePlans.tsx   |      90 |      100 |      80 |    87.5 | 19                
- src/Interfaces       |       0 |        0 |       0 |       0 |                   
-  Courses.ts          |       0 |        0 |       0 |       0 |                   
-  Plan.ts             |       0 |        0 |       0 |       0 |                   
-  Semester.ts         |       0 |        0 |       0 |       0 |                   
-----------------------|---------|----------|---------|---------|-------------------
+------------------------|---------|----------|---------|---------|--------------------
+File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s  
+------------------------|---------|----------|---------|---------|--------------------
+All files               |   76.43 |    72.41 |   70.78 |   78.16 |                    
+ src                    |      85 |    66.66 |    87.5 |   84.21 |                    
+  App.tsx               |      85 |    66.66 |    87.5 |   84.21 | 15,24-26           
+ src/Components         |   75.18 |    73.91 |   69.13 |   77.23 |                    
+  AddCourses.tsx        |    62.5 |    55.55 |   63.63 |   70.58 | 47,60-61,70-97,111 
+  CreateCourseModal.tsx |      50 |      100 |   16.66 |      50 | 44-97              
+  EditCourse.tsx        |    90.9 |      100 |   83.33 |    90.9 | 77                 
+  EditCourseModal.tsx   |     100 |      100 |     100 |     100 |                    
+  ListCourses.tsx       |     100 |      100 |     100 |     100 |                    
+  NewPlanList.tsx       |     100 |      100 |     100 |     100 |                    
+  PlanAdd.tsx           |     100 |      100 |     100 |     100 |                    
+  PlanView.tsx          |   53.84 |      100 |   42.85 |   54.54 | 32-33,38-41        
+  PlanViewModal.tsx     |     100 |      100 |     100 |     100 |                    
+  SemesterAdd.tsx       |      75 |       50 |      50 |      75 | 18,56              
+  SemesterList.tsx      |   71.42 |      100 |      60 |   71.42 | 23,42              
+  SemesterModal.tsx     |    87.5 |       75 |   77.77 |   85.71 | 25,66              
+  SemesterView.tsx      |     100 |      100 |     100 |     100 |                    
+  ShowHidePlans.tsx     |      90 |      100 |      80 |    87.5 | 19                 
+ src/Interfaces         |       0 |        0 |       0 |       0 |                    
+  Courses.ts            |       0 |        0 |       0 |       0 |                    
+  Plan.ts               |       0 |        0 |       0 |       0 |                    
+  Semester.ts           |       0 |        0 |       0 |       0 |                    
+------------------------|---------|----------|---------|---------|--------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 16 passed, 17 total
 Snapshots:   0 total
-Time:        9.148 s
+Time:        6.922 s
 Ran all test suites.
