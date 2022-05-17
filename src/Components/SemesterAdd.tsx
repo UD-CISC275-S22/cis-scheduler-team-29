@@ -42,7 +42,11 @@ export function SemesterAdd({
                         Semester Name
                     </Form.Label>
                     <Col>
-                        <Form.Select value={season} onChange={updateSeason}>
+                        <Form.Select
+                            value={season}
+                            onChange={updateSeason}
+                            data-testid="pickSeason"
+                        >
                             <option value="Summer">Summer</option>
                             <option value="Fall">Fall</option>
                             <option value="Winter">Winter</option>

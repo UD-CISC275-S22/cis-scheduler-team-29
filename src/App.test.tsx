@@ -74,6 +74,33 @@ describe("Testing plan", () => {
         const courseID = screen.getAllByText("ACCT 166");
         expect(courseID.length).toBe(1);
     });
+    // test("cannot add an existing course into a plan 2", () => {
+    //     const newPlanButton = screen.getByTestId("newPlanButton");
+    //     newPlanButton.click();
+    //     const createNewPlanButton = screen.getByTestId("savePlanButton");
+    //     const input = screen.getByTestId("addPlanInputName");
+    //     userEvent.type(input, "test plan");
+    //     createNewPlanButton.click();
+    //     const newCreatedPlan = screen.getByTestId("test plan");
+    //     newCreatedPlan.click();
+    //     const addsemesterbutton = screen.getByTestId("addsemesterbutton");
+    //     addsemesterbutton.click();
+    //     const save = screen.getByTestId("Savechangessemester");
+    //     save.click();
+    //     const clickaddcourse = screen.getByTestId("addcoursetest");
+    //     clickaddcourse.click();
+    //     addsemesterbutton.click();
+    //     const changedSeason = screen.getByTestId("pickSeason");
+    //     changedSeason.click();
+    //     const aSeason = screen.getByText(/Spring/i);
+    //     aSeason.click();
+    //     save.click();
+    //     clickaddcourse.click();
+    //     // const courseID = screen.getAllByText("ACCT 166");
+    //     // expect(courseID.length).toBe(1);
+    //     const checksemester = screen.getByText(/Spring 2022/i);
+    //     expect(checksemester).toBeInTheDocument;
+    // });
 });
 describe("Courses", () => {
     beforeEach(() => {
