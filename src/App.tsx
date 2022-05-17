@@ -78,6 +78,9 @@ function App(): JSX.Element {
                             <h1>
                                 Department of Computer Science Course Scheduler
                             </h1>
+                            <div className="div2">
+                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                            </div>
                             <span>
                                 Welcome to the student made course scheduler!
                                 This application is ment for any UD students to
