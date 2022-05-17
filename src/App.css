@@ -120,7 +120,7 @@
     border-bottom-color: rgb(255, 255, 255);
     border-bottom-width: 5px;
     border-radius: 6px;
-    max-width: 200px;
+    max-width: 300px;
 }
 .plans:focus {
     background-color: #00539f;
@@ -129,21 +129,24 @@
     border-bottom-color: rgb(255, 255, 255);
     border-bottom-width: 5px;
     border-radius: none;
-    max-width: 100px;
+    max-width: 300px;
 }
 .plans:hover {
     color: #ffd000;
     background-color: #00539f;
     border-color: #00539f;
-    letter-spacing: 0.13em;
+    letter-spacing: 0.1em;
     border-radius: none;
-    max-width: 200px;
+    max-width: 300px;
 }
 .divider {
     padding: 15px;
-    color: #c7a301;
+    color: #ffd000;
 }
-
+.div2 {
+    padding: 15px;
+    color: #ffd000;
+}
 /*       */ /*       */ /*       */ /*       */ /*       */
 /*       */ /*       */ /*       */ /*       */ /*       */
 
