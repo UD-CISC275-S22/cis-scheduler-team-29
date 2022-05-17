@@ -8,11 +8,13 @@ export function SemesterList({
     semesters,
     deleteSemester,
     setPlan,
+    plan,
     plans
 }: {
     semesters: Semester[];
     deleteSemester: (id: string) => void;
     setPlan: (plans: Plan[]) => void;
+    plan: Plan;
     plans: Plan[];
 }): JSX.Element {
     function sortBySeason(semester: Semester[]) {
@@ -47,6 +49,7 @@ export function SemesterList({
                                 semester={semester}
                                 deleteSemester={deleteSemester}
                                 courses={semester.course}
+                                plan={plan}
                                 plans={plans}
                                 setPlan={setPlan}
                             ></SemesterView>
