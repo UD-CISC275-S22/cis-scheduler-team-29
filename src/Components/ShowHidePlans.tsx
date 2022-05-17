@@ -45,11 +45,6 @@ export function ShowHidePlans({
                 handleClose={handleCloseAddModal}
                 addPlan={addPlan}
             ></PlanAdd>
-            {/* <PlanList
-                plans={realPlans}
-                deletePlan={deletePlan}
-                setPlan={setPlan}
-            ></PlanList> */}
         </div>
     );
 }

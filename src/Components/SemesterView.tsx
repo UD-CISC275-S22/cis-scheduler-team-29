@@ -22,7 +22,7 @@ export function SemesterView({
     plans: Plan[];
 }): JSX.Element {
     return (
-        <Stack direction="horizontal" gap={0}>
+        <Stack direction="horizontal" gap={2}>
             <Col>
                 <h3>{semester.id}</h3>
                 <AddCourse
