@@ -33,7 +33,7 @@ export function SemesterAdd({
     return (
         <Modal show={show} onHide={handleClose} animation={false}>
             <Modal.Header closeButton>
-                <Modal.Title>Add New Semester</Modal.Title>
+                <Modal.Title>Create new Semester</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 {/* Title */}
@@ -59,15 +59,12 @@ export function SemesterAdd({
                 </Form.Group>
             </Modal.Body>
             <Modal.Footer>
-                <Button variant="secondary" onClick={handleClose}>
-                    Close
-                </Button>
                 <Button
                     data-testid="Savechangessemester"
-                    variant="primary"
+                    variant="success"
                     onClick={saveChanges}
                 >
-                    Save Changes
+                    Add Semester
                 </Button>
             </Modal.Footer>
         </Modal>

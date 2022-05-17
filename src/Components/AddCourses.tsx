@@ -91,15 +91,6 @@ export function AddCourse({
                             />
                         )}
                     />
-                    {/* <div>
-                        <Button
-                            style={{ textAlign: "center" }}
-                            onClick={() => addCourse(inputValue)}
-                            data-testid="addcoursetest"
-                        >
-                            Add Course
-                        </Button>
-                    </div> */}
                     <button
                         style={{ textAlign: "center" }}
                         onClick={() => addCourse(inputValue)}
