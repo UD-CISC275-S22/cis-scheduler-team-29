@@ -44,7 +44,7 @@ export function PlanView({
     }
 
     return (
-        <Container>
+        <Container fluid={"xxl"}>
             <Row>
                 <Col>
                     <h3>{plan.id}</h3>
@@ -79,6 +79,9 @@ export function PlanView({
                     </Button>
                 </Col>
             </Row>
+            <div className="divider">
+                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+            </div>
         </Container>
     );
 }

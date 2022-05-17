@@ -46,15 +46,12 @@ export function PlanAdd({
                 </Form.Group>
             </Modal.Body>
             <Modal.Footer>
-                <Button variant="secondary" onClick={handleClose}>
-                    Close
-                </Button>
                 <Button
                     data-testid="savePlanButton"
-                    variant="primary"
+                    variant="success"
                     onClick={saveChanges}
                 >
-                    Save Changes
+                    Add Plan
                 </Button>
             </Modal.Footer>
         </Modal>

@@ -18,12 +18,14 @@ const COURSES: Courses[] = Object.values(catalog)
 export function AddCourse({
     courses,
     semester,
+    plan,
     plans,
     setPlan
 }: {
     courses: Courses[];
     setPlan: (plans: Plan[]) => void;
     semester: Semester;
+    plan: Plan;
     plans: Plan[];
 }): JSX.Element {
     const [inputValue, setInputValue] = React.useState("");
@@ -41,7 +43,14 @@ export function AddCourse({
         setPlan([...plans]);
     }
     function addCourse(code: string) {
-        if (!courses.find((c) => c.code === code) && code !== "") {
+        if (
+            !courses.find((c) => c.code === code) &&
+            code !== "" &&
+            !plan.semesters.some(
+                (sem) =>
+                    sem.course.filter((crse) => crse.code === code).length > 0
+            )
+        ) {
             semester.course = [
                 ...courses,
                 ...COURSES.filter((obj) => obj.code === code)
@@ -82,7 +91,9 @@ export function AddCourse({
             breadth: breadth,
             typ: typ
         };
-        COURSES.push(newCourse);
+        if (!COURSES.find((course) => course.name === name)) {
+            COURSES.push(newCourse);
+        }
         handleCloseCreateCourseModal();
     }
 
@@ -116,15 +127,6 @@ export function AddCourse({
                             />
                         )}
                     />
-                    {/* <div>
-                        <Button
-                            style={{ textAlign: "center" }}
-                            onClick={() => addCourse(inputValue)}
-                            data-testid="addcoursetest"
-                        >
-                            Add Course
-                        </Button>
-                    </div> */}
                     <button
                         style={{ textAlign: "center" }}
                         onClick={() => addCourse(inputValue)}

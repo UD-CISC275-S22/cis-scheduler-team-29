@@ -77,6 +77,7 @@ export function SemesterModal({
                     semesters={realSemesters}
                     deleteSemester={deleteSemester}
                     setPlan={setPlan}
+                    plan={plan}
                     plans={plans}
                 ></SemesterList>
             </div>
