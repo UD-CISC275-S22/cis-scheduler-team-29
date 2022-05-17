@@ -2,28 +2,28 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test "--coverage"
 
-FAIL src/App.test.tsx (6.021 s)
-  ✓ renders the course name somewhere (54 ms)
+FAIL src/App.test.tsx (5.897 s)
+  ✓ renders the course name somewhere (42 ms)
   Testing plan
     ✓ Add new plan button shows up (13 ms)
-    ✓ clicking new plan shows modal (57 ms)
-    ✓ can add a plan (97 ms)
-    ✓ can not add an empty plan (36 ms)
-    ✓ can delete a plan (90 ms)
+    ✓ clicking new plan shows modal (65 ms)
+    ✓ can add a plan (94 ms)
+    ✓ can not add an empty plan (32 ms)
+    ✓ can delete a plan (86 ms)
   Courses
-    ✓ can add course (245 ms)
-    ✕ can search course (608 ms)
-    ✓ can delete a SINGLE selected course (154 ms)
-    ✓ can edit a course (all fields, course: code/name/credit/desc.. (481 ms)
+    ✓ can add course (247 ms)
+    ✕ can search course (570 ms)
+    ✓ can delete a SINGLE selected course (149 ms)
+    ✓ can edit a course (all fields, course: code/name/credit/desc.. (463 ms)
   View
-    ✓ view plan button shows up (114 ms)
-    ✓ can view an empty plan (64 ms)
-    ✓ can view a plan with an empty semester (110 ms)
-    ✓ can view a plan with a non-empty semester (118 ms)
+    ✓ view plan button shows up (116 ms)
+    ✓ can view an empty plan (70 ms)
+    ✓ can view a plan with an empty semester (117 ms)
+    ✓ can view a plan with a non-empty semester (116 ms)
   Semesters
-    ✓ can add a semester (93 ms)
-    ✓ can delete a semester (101 ms)
-    ✓ can delete all semesters (96 ms)
+    ✓ can add a semester (90 ms)
+    ✓ can delete a semester (108 ms)
+    ✓ can delete all semesters (97 ms)
 
   ● Courses › can search course
 
@@ -176,11 +176,11 @@ FAIL src/App.test.tsx (6.021 s)
 ----------------------|---------|----------|---------|---------|-------------------
 File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ----------------------|---------|----------|---------|---------|-------------------
-All files             |   83.58 |       75 |   80.26 |   84.42 |                   
+All files             |   83.08 |       76 |   79.48 |   83.87 |                   
  src                  |   85.71 |    66.66 |    87.5 |      85 |                   
   App.tsx             |   85.71 |    66.66 |    87.5 |      85 | 15,25-27          
- src/Components       |   83.18 |    77.77 |   79.41 |   84.31 |                   
-  AddCourses.tsx      |   80.76 |    66.66 |   86.66 |   86.95 | 45-46,66          
+ src/Components       |    82.6 |    78.94 |   78.57 |   83.65 |                   
+  AddCourses.tsx      |   78.57 |    71.42 |   82.35 |      84 | 41,54-55,75       
   EditCourse.tsx      |    90.9 |      100 |   83.33 |    90.9 | 77                
   EditCourseModal.tsx |     100 |      100 |     100 |     100 |                   
   ListCourses.tsx     |     100 |      100 |     100 |     100 |                   
@@ -189,7 +189,7 @@ All files             |   83.58 |       75 |   80.26 |   84.42 |
   PlanView.tsx        |      50 |      100 |    37.5 |      50 | 35-36,41-44,80    
   PlanViewModal.tsx   |     100 |      100 |     100 |     100 |                   
   SemesterAdd.tsx     |      75 |       50 |      50 |      75 | 18,56             
-  SemesterList.tsx    |   71.42 |      100 |      60 |   71.42 | 21,38             
+  SemesterList.tsx    |   71.42 |      100 |      60 |   71.42 | 23,40             
   SemesterModal.tsx   |   93.33 |       75 |    87.5 |    92.3 | 23                
   SemesterView.tsx    |     100 |      100 |     100 |     100 |                   
   ShowHidePlans.tsx   |      90 |      100 |      80 |    87.5 | 19                
@@ -201,5 +201,5 @@ All files             |   83.58 |       75 |   80.26 |   84.42 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 16 passed, 17 total
 Snapshots:   0 total
-Time:        6.681 s
+Time:        6.544 s
 Ran all test suites.
