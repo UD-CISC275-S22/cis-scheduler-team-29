@@ -164,14 +164,13 @@ describe("Courses", () => {
         edit.click();
         const checkchangecode = screen.getByText(/testcode_n1/i);
         expect(checkchangecode).toBeInTheDocument;
-        // const checkchangename = screen.getByText(/coursename_test_n2/i);
-        // expect(checkchangename).toBeInTheDocument;
-        // const checkchangecredit = screen.getByText(/1-3three_n3/i);
-        // expect(checkchangecredit).toBeInTheDocument;
-        // const checkchangedesc = screen.getByText(
-        //     /coursedesc_n4: what a lovely class this must be/i
-        // );
-        // expect(checkchangedesc).toBeInTheDocument;
+        expect(screen.queryByText("lllllllll")).toBeInTheDocument;
+        expect(screen.queryByText("1-3three_n3")).toBeInTheDocument;
+        expect(
+            screen.queryByText(
+                "coursedesc_n4: what a lovely class this must be"
+            )
+        ).toBeInTheDocument;
     });
 });
 // editbuttonforsinglecourse

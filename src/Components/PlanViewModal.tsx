@@ -10,7 +10,6 @@ export function PlanViewModal({
     handleClose
 }: {
     semesters: Semester[];
-    course: Courses[];
     show: boolean;
     handleClose: () => void;
 }): JSX.Element {
