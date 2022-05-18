@@ -5,11 +5,8 @@ import { PlanView } from "./Components/PlanView";
 import { ShowHidePlans } from "./Components/ShowHidePlans";
 import { Plan } from "./Interfaces/Plan";
 import UDLOGO from "../src/UDPrimaryLogo2945.png";
-<<<<<<< HEAD
 import Default from "./Data/default.json";
-=======
 import UDMonolog from "../src/UDMonogramC.jpg";
->>>>>>> d3d47dfaca4fb1e6b918727cc4a3b28da583e752
 
 const saveDataKey = "MY-PAGE-DATA";
 let loadedData: Plan[] = [];
