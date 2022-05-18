@@ -33,7 +33,7 @@ export function CourseEditor({
 
     return (
         <Modal show={show} onHide={handleClose} animation={false}>
-            <Modal.Header>
+            <Modal.Header closeButton>
                 <Modal.Title>Edit Course</Modal.Title>
             </Modal.Header>
             {/* COURSE CODE */}
@@ -100,9 +100,6 @@ export function CourseEditor({
                 </Form.Group>
             </Modal.Body>
             <Modal.Footer>
-                <Button variant="secondary" onClick={handleClose}>
-                    Close
-                </Button>
                 <Button
                     data-testid="savechangesforeditsinglecourse"
                     variant="success"
