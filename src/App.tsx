@@ -5,6 +5,7 @@ import { PlanView } from "./Components/PlanView";
 import { ShowHidePlans } from "./Components/ShowHidePlans";
 import { Plan } from "./Interfaces/Plan";
 import UDLOGO from "../src/UDPrimaryLogo2945.png";
+import Default from "./Data/default.json";
 import UDMonolog from "../src/UDMonogramC.jpg";
 
 const saveDataKey = "MY-PAGE-DATA";
@@ -17,7 +18,7 @@ if (previousData !== null) {
 }
 
 function App(): JSX.Element {
-    const [plans, setPlan] = useState<Plan[]>(loadedData);
+    const [plans, setPlan] = useState<Plan[]>(loadedData.concat(Default));
     const [plansToShow, setPlansToShow] = useState<Plan[]>([]);
 
     const handleShowAddModal = (plan: Plan) => {
