@@ -1,4 +1,3 @@
-import React from "react";
 import { Col, Button } from "react-bootstrap";
 import { Semester } from "../Interfaces/Semester";
 import { AddCourse } from "./AddCourses";
@@ -21,6 +20,11 @@ export function SemesterView({
     plan: Plan;
     plans: Plan[];
 }): JSX.Element {
+    let credits = 0;
+    courses.forEach(function (course) {
+        credits = credits + parseInt(course.credits);
+    });
+
     return (
         <Stack direction="horizontal" gap={2}>
             <Col>
@@ -32,7 +36,7 @@ export function SemesterView({
                     plans={plans}
                     setPlan={setPlan}
                 ></AddCourse>
-
+                {credits}
                 <Button
                     data-testid="deleteSemester"
                     onClick={() => deleteSemester(semester.id)}
