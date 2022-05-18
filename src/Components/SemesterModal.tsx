@@ -4,7 +4,7 @@ import { Plan } from "../Interfaces/Plan";
 import { Semester } from "../Interfaces/Semester";
 import { SemesterAdd } from "./SemesterAdd";
 import { SemesterList } from "./SemesterList";
-import CloseButton from "react-bootstrap/Closebutton";
+import CloseButton from "react-bootstrap/CloseButton";
 
 export function SemesterModal({
     plan,
