@@ -254,3 +254,13 @@ a {
     bottom: 0px;
     font-size: small;
 }
+.totalcredits {
+    float: initial;
+    color: #00539f;
+    font-size: large;
+    font-weight: bold;
+}
+.semestercredits {
+    color: #00539f;
+    font-weight: bold;
+}

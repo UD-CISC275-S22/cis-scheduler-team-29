@@ -51,10 +51,13 @@ export function PlanView({
     }
 
     return (
-        <Container fluid={true}>
+        <Container fluid={false}>
             <Row>
                 <Col>
-                    <h3>{plan.id}</h3>
+                    <h2>{plan.id}</h2>
+                    <div className="totalcredits">
+                        Total Enlisted Credits: {credits}
+                    </div>
                     <SemesterModal
                         realSemesters={semesters}
                         plan={plan}
@@ -92,7 +95,6 @@ export function PlanView({
                     </Button>
                 </Col>
             </Row>
-            {credits}
             <div className="divider">
                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             </div>
