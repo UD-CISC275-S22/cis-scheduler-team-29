@@ -2,35 +2,56 @@
 > react-typescript-starter@0.1.0 test
 > react-scripts test "--coverage"
 
-PASS src/App.test.tsx (8.089 s)
-  ✓ renders the course name somewhere (68 ms)
+FAIL src/App.test.tsx (5.8 s)
+  ✓ renders the course name somewhere (56 ms)
   Testing plan
-    ✓ Add new plan button shows up (21 ms)
-    ✓ clicking new plan shows modal (94 ms)
-    ✓ can add a plan (149 ms)
-    ✓ can not add an empty plan (60 ms)
-    ✓ can delete a plan (148 ms)
+    ✓ Add new plan button shows up (14 ms)
+    ✓ clicking new plan shows modal (58 ms)
+    ✓ can add a plan (104 ms)
+    ✕ can not add an empty plan (55 ms)
+    ✓ can delete a plan (97 ms)
   Courses
-    ✓ can add course (393 ms)
-    ✓ can delete a SINGLE selected course (277 ms)
-    ✓ can edit a course (all fields, course: code/name/credit/desc.. (807 ms)
+    ✓ can add course (259 ms)
+    ✓ can delete a SINGLE selected course (168 ms)
+    ✓ can edit a course (all fields, course: code/name/credit/desc.. (533 ms)
   View
-    ✓ view plan button shows up (203 ms)
-    ✓ can view an empty plan (108 ms)
-    ✓ can view a plan with an empty semester (184 ms)
-    ✓ can view a plan with a non-empty semester (214 ms)
+    ✓ view plan button shows up (145 ms)
+    ✓ can view an empty plan (67 ms)
+    ✓ can view a plan with an empty semester (125 ms)
+    ✓ can view a plan with a non-empty semester (137 ms)
   Semesters
-    ✓ can add a semester (160 ms)
-    ✓ can delete a semester (160 ms)
-    ✓ can delete all semesters (154 ms)
+    ✓ can add a semester (101 ms)
+    ✓ can delete a semester (116 ms)
+    ✓ can delete all semesters (106 ms)
+
+  ● Testing plan › can not add an empty plan
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 2
+
+      40 |         createNewPlanButton.click();
+      41 |         const totalButtons = screen.queryAllByRole("button");
+    > 42 |         expect(totalButtons.length).toBe(1);
+         |                                     ^
+      43 |     });
+      44 |     test("can delete a plan", () => {
+      45 |         const newPlanButton = screen.getByTestId("newPlanButton");
+
+      at Object.<anonymous> (src/App.test.tsx:42:37)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
 ------------------------|---------|----------|---------|---------|--------------------
 File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s  
 ------------------------|---------|----------|---------|---------|--------------------
-All files               |   77.43 |    74.19 |   71.73 |   79.19 |                    
- src                    |      85 |    66.66 |    87.5 |   84.21 |                    
-  App.tsx               |      85 |    66.66 |    87.5 |   84.21 | 16,25-27           
- src/Components         |   76.38 |       76 |   70.23 |   78.46 |                    
+All files               |   78.04 |    70.96 |   72.82 |   79.86 |                    
+ src                    |      85 |       50 |    87.5 |   84.21 |                    
+  App.tsx               |      85 |       50 |    87.5 |   84.21 | 17,26-28           
+ src/Components         |   77.08 |       76 |   71.42 |   79.23 |                    
   AddCourses.tsx        |    62.5 |    55.55 |   63.63 |   70.58 | 47,60-61,70-97,110 
   CreateCourseModal.tsx |      50 |      100 |   16.66 |      50 | 44-97              
   EditCourse.tsx        |    90.9 |      100 |   83.33 |    90.9 | 77                 
@@ -44,14 +65,14 @@ All files               |   77.43 |    74.19 |   71.73 |   79.19 |
   SemesterList.tsx      |   71.42 |      100 |      60 |   71.42 | 23,42              
   SemesterModal.tsx     |    87.5 |       75 |   77.77 |   85.71 | 26,71              
   SemesterView.tsx      |     100 |      100 |     100 |     100 |                    
-  ShowHidePlans.tsx     |      90 |      100 |      80 |    87.5 | 19                 
+  ShowHidePlans.tsx     |     100 |      100 |     100 |     100 |                    
  src/Interfaces         |       0 |        0 |       0 |       0 |                    
   Courses.ts            |       0 |        0 |       0 |       0 |                    
   Plan.ts               |       0 |        0 |       0 |       0 |                    
   Semester.ts           |       0 |        0 |       0 |       0 |                    
 ------------------------|---------|----------|---------|---------|--------------------
-Test Suites: 1 passed, 1 total
-Tests:       16 passed, 16 total
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 15 passed, 16 total
 Snapshots:   0 total
-Time:        8.894 s
+Time:        6.442 s
 Ran all test suites.
