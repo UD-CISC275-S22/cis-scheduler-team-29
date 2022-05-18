@@ -16,7 +16,6 @@ export function NewPlanList({
                     <Button
                         data-testid={plan.id}
                         className="plans"
-                        target="_blank"
                         onClick={() => handleShowAddModal(plan)}
                     >
                         <span>{plan.id}</span>
