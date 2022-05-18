@@ -33,6 +33,13 @@ export function PlanView({
         setPlan([...plans]);
     }
 
+    let credits = 0;
+    semesters.forEach(function (semester) {
+        semester.course.forEach(function (course) {
+            credits = credits + parseInt(course.credits);
+        });
+    });
+
     const COPYPLANS = JSON.parse(JSON.stringify(plans)) as typeof plans;
     function dontSave(plan: Plan) {
         setPlan([...COPYPLANS]);
@@ -79,6 +86,7 @@ export function PlanView({
                     </Button>
                 </Col>
             </Row>
+            {credits}
             <div className="divider">
                 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
             </div>
