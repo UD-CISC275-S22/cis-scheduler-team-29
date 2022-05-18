@@ -47,28 +47,29 @@
       at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
       at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
 
-FAIL src/App.test.tsx (6.345 s)
-  ✓ renders the course name somewhere (46 ms)
+FAIL src/App.test.tsx (9.524 s)
+  ✓ renders the course name somewhere (64 ms)
   Testing plan
-    ✓ Add new plan button shows up (13 ms)
-    ✓ clicking new plan shows modal (59 ms)
-    ✓ can add a plan (102 ms)
-    ✓ can not add an empty plan (41 ms)
-    ✓ can delete a plan (100 ms)
+    ✓ Add new plan button shows up (19 ms)
+    ✓ clicking new plan shows modal (91 ms)
+    ✓ can add a plan (143 ms)
+    ✓ can not add an empty plan (56 ms)
+    ✓ can delete a plan (149 ms)
+    ✓ cannot add an existing course into a plan (508 ms)
   Courses
-    ✓ can add course (366 ms)
-    ✕ can search course (670 ms)
-    ✓ can delete a SINGLE selected course (163 ms)
-    ✓ can edit a course (all fields, course: code/name/credit/desc.. (492 ms)
+    ✓ can add course (268 ms)
+    ✕ can search course (1117 ms)
+    ✓ can delete a SINGLE selected course (222 ms)
+    ✓ can edit a course (all fields, course: code/name/credit/desc.. (770 ms)
   View
-    ✓ view plan button shows up (123 ms)
-    ✓ can view an empty plan (65 ms)
-    ✓ can view a plan with an empty semester (125 ms)
-    ✓ can view a plan with a non-empty semester (134 ms)
+    ✓ view plan button shows up (213 ms)
+    ✓ can view an empty plan (142 ms)
+    ✓ can view a plan with an empty semester (187 ms)
+    ✓ can view a plan with a non-empty semester (210 ms)
   Semesters
-    ✓ can add a semester (108 ms)
-    ✓ can delete a semester (101 ms)
-    ✓ can delete all semesters (100 ms)
+    ✓ can add a semester (148 ms)
+    ✓ can delete a semester (161 ms)
+    ✓ can delete all semesters (160 ms)
 
   ● Courses › can search course
 
@@ -204,48 +205,48 @@ FAIL src/App.test.tsx (6.345 s)
       [36m</div>[39m
     [36m</div>[39m
 
-       98 |         // const input2 = screen.getByTestId("autocompletebutton");
-       99 |         // userEvent.type(input2, "MATH242");
-    > 100 |         const inputt = within(autocomplete).getByRole("textbox");
+      144 |         // const input2 = screen.getByTestId("autocompletebutton");
+      145 |         // userEvent.type(input2, "MATH242");
+    > 146 |         const inputt = within(autocomplete).getByRole("textbox");
           |                                             ^
-      101 |         fireEvent.change(inputt, { target: { value: "MATH242" } });
-      102 |         await wait();
-      103 |         fireEvent.keyDown(autocomplete, { key: "ArrowDown " });
+      147 |         fireEvent.change(inputt, { target: { value: "MATH242" } });
+      148 |         await wait();
+      149 |         fireEvent.keyDown(autocomplete, { key: "ArrowDown " });
 
       at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
       at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
       at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
       at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/App.test.tsx:100:45)
+      at Object.<anonymous> (src/App.test.tsx:146:45)
 
-------------------------|---------|----------|---------|---------|--------------------
-File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s  
-------------------------|---------|----------|---------|---------|--------------------
-All files               |   76.43 |    72.41 |   70.78 |   78.16 |                    
- src                    |      85 |    66.66 |    87.5 |   84.21 |                    
-  App.tsx               |      85 |    66.66 |    87.5 |   84.21 | 15,24-26           
- src/Components         |   75.18 |    73.91 |   69.13 |   77.23 |                    
-  AddCourses.tsx        |    62.5 |    55.55 |   63.63 |   70.58 | 47,60-61,70-97,111 
-  CreateCourseModal.tsx |      50 |      100 |   16.66 |      50 | 44-97              
-  EditCourse.tsx        |    90.9 |      100 |   83.33 |    90.9 | 77                 
-  EditCourseModal.tsx   |     100 |      100 |     100 |     100 |                    
-  ListCourses.tsx       |     100 |      100 |     100 |     100 |                    
-  NewPlanList.tsx       |     100 |      100 |     100 |     100 |                    
-  PlanAdd.tsx           |     100 |      100 |     100 |     100 |                    
-  PlanView.tsx          |   53.84 |      100 |   42.85 |   54.54 | 32-33,38-41        
-  PlanViewModal.tsx     |     100 |      100 |     100 |     100 |                    
-  SemesterAdd.tsx       |      75 |       50 |      50 |      75 | 18,56              
-  SemesterList.tsx      |   71.42 |      100 |      60 |   71.42 | 23,42              
-  SemesterModal.tsx     |    87.5 |       75 |   77.77 |   85.71 | 25,66              
-  SemesterView.tsx      |     100 |      100 |     100 |     100 |                    
-  ShowHidePlans.tsx     |      90 |      100 |      80 |    87.5 | 19                 
- src/Interfaces         |       0 |        0 |       0 |       0 |                    
-  Courses.ts            |       0 |        0 |       0 |       0 |                    
-  Plan.ts               |       0 |        0 |       0 |       0 |                    
-  Semester.ts           |       0 |        0 |       0 |       0 |                    
-------------------------|---------|----------|---------|---------|--------------------
+------------------------|---------|----------|---------|---------|-------------------
+File                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+------------------------|---------|----------|---------|---------|-------------------
+All files               |   79.26 |    75.86 |   72.82 |    81.2 |                   
+ src                    |      85 |    66.66 |    87.5 |   84.21 |                   
+  App.tsx               |      85 |    66.66 |    87.5 |   84.21 | 15,24-26          
+ src/Components         |   78.47 |    78.26 |   71.42 |   80.76 |                   
+  AddCourses.tsx        |      70 |    66.66 |   68.18 |   79.41 | 70-97,111         
+  CreateCourseModal.tsx |      50 |      100 |   16.66 |      50 | 44-97             
+  EditCourse.tsx        |    90.9 |      100 |   83.33 |    90.9 | 77                
+  EditCourseModal.tsx   |     100 |      100 |     100 |     100 |                   
+  ListCourses.tsx       |     100 |      100 |     100 |     100 |                   
+  NewPlanList.tsx       |     100 |      100 |     100 |     100 |                   
+  PlanAdd.tsx           |     100 |      100 |     100 |     100 |                   
+  PlanView.tsx          |    64.7 |      100 |   55.55 |   66.66 | 32-33,45-48       
+  PlanViewModal.tsx     |     100 |      100 |     100 |     100 |                   
+  SemesterAdd.tsx       |      75 |       50 |      50 |      75 | 18,60             
+  SemesterList.tsx      |   71.42 |      100 |      60 |   71.42 | 23,42             
+  SemesterModal.tsx     |    87.5 |       75 |   77.77 |   85.71 | 25,66             
+  SemesterView.tsx      |     100 |      100 |     100 |     100 |                   
+  ShowHidePlans.tsx     |      90 |      100 |      80 |    87.5 | 19                
+ src/Interfaces         |       0 |        0 |       0 |       0 |                   
+  Courses.ts            |       0 |        0 |       0 |       0 |                   
+  Plan.ts               |       0 |        0 |       0 |       0 |                   
+  Semester.ts           |       0 |        0 |       0 |       0 |                   
+------------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
-Tests:       1 failed, 16 passed, 17 total
+Tests:       1 failed, 17 passed, 18 total
 Snapshots:   0 total
-Time:        6.922 s
+Time:        10.317 s
 Ran all test suites.
