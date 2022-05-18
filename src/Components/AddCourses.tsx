@@ -99,55 +99,51 @@ export function AddCourse({
 
     return (
         <div>
-            <div>
-                <Grid>
-                    <Autocomplete
-                        data-testid="autocompletebutton"
-                        value={value}
-                        onChange={(
-                            event: React.SyntheticEvent<Element, Event>,
-                            newValue: string | null
-                        ) => {
-                            setValue(newValue);
-                        }}
-                        inputValue={inputValue}
-                        onInputChange={(event, newInputValue) => {
-                            setInputValue(newInputValue);
-                        }}
-                        id="controllable-states-demo"
-                        options={COURSES.map(
-                            (test: Courses): string => test.code
-                        )}
-                        sx={{ width: 200, textAlign: "center" }}
-                        renderInput={(params) => (
-                            <TextField
-                                data-testid="autocompleteInput"
-                                {...params}
-                                label="Courses"
-                            />
-                        )}
-                    />
-                    <button
-                        style={{ textAlign: "center" }}
-                        onClick={() => addCourse(inputValue)}
-                        data-testid="addcoursetest"
-                    >
-                        Add Course
-                    </button>
-                    <button
-                        style={{ textAlign: "center" }}
-                        onClick={handleShowCreateCourseModal}
-                        data-testid="createCourseModal"
-                    >
-                        Create Course
-                    </button>
-                    <CreateCourseModal
-                        show={showCreateCourseModal}
-                        handleClose={handleCloseCreateCourseModal}
-                        createCourse={createCourse}
-                    ></CreateCourseModal>
-                </Grid>
-            </div>
+            <Grid>
+                <Autocomplete
+                    data-testid="autocompletebutton"
+                    value={value}
+                    onChange={(
+                        event: React.SyntheticEvent<Element, Event>,
+                        newValue: string | null
+                    ) => {
+                        setValue(newValue);
+                    }}
+                    inputValue={inputValue}
+                    onInputChange={(event, newInputValue) => {
+                        setInputValue(newInputValue);
+                    }}
+                    id="controllable-states-demo"
+                    options={COURSES.map((test: Courses): string => test.code)}
+                    sx={{ width: 200, textAlign: "center" }}
+                    renderInput={(params) => (
+                        <TextField
+                            data-testid="autocompleteInput"
+                            {...params}
+                            label="Courses"
+                        />
+                    )}
+                />
+                <button
+                    style={{ textAlign: "center" }}
+                    onClick={() => addCourse(inputValue)}
+                    data-testid="addcoursetest"
+                >
+                    Add Course
+                </button>
+                <button
+                    style={{ textAlign: "center" }}
+                    onClick={handleShowCreateCourseModal}
+                    data-testid="createCourseModal"
+                >
+                    Create Course
+                </button>
+                <CreateCourseModal
+                    show={showCreateCourseModal}
+                    handleClose={handleCloseCreateCourseModal}
+                    createCourse={createCourse}
+                ></CreateCourseModal>
+            </Grid>
             <ListCourses
                 course={courses}
                 editCourse={editCourse}

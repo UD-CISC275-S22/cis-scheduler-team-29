@@ -14,6 +14,10 @@ export function ListCourses({
     deleteCourse: (name: string) => void;
     clearCourses: () => void;
 }): JSX.Element {
+    let credits = 0;
+    course.forEach(function (course) {
+        credits = credits + parseInt(course.credits);
+    });
     return (
         <Stack gap={3}>
             <Table>
@@ -42,13 +46,16 @@ export function ListCourses({
                             </td>
                         </tr>
                     ))}
-                    {course.length != 0 && (
-                        <Button size="sm" onClick={clearCourses}>
-                            Clear Courses
-                        </Button>
-                    )}
                 </tbody>
             </Table>
+            <div className="semestercredits">Semester Credits: {credits}</div>
+            <div className="alignleft">
+                {course.length != 0 && (
+                    <Button size="sm" onClick={clearCourses}>
+                        Clear Courses
+                    </Button>
+                )}
+            </div>
         </Stack>
     );
 }
