@@ -1,8 +1,7 @@
 import React from "react";
-import { fireEvent, render, screen, within } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import App from "./App";
 import userEvent from "@testing-library/user-event";
-import { wait } from "@testing-library/user-event/dist/utils";
 
 test("renders the course name somewhere", () => {
     render(<App />);
