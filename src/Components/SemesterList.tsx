@@ -18,7 +18,7 @@ export function SemesterList({
     plans: Plan[];
 }): JSX.Element {
     function sortBySeason(semester: Semester[]) {
-        const seasonName: string[] = ["Summer", "Fall", "Winter", "Spring"];
+        const seasonName: string[] = ["Winter", "Spring", "Summer", "Fall"];
         semester.sort(function (a, b) {
             return seasonName.indexOf(a.season) - seasonName.indexOf(b.season);
         });
