@@ -4,6 +4,7 @@ import { Plan } from "../Interfaces/Plan";
 import { Semester } from "../Interfaces/Semester";
 import { SemesterAdd } from "./SemesterAdd";
 import { SemesterList } from "./SemesterList";
+import CloseButton from "react-bootstrap/CloseButton";
 
 export function SemesterModal({
     plan,
@@ -63,9 +64,7 @@ export function SemesterModal({
                 >
                     Delete All Semesters
                 </Button>
-                <Button variant="secondary" onClick={() => dontSave(plan)}>
-                    Close
-                </Button>
+                <CloseButton onClick={() => dontSave(plan)} />
             </h4>
             <div>
                 <SemesterAdd

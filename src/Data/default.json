@@ -1,0 +1,25 @@
+[
+    {
+        "id": "default",
+        "title": "default",
+        "semesters": [
+            {
+                "id": "default",
+                "season": "fall",
+                "year": "2020",
+                "course": [
+                    {
+                        "code": "hhhh",
+                        "name": "dj",
+                        "descr": "hi",
+                        "credits": "5",
+                        "preReq": "",
+                        "restrict": "",
+                        "breadth": "",
+                        "typ": ""
+                    }
+                ]
+            }
+        ]
+    }
+]
