@@ -1,3 +1,4 @@
+import React from "react";
 import { Col, Button } from "react-bootstrap";
 import { Semester } from "../Interfaces/Semester";
 import { AddCourse } from "./AddCourses";
