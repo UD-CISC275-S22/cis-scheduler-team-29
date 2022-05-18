@@ -44,7 +44,7 @@ export function PlanView({
     }
 
     return (
-        <Container fluid={"xxl"}>
+        <Container fluid={true}>
             <Row>
                 <Col>
                     <h3>{plan.id}</h3>
@@ -60,6 +60,11 @@ export function PlanView({
                         handleClose={handleClosePlanViewModal}
                         semesters={plan.semesters}
                     ></PlanViewModal>
+                    {plan.semesters.length == 0 && (
+                        <div className="ifnosemesters">
+                            Please begin by selecting Add New Semester!
+                        </div>
+                    )}
                     <Button
                         data-testid="deletePlanButton"
                         onClick={() => deletePlan(plan.id)}
@@ -71,6 +76,7 @@ export function PlanView({
                     <Button
                         data-testid="viewPlanButton"
                         onClick={handleShowPlanViewModal}
+                        variant="secondary"
                     >
                         View
                     </Button>

@@ -5,6 +5,7 @@ import { PlanView } from "./Components/PlanView";
 import { ShowHidePlans } from "./Components/ShowHidePlans";
 import { Plan } from "./Interfaces/Plan";
 import UDLOGO from "../src/UDPrimaryLogo2945.png";
+import UDMonolog from "../src/UDMonogramC.jpg";
 
 const saveDataKey = "MY-PAGE-DATA";
 let loadedData: Plan[] = [];
@@ -77,7 +78,7 @@ function App(): JSX.Element {
                                 Department of Computer Science Course Scheduler
                             </h1>
                             <div className="div2">
-                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                                ━━━━━━━━━━━━━━━━━━━━━━━━━━━━
                             </div>
                             <span>
                                 Welcome to the student made course scheduler!
@@ -117,8 +118,37 @@ function App(): JSX.Element {
                     </div>
                 ))}
             </div>
+            <div className="monolog">
+                <img src={UDMonolog}></img>
+            </div>
             <div className="ResourceSection">
-                <h1>COMING SOON! RESOURCE SECTION</h1>
+                <div>
+                    2022 University of Delaware Resources
+                    <a
+                        href="https://catalog.udel.edu/content.php?catoid=47&navoid=8860"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        Catalog
+                    </a>
+                    <a
+                        href="https://catalog.udel.edu/content.php?catoid=47&navoid=8860"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        Programs
+                    </a>
+                    <a
+                        href="https://udapps.nss.udel.edu/CoursesSearch/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        UD Course Search
+                    </a>
+                </div>
+                <span>
+                    Developed by: Adam Oberembt, Rehan Amir, Dhruv Patel
+                </span>
             </div>
         </div>
     );

@@ -42,13 +42,15 @@ export function ListCourses({
                             </td>
                         </tr>
                     ))}
-                    {course.length != 0 && (
-                        <Button size="sm" onClick={clearCourses}>
-                            Clear Courses
-                        </Button>
-                    )}
                 </tbody>
             </Table>
+            <div className="alignleft">
+                {course.length != 0 && (
+                    <Button size="sm" onClick={clearCourses}>
+                        Clear Courses
+                    </Button>
+                )}
+            </div>
         </Stack>
     );
 }

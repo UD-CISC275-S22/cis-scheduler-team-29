@@ -16,7 +16,6 @@ export function PlanAdd({
     function saveChanges() {
         addPlan({
             id: id,
-            title: "",
             semesters: []
         });
         handleClose();

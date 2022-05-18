@@ -4,6 +4,7 @@ import { Plan } from "../Interfaces/Plan";
 import { Semester } from "../Interfaces/Semester";
 import { SemesterAdd } from "./SemesterAdd";
 import { SemesterList } from "./SemesterList";
+import CloseButton from "react-bootstrap/Closebutton";
 
 export function SemesterModal({
     plan,
@@ -46,27 +47,30 @@ export function SemesterModal({
 
     return (
         <>
-            <h4>
-                <Button
-                    variant="success"
-                    className="m-4"
-                    onClick={handleShowAddModal}
-                    data-testid="addsemesterbutton"
-                >
-                    Add New Semester
-                </Button>
-                <Button
-                    variant="danger"
-                    className="m-4"
-                    onClick={deleteAllSemesters}
-                    data-testid="deleteAllSemestersButton"
-                >
-                    Delete All Semesters
-                </Button>
-                <Button variant="secondary" onClick={() => dontSave(plan)}>
-                    Close
-                </Button>
-            </h4>
+            <div id="alignmain">
+                <div className="alignleft"></div>
+                <div className="alignmiddle">
+                    <Button
+                        variant="success"
+                        className="m-4"
+                        onClick={handleShowAddModal}
+                        data-testid="addsemesterbutton"
+                    >
+                        Add New Semester
+                    </Button>
+                    <Button
+                        variant="danger"
+                        className="m-4"
+                        onClick={deleteAllSemesters}
+                        data-testid="deleteAllSemestersButton"
+                    >
+                        Delete All Semesters
+                    </Button>
+                </div>
+                <div className="alignright">
+                    <CloseButton onClick={() => dontSave(plan)}></CloseButton>
+                </div>
+            </div>
             <div>
                 <SemesterAdd
                     show={showAddModal}
