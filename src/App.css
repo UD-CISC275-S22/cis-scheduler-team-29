@@ -185,6 +185,7 @@
     width: 100%;
     position: fixed;
     padding: 10px;
+    z-index: 2;
 }
 .alignplanviewleft {
     display: flex;
